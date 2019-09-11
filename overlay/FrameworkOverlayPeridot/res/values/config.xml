@@ -997,4 +997,9 @@
         "stopped" during initial boot of a device, or after an OTA update. Stopped state of
         an app is not changed during subsequent reboots.  -->
     <bool name="config_stopSystemPackagesByDefault">false</bool>
+
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
 </resources>
