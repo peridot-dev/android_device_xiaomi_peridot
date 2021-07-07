@@ -162,7 +162,6 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 # Audio soundfx
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libquasar.so
-vendor/lib64/soundfx/libshoebox.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
