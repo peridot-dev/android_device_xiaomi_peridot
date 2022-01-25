@@ -2173,7 +2173,6 @@ vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.weaver-service.nxp.xml
 vendor/etc/vintf/manifest/atfwd-saidl.xml
 vendor/etc/vintf/manifest/blackbox.xml
-vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/boot-service.qti.xml
 vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
