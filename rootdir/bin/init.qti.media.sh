@@ -36,4 +36,5 @@
 
 setprop vendor.mm.target.enable.qcom_parser 524304
 setprop vendor.media.target_variant "_cliffs_v0"
+setprop ro.media.xml_variant.profiles "_cliffs_v0"
 setprop vendor.netflix.bsp_rev "Q8635-38577-1"
