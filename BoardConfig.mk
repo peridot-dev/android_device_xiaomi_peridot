@@ -275,3 +275,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Vendor
 include vendor/xiaomi/peridot/BoardConfigVendor.mk
+
+# Vendor MiuiCamera
+-include device/xiaomi/peridot-miuicamera/BoardConfig.mk

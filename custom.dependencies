@@ -1,5 +1,9 @@
 [
   {
+    "repository": "PixelOS-Devices/android_device_xiaomi_peridot-miuicamera",
+    "target_path": "device/xiaomi/peridot-miuicamera"
+  },
+  {
     "repository": "LineageOS/android_hardware_xiaomi",
     "target_path": "hardware/xiaomi",
     "branch": "lineage-23.2"
@@ -20,5 +24,10 @@
     "remote": "gitlab",
     "repository": "NoPrincessHere/proprietary_vendor_xiaomi_peridot",
     "target_path": "vendor/xiaomi/peridot"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "NoPrincessHere/proprietary_vendor_xiaomi_peridot-miuicamera",
+    "target_path": "vendor/xiaomi/peridot-miuicamera"
   }
 ]
