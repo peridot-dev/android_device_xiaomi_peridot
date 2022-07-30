@@ -60,8 +60,8 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
-    swinfo.fingerprint=peridot:14/V816.0.2.0.UNPINXM:user \
-    mtdoops.fingerprint=peridot:14/V816.0.2.0.UNPINXM:user
+    swinfo.fingerprint=peridot:$(LINEAGE_VERSION) \
+    mtdoops.fingerprint=peridot:$(LINEAGE_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
