@@ -1,0 +1,7 @@
+service vibratorfeature-wrapper /system/bin/hw/vibratorfeature-wrapper
+    class hal
+    user system
+    group system
+
+on property:init.svc.vibratorfeature-hal-service=restarting
+    restart vibratorfeature-wrapper

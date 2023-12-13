@@ -1,0 +1,11 @@
+cc_binary {
+    name: "vibratorfeature-wrapper",
+    init_rc: ["vibratorfeature-wrapper.rc"],
+    vintf_fragments: ["android.hardware.vibrator.xml"],
+    relative_install_path: "hw",
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+    ],
+    srcs: ["main.cpp"],
+}
