@@ -552,6 +552,9 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
+    vibratorfeature-wrapper
+
+PRODUCT_PACKAGES += \
     android.hardware.vibrator-V1-ndk_platform.vendor
 
 # Verified boot
