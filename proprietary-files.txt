@@ -1996,11 +1996,6 @@ vendor/etc/media_profiles_cliffs_v0.xml
 vendor/etc/media_profiles_cliffs_v1.xml
 vendor/etc/media_profiles_pineapple.xml
 
-# Memtrack
-vendor/bin/hw/vendor.qti.hardware.memtrack-service
-vendor/etc/init/memtrack_qti.rc
-vendor/etc/vintf/manifest/memtrack_qti.xml
-
 # Mlipay
 odm/bin/fidoca
 odm/bin/mlipayd
