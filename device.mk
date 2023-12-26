@@ -265,6 +265,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.media.bufferpool2-V1-ndk.vendor
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service
+
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd-V1-ndk.vendor \
