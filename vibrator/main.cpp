@@ -25,6 +25,5 @@ int main() {
             AServiceManager_waitForService("android.hardware.vibrator.IVibrator/vibratorfeature"), "android.hardware.vibrator.IVibrator/default");
     CHECK_EQ(status, STATUS_OK);
 
-    ABinderProcess_joinThreadPool();
-    return EXIT_FAILURE;
+    return EXIT_SUCCESS;
 }
