@@ -27,20 +27,6 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.aidl.mtdservice</name>
-        <interface>
-            <name>IMTService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.aidl.tidaservice</name>
-        <interface>
-            <name>ITidaService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.xiaomi.hardware.aidlbgservice</name>
         <interface>
             <name>IBGService</name>
@@ -80,13 +66,6 @@
         <name>vendor.xiaomi.hardware.fx.tunnel</name>
         <interface>
             <name>IMiFxTunnel</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.mfidoca</name>
-        <interface>
-            <name>IFidoService</name>
             <instance>default</instance>
         </interface>
     </hal>

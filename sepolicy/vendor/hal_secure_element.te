@@ -1,3 +1,2 @@
 allow hal_secure_element_default nfc_device:chr_file { ioctl open read write };
 allow hal_secure_element_default vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
-hal_client_domain(hal_secure_element_default, hal_mtdservice)

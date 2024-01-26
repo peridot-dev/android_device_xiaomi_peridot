@@ -80,10 +80,7 @@
 /sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
 
 # Mlipay
-/(odm|vendor/odm|system/vendor)/bin/fidoca u:object_r:hal_mfidoca_default_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/mlipayd u:object_r:hal_mlipay_default_exec:s0
-/(odm|vendor/odm|system/vendor)/bin/mtd u:object_r:hal_mtdservice_default_exec:s0
-/(odm|vendor/odm|system/vendor)/bin/tidad u:object_r:hal_tidaservice_default_exec:s0
 
 # MiThermal
 /(vendor|system/vendor)/bin/mi_ambient u:object_r:mi_ambient_exec:s0

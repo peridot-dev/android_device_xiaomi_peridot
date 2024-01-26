@@ -16,10 +16,7 @@ vendor.xiaomi.hardware.fingerprintextension.IXiaomiFingerprint/default  u:object
 vendor.xiaomi.hardware.fx.tunnel.IMiFxTunnel/default                    u:object_r:vendor_hal_fingerprint_service_xiaomi:s0
 
 # Mlipay
-vendor.xiaomi.hardware.mfidoca.IFidoService/default       u:object_r:hal_mfidoca_service:s0
 vendor.xiaomi.hardware.mlipay.IMlipayService/default        u:object_r:hal_mlipay_service:s0
-vendor.xiaomi.hardware.aidl.mtdservice.IMTService/default        u:object_r:hal_mtdservice_service:s0
-vendor.xiaomi.hardware.aidl.tidaservice.ITidaService/default       u:object_r:hal_tidaservice_service:s0
 
 # NFC
 mi_nfc                u:object_r:nfc_service:s0
