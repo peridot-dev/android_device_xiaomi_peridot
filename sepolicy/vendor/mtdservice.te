@@ -1,4 +1,0 @@
-type mtdservice, coredomain, domain, mlstrustedsubject;
-
-binder_use(mtdservice)
-hal_client_domain(mtdservice, hal_mtdservice)
