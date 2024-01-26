@@ -1892,26 +1892,11 @@ vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 
 # Mlipay
-odm/bin/fidoca
 odm/bin/mlipayd
-odm/bin/mtd
-odm/bin/tidad
-odm/etc/init/vendor.xiaomi.hardware.aidl.mtdservice-service.rc
-odm/etc/init/vendor.xiaomi.hardware.aidl.tidaservice-service.rc
-odm/etc/init/vendor.xiaomi.hardware.mfidoca-service.rc
 odm/etc/init/vendor.xiaomi.hardware.mlipay-service.rc
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.aidl.mtdservice.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.aidl.tidaservice.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
 odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
-odm/lib64/libmfido.so
 odm/lib64/libmlipay.so
-odm/lib64/libmt.so
-odm/lib64/libtida.so
 vendor/lib64/libesesbprovision.so
-vendor/lib64/vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk_platform.so
-vendor/lib64/vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk_platform.so
-vendor/lib64/vendor.xiaomi.hardware.mfidoca-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay-V1-ndk_platform.so
 
 # NFC
@@ -2484,6 +2469,7 @@ vendor/etc/vintf/manifest/android.hardware.secure_element.xml
 vendor/etc/vintf/manifest/secure_element-service.xml
 vendor/lib64/hw/libEseUtils.so
 vendor/lib64/libGPQeSE.so
+vendor/lib64/vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk_platform.so
 
 # Sensors
 odm/bin/test-nusensors
