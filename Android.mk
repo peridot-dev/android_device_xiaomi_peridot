@@ -52,16 +52,6 @@ $(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_WLAN_SYMLINKS) $(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS)
 
-EGL_LIBS_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64/
-$(EGL_LIBS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating EGL symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf egl/libEGL_adreno.so $@libEGL_adreno.so
-	$(hide) ln -sf egl/libGLESv2_adreno.so $@libGLESv2_adreno.so
-	$(hide) ln -sf egl/libq3dtools_adreno.so $@libq3dtools_adreno.so
-
-ALL_DEFAULT_INSTALLED_MODULES += $(EGL_LIBS_SYMLINKS)
-
 CNE_LIBS_SYMLINKS := $(TARGET_OUT_VENDOR)/app/CneApp/lib/arm64
 $(CNE_LIBS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating CneApp symlinks: $@"
