@@ -600,3 +600,6 @@ subsystem mem_buf_vm
 
 # Q2SPI UWB device
 /dev/q2spiuwb    0660    uwb    uwb
+
+# Battery
+/sys/class/qcom-battery                                 input_suspend                   0660    system  system
