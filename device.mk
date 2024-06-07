@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V4-ndk.vendor
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
