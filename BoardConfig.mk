@@ -6,6 +6,8 @@
 
 DEVICE_PATH := device/xiaomi/peridot
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -47,10 +49,6 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
-TARGET_KERNEL_SOURCE := kernel/xiaomi/peridot
-TARGET_KERNEL_CONFIG := \
-    gki_defconfig
-
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 
@@ -70,6 +68,32 @@ BOARD_BOOTCONFIG := \
     androidboot.vendor.qspa=true \
     androidboot.hypervisor.protected_vm.supported=false \
     androidboot.selinux=permissive
+
+# Kernel (prebuilt)
+PREBUILT_PATH := device/xiaomi/peridot-prebuilt
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
+BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
+BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/images/dtbo.img
+PRODUCT_COPY_FILES += \
+	$(PREBUILT_PATH)/images/kernel:kernel
+
+# Kernel modules
+DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_dlkm
+RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_boot
+SYSTEM_DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/system_dlkm/6.1.57-android14-11-g83e3d64b2402-ab11577925
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(SYSTEM_DLKM_MODULES_PATH)/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.57-android14-11-g83e3d64b2402-ab11577925/)
+
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DLKM_MODULES_PATH)/modules.blocklist
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
