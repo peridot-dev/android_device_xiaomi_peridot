@@ -1165,7 +1165,6 @@ vendor/bin/audiodsd2pcmtest
 vendor/bin/audioflacapp
 vendor/bin/awk
 vendor/bin/batterysecret
-vendor/bin/boringssl_self_test64
 vendor/bin/btconfig
 vendor/bin/ccid_daemon_nr
 vendor/bin/cdsprpcd
@@ -1591,8 +1590,6 @@ vendor/etc/audio_policy_volumes.xml
 vendor/etc/batching.conf
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
 vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
-vendor/etc/boringssl_self_test.zygote64.rc
-vendor/etc/boringssl_self_test.zygote64_32.rc
 vendor/etc/camera/102_SummerDay.png
 vendor/etc/camera/103_Fantasy.png
 vendor/etc/camera/104_Meet.png
@@ -1782,7 +1779,6 @@ vendor/etc/init/android.hardware.weaver-service.nxp.rc
 vendor/etc/init/android.hardware.wifi-service.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/blackbox.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/cnd.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/init/dataadpl.rc
