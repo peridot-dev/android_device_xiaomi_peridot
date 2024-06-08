@@ -180,7 +180,6 @@ vendor.netflix.bsp_rev=Q8635-38577-1
 
 # Power
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=3.0
 ro.vendor.perf.scroll_opt=1
 
 # QCOM
