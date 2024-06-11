@@ -52,8 +52,8 @@ odm/etc/UserDefinedMi.udm
 odm/etc/XiaoAiNiZaiNaMi.udm
 odm/etc/XiaoAiTongXue.uim
 odm/etc/XiaoAiTongXueMi.udm
-odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb
-odm/etc/acdbdata/Fluence/Fluence_workspaceFileXml.qwsp
+odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb:odm/etc/acdbdata/cliffs_mtp/Fluence_acdb_cal.acdb
+odm/etc/acdbdata/Fluence/Fluence_workspaceFileXml.qwsp:odm/etc/acdbdata/cliffs_mtp/Fluence_workspaceFileXml.qwsp
 odm/etc/audio-test-config
 odm/etc/audio/RES1K.wav
 odm/etc/audio/bottom_spk.wav
