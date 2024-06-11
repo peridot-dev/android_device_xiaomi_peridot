@@ -1145,7 +1145,6 @@ vendor/bin/GPTEE_Sample_client
 vendor/bin/KmInstallKeybox
 vendor/bin/MI_IC
 vendor/bin/MI_RIC
-vendor/bin/PalTest
 vendor/bin/PktRspTest
 vendor/bin/SoterProvisioningTool
 vendor/bin/StoreKeybox
