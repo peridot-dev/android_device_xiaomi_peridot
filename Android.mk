@@ -42,14 +42,6 @@ $(FIRMWARE_WLAN_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $@
 	$(hide) ln -sf /data/vendor/firmware/wlanmdsp.mbn $@/wlanmdsp.otaupdate
 
-FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/kiwi_v2/
-$(FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating kiwi_v2 qca_cld wlan firmware symlinks: $@"
-	@rm -rf $@/*
-	@mkdir -p $@
-	$(hide) ln -sf /vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-	$(hide) ln -sf /mnt/vendor/persist/wlan/wlan_mac.bin $@/wlan_mac.bin
-
 FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/qca6750/
 $(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating qca6750 qca_cld wlan firmware symlinks: $@"
@@ -58,7 +50,7 @@ $(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
 	$(hide) ln -sf /mnt/vendor/persist/wlan/wlan_mac.bin $@/wlan_mac.bin
 
-ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_WLAN_SYMLINKS) $(FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS) $(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_WLAN_SYMLINKS) $(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS)
 
 RFS_APQ_GNSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/apq/gnss/
 $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

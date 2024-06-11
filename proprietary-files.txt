@@ -1215,7 +1215,6 @@ vendor/bin/gpu_counter_producer
 vendor/bin/hal_proxy_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
-vendor/bin/hostapd_cli
 vendor/bin/hw/android.hardware.audio.service_64
 vendor/bin/hw/android.hardware.authsecret-service.nxp
 vendor/bin/hw/android.hardware.biometrics.face@1.0-service.face
@@ -1239,10 +1238,8 @@ vendor/bin/hw/android.hardware.thermal-service.qti
 vendor/bin/hw/android.hardware.usb-service.qti
 vendor/bin/hw/android.hardware.usb.gadget-service.qti
 vendor/bin/hw/android.hardware.weaver-service.nxp-qti
-vendor/bin/hw/android.hardware.wifi-service
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/fbo-test
-vendor/bin/hw/hostapd
 vendor/bin/hw/mfp-daemon
 vendor/bin/hw/miperf_client
 vendor/bin/hw/pasrknob
@@ -1282,7 +1279,6 @@ vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/bin/hw/vendor.qti.sla.service@1.0-service
 vendor/bin/hw/vendor.rongcard.eid@1.0-service
 vendor/bin/hw/vendor.xiaomi.cit.bluetooth-service
-vendor/bin/hw/vendor.xiaomi.cit.wifi-service
 vendor/bin/hw/vendor.xiaomi.hardware.blackbox.service
 vendor/bin/hw/vendor.xiaomi.hardware.cld@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature_aidl-service
@@ -1298,7 +1294,6 @@ vendor/bin/hw/vendor.xiaomi.hardware.swap@1.0-service
 vendor/bin/hw/vendor.xiaomi.hidl.minet@1.0-service
 vendor/bin/hw/vendor.xiaomi.hidl.miwill@1.0-service
 vendor/bin/hw/vendor.xiaomi.modem.qms@1.0-service
-vendor/bin/hw/wpa_supplicant
 vendor/bin/hwinfo
 vendor/bin/ims-dataservice-daemon
 vendor/bin/ims_rtp_daemon
@@ -1469,9 +1464,7 @@ vendor/bin/wdsdaemon
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
-vendor/bin/wifilearner
 vendor/bin/wlanramdumpcollector
-vendor/bin/wpa_cli
 vendor/bin/xiaomi_cellinfo_test
 vendor/bin/xiaomi_extend_cmd
 vendor/bin/xtra-daemon
@@ -1750,9 +1743,6 @@ vendor/etc/hal_uuid_map_manet.xml
 vendor/etc/hal_uuid_map_peridot.xml
 vendor/etc/hal_uuid_map_ruyi.xml
 vendor/etc/hal_uuid_map_shennong.xml
-vendor/etc/hostapd/hostapd.accept
-vendor/etc/hostapd/hostapd.deny
-vendor/etc/hostapd/hostapd_default.conf
 vendor/etc/hrtf5c.bin
 vendor/etc/init.qti.fm.sh
 vendor/etc/init/android.hardware.audio.service_64.rc
@@ -1776,8 +1766,6 @@ vendor/etc/init/android.hardware.thermal-service.qti.rc
 vendor/etc/init/android.hardware.usb-service.qti.rc
 vendor/etc/init/android.hardware.usb.gadget-service.qti.rc
 vendor/etc/init/android.hardware.weaver-service.nxp.rc
-vendor/etc/init/android.hardware.wifi-service.rc
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/blackbox.rc
 vendor/etc/init/cnd.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
@@ -1791,7 +1779,6 @@ vendor/etc/init/dpmQmiMgr.rc
 vendor/etc/init/dumpstate-xiaomi.rc
 vendor/etc/init/ffu.rc
 vendor/etc/init/general_service.rc
-vendor/etc/init/hostapd.android.rc
 vendor/etc/init/hw/init.batterysecret.rc
 vendor/etc/init/hw/init.mi_ambient.rc
 vendor/etc/init/hw/init.mi_thermald.rc
@@ -1887,7 +1874,6 @@ vendor/etc/init/vendor.qti.hardware.sensorscalibrate-service.rc
 vendor/etc/init/vendor.qti.hardware.servicetrackeraidl-service.rc
 vendor/etc/init/vendor.qti.hardware.soter-service.rc
 vendor/etc/init/vendor.qti.hardware.trustedui-aidl-service-qti.rc
-vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/init/vendor.qti.memory.pasrmanager-service.rc
@@ -1903,7 +1889,6 @@ vendor/etc/init/vendor.rongcard.eid@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/init/vendor.xiaomi.cit.bluetooth-service.rc
-vendor/etc/init/vendor.xiaomi.cit.wifi-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.cld@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.fbo@1.0-service.rc
@@ -2229,9 +2214,6 @@ vendor/etc/vintf/manifest/android.hardware.thermal-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.usb-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.weaver-service.nxp.xml
-vendor/etc/vintf/manifest/android.hardware.wifi-service.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/etc/vintf/manifest/atfwd-saidl.xml
 vendor/etc/vintf/manifest/blackbox.xml
 vendor/etc/vintf/manifest/bluetooth_audio.xml
@@ -2306,7 +2288,6 @@ vendor/etc/vintf/manifest/vendor.qti.qspa-service.xml
 vendor/etc/vintf/manifest/vendor.qti.qspmhal-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.camera.aon-impl.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.cit.bluetooth-service.xml
-vendor/etc/vintf/manifest/vendor.xiaomi.cit.wifi-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.aidlbgservice-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature_aidl-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge.xml
@@ -2319,13 +2300,6 @@ vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
 vendor/etc/vmmgr.conf
 vendor/etc/wfdconfig.xml
-vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/p2p_supplicant_overlay.conf
-vendor/etc/wifi/passpointProfile.conf
-vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/vendor_cmd.xml
-vendor/etc/wifi/wpa_supplicant.conf
-vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/etc/xiaomi_ecc_list.xml
 vendor/etc/xiaomi_ecc_list_preference.xml
 vendor/etc/xtwifi.conf
@@ -2513,16 +2487,11 @@ vendor/lib64/android.hardware.usb.gadget@1.0.so
 vendor/lib64/android.hardware.usb.gadget@1.1.so
 vendor/lib64/android.hardware.vibrator-V1-ndk_platform.so
 vendor/lib64/android.hardware.weaver-V2-ndk.so
-vendor/lib64/android.hardware.wifi-V1-ndk.so
-vendor/lib64/android.hardware.wifi.hostapd-V1-ndk.so
-vendor/lib64/android.hardware.wifi.supplicant-V1-ndk.so
-vendor/lib64/android.hardware.wifi.supplicant-V2-ndk.so
 vendor/lib64/android.hidl.allocator@1.0.so
 vendor/lib64/android.media.audio.common.types-V2-ndk.so
 vendor/lib64/android.se.omapi-V1-ndk.so
 vendor/lib64/android.system.keystore2-V1-ndk.so
 vendor/lib64/android.system.net.netd-V1-ndk.so
-vendor/lib64/android.system.wifi.keystore@1.0.so
 vendor/lib64/bm3b68v04s12n52.bin
 vendor/lib64/bm3b68v04s12n53.bin
 vendor/lib64/bm3b73v04s12n02.bin
@@ -3177,8 +3146,6 @@ vendor/lib64/libkeymaster_portable.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblightninglaunches.so
@@ -3602,12 +3569,8 @@ vendor/lib64/libwfduibcsinkinterface_vendor.so
 vendor/lib64/libwfduibcsrc_vendor.so
 vendor/lib64/libwfduibcsrcinterface_vendor.so
 vendor/lib64/libwfdutils_proprietary.so
-vendor/lib64/libwifi-hal-ctrl.so
-vendor/lib64/libwifi-hal-qcom.so
-vendor/lib64/libwifi-hal.so
 vendor/lib64/libwifiobserver.so
 vendor/lib64/libwms.so
-vendor/lib64/libwpa_client.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxiaomi_hydra.so
 vendor/lib64/libxiaomi_qcril.so
@@ -3907,8 +3870,6 @@ vendor/lib64/vendor.qti.hardware.vpp-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
-vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
@@ -3956,7 +3917,6 @@ vendor/lib64/vendor.qti.sla.service@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib64/vendor.rongcard.eid-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.cit.bluetooth-V1-ndk_platform.so
-vendor/lib64/vendor.xiaomi.cit.wifi-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.hardware.aidlbgservice-V1-impl.so
@@ -3986,8 +3946,6 @@ vendor/lib64/vendor.xiaomi.hardware.quickcamera-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.hardware.seccam-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.swap@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.vsimapp-V1-ndk_platform.so
-vendor/lib64/vendor.xiaomi.hardware.wifi.hostapd-V1-ndk.so
-vendor/lib64/vendor.xiaomi.hardware.wifi.supplicant-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hidl.minet@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hidl.minet@1.0.so
 vendor/lib64/vendor.xiaomi.hidl.miwill@1.0-impl.so
