@@ -58,6 +58,21 @@ function blob_fixup() {
         odm/etc/camera/enhance_motiontuning.xml|odm/etc/camera/motiontuning.xml|odm/etc/camera/night_motiontuning.xml)
             sed -i 's/xml=version/xml version/g' "${2}"
             ;;
+        vendor/etc/init/hw/init.batterysecret.rc)
+            sed -i s/seclabel\ u:r:batterysecret:s0//g "${2}"
+            ;;
+        vendor/etc/init/hw/init.mi_thermald.rc)
+            sed -i s/seclabel\ u:r:mi_thermald:s0//g "${2}"
+            ;;
+        vendor/etc/init/mi_ric.rc)
+            sed -i s/seclabel\ u:r:mi_ric:s0//g "${2}"
+            ;;
+        vendor/etc/init/init.mfp-daemon.aidl.rc)
+            sed -i s/seclabel\ u:r:vendor_mfp-daemon:s0//g "${2}"
+            ;;
+        vendor/etc/init/hw/init.mi_ambient.rc)
+            sed -i s/seclabel\ u:r:mi_ambient:s0//g "${2}"
+            ;;
     esac
 }
 
