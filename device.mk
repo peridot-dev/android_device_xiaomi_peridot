@@ -100,5 +100,31 @@ PRODUCT_PACKAGES += \
     vndservice \
     vndservicemanager
 
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    android.hardware.wifi.hostapd@1.0.vendor \
+    hostapd \
+    hostapd_cli \
+    libkeystore-engine-wifi-hidl \
+    libkeystore-wifi-hidl \
+    libwifi-hal \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    libwpa_client \
+    wpa_cli \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
+    android.hardware.wifi.supplicant-V1-ndk.vendor \
+    android.hardware.wifi.supplicant-V2-ndk.vendor \
+    android.hardware.wifi.hostapd-V1-ndk.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6750/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
 # Vendor
 $(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
