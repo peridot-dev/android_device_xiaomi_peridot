@@ -48,8 +48,6 @@ odm/bin/vsimd
 odm/bin/wcd9375_check.sh
 odm/bin/xiaomi_ir_test
 odm/etc/MESubway_prebuilt.db
-odm/etc/NOTICE.xml.gz
-odm/etc/NOTICE_GPL.html.gz
 odm/etc/UserDefinedMi.udm
 odm/etc/XiaoAiNiZaiNaMi.udm
 odm/etc/XiaoAiTongXue.uim
@@ -483,9 +481,6 @@ odm/etc/display/qdcm_calib_data_xiaomi_36_0f_0b_video_mode_dsc_dsi_panel.json
 odm/etc/display/qdcm_calib_data_xiaomi_42_02_0a_video_mode_dsc_dsi_panel.json
 odm/etc/dolby/dax-default-spatializer.xml
 odm/etc/dolby/dax-default.xml
-odm/etc/fs_config_dirs
-odm/etc/fs_config_files
-odm/etc/group
 odm/etc/init.panel_info.sh
 odm/etc/init/android.hardware.contexthub-service.qmi.rc
 odm/etc/init/init.boled.lightsensor.rc
@@ -516,7 +511,6 @@ odm/etc/miperf_actvity_cfg.xml
 odm/etc/miperf_app_cfg.xml
 odm/etc/miperf_contable.xml
 odm/etc/miperflock_activity_cfg.xml
-odm/etc/passwd
 odm/etc/permissions/android.hardware.biometrics.face.xml
 odm/etc/permissions/android.hardware.consumerir.xml
 odm/etc/permissions/android.hardware.context_hub.xml
@@ -1159,13 +1153,11 @@ vendor/bin/athdiag
 vendor/bin/audioadsprpcd
 vendor/bin/audiodsd2pcmtest
 vendor/bin/audioflacapp
-vendor/bin/awk
 vendor/bin/batterysecret
 vendor/bin/btconfig
 vendor/bin/ccid_daemon_nr
 vendor/bin/cdsprpcd
 vendor/bin/charge_logger
-vendor/bin/checkpoint_gc
 vendor/bin/cnd
 vendor/bin/cnss-daemon
 vendor/bin/cnss_cli
@@ -1173,7 +1165,6 @@ vendor/bin/cnss_diag
 vendor/bin/color
 vendor/bin/color_sampling_test
 vendor/bin/color_sampling_tool
-vendor/bin/cplay
 vendor/bin/csaudiotransfer_test
 vendor/bin/ctrlapp_dut
 vendor/bin/dcc-script.sh
@@ -1193,7 +1184,6 @@ vendor/bin/dlsc
 vendor/bin/dpmQmiMgr
 vendor/bin/dppdaemon
 vendor/bin/dspservice
-vendor/bin/dumpsys
 vendor/bin/e_loop
 vendor/bin/edgnss-daemon
 vendor/bin/embmsslServer
@@ -1335,14 +1325,12 @@ vendor/bin/iperf
 vendor/bin/iperf3
 vendor/bin/iperf3.zc
 vendor/bin/irsc_util
-vendor/bin/iw
 vendor/bin/iwconfig
 vendor/bin/iwlist
 vendor/bin/iwpriv
 vendor/bin/ks
 vendor/bin/loadalgo
 vendor/bin/loc_launcher
-vendor/bin/logwrapper
 vendor/bin/lowi-server
 vendor/bin/mbnota
 vendor/bin/mcs_test
@@ -1414,8 +1402,6 @@ vendor/bin/qwesd
 vendor/bin/rmt_storage
 vendor/bin/rpmbClient
 vendor/bin/sensors.qti
-vendor/bin/sg_write_buffer
-vendor/bin/sh
 vendor/bin/show_reserved_mem
 vendor/bin/shsusrd
 vendor/bin/sigma_dut
@@ -1434,14 +1420,11 @@ vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 vendor/bin/sxrservicetest
 vendor/bin/system_dlkm_modprobe.sh
-vendor/bin/tcpdump
 vendor/bin/test_diag
 vendor/bin/tftp_server
 vendor/bin/thermal-engine-v2
 vendor/bin/time_daemon
 vendor/bin/tlpd
-vendor/bin/toolbox
-vendor/bin/toybox_vendor
 vendor/bin/trusteduilistener
 vendor/bin/ubwcconvert
 vendor/bin/ubwcp_test64
@@ -1470,8 +1453,6 @@ vendor/etc/Hapticsconfig.xml
 vendor/etc/IPACM_Filter_cfg.xml
 vendor/etc/IPACM_cfg.xml
 vendor/etc/ITVDD.txt
-vendor/etc/NOTICE.xml.gz
-vendor/etc/NOTICE_GPL.html.gz
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp
@@ -1713,8 +1694,6 @@ vendor/etc/eva/facelandmark/weight_2.dat
 vendor/etc/eva/facelandmark/weight_3_1.dat
 vendor/etc/eva/facelandmark/weight_3_2.dat
 vendor/etc/eva/itof/tuning_params_sensor_type_1.json
-vendor/etc/fs_config_dirs
-vendor/etc/fs_config_files
 vendor/etc/ftm_test_config
 vendor/etc/ftm_test_config_cliffs-mtp-wcd9395-snd-card
 vendor/etc/ftm_test_config_cliffs-mtp-wsa883x-snd-card
@@ -1725,7 +1704,6 @@ vendor/etc/getConfig.pnscr
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/gps.conf
 vendor/etc/gps_diag.cfg
-vendor/etc/group
 vendor/etc/hal_uuid_map_aurora.xml
 vendor/etc/hal_uuid_map_aurorain.xml
 vendor/etc/hal_uuid_map_aurorapro.xml
@@ -1957,7 +1935,6 @@ vendor/etc/media_profiles_pineapple.xml
 vendor/etc/mem_logger_config.xml
 vendor/etc/microphone_characteristics.xml
 vendor/etc/misound_asc_model.tflite
-vendor/etc/mkshrc
 vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
@@ -1974,7 +1951,6 @@ vendor/etc/modem/Diag_power.cfg
 vendor/etc/modem/network_scan_config.cfg
 vendor/etc/modem/power.cfg
 vendor/etc/nfcon.pnscr
-vendor/etc/passwd
 vendor/etc/perf/avcsysnodesconfigs.xml
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/commonsysnodesconfigs.xml
@@ -3947,4 +3923,3 @@ vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.modem.qms@1.0.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
 vendor/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta
-vendor/rfs/rfs_symlinks
