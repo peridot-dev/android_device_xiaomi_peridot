@@ -55,6 +55,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        odm/etc/camera/enhance_motiontuning.xml|odm/etc/camera/motiontuning.xml|odm/etc/camera/night_motiontuning.xml)
+            sed -i 's/xml=version/xml version/g' "${2}"
+            ;;
     esac
 }
 

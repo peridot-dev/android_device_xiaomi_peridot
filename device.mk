@@ -7,8 +7,14 @@
 # Generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Virtual A/B Compression
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/android_t_baseline.mk)
+
+# Dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
@@ -46,6 +52,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.recovery.qcom.rc
 
 PRODUCT_COPY_FILES += \
@@ -64,3 +71,11 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservice \
+    vndservicemanager
+
+# Vendor
+$(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
