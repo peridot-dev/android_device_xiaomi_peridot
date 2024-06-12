@@ -1222,7 +1222,6 @@ vendor/bin/hw/android.hardware.authsecret-service.nxp
 vendor/bin/hw/android.hardware.biometrics.face@1.0-service.face
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/bin/hw/android.hardware.boot-service.qti
-vendor/bin/hw/android.hardware.cas-service.example
 vendor/bin/hw/android.hardware.contexthub-service.qmi
 vendor/bin/hw/android.hardware.drm-service.clearkey
 vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
@@ -1784,7 +1783,6 @@ vendor/etc/init/android.hardware.wifi-service.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/blackbox.rc
 vendor/etc/init/boringssl_self_test.rc
-vendor/etc/init/cas-default.rc
 vendor/etc/init/cnd.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/init/dataadpl.rc
@@ -2212,7 +2210,6 @@ vendor/etc/usecaseKvManager.xml
 vendor/etc/vintf/manifest/AHBF-V3-service.xml
 vendor/etc/vintf/manifest/ImsRtpService-aidl.xml
 vendor/etc/vintf/manifest/android.hardware.authsecret-service.nxp.xml
-vendor/etc/vintf/manifest/android.hardware.cas-service.xml
 vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
 vendor/etc/vintf/manifest/android.hardware.drm-service.xml
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
@@ -2440,7 +2437,6 @@ vendor/lib64/android.hardware.camera.common-V1-ndk.so
 vendor/lib64/android.hardware.camera.device-V2-ndk.so
 vendor/lib64/android.hardware.camera.metadata-V2-ndk.so
 vendor/lib64/android.hardware.camera.provider-V2-ndk.so
-vendor/lib64/android.hardware.cas-V1-ndk.so
 vendor/lib64/android.hardware.contexthub-V2-ndk.so
 vendor/lib64/android.hardware.drm-V1-ndk.so
 vendor/lib64/android.hardware.dumpstate-V1-ndk.so
