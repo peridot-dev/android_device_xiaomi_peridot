@@ -143,6 +143,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.peridot.rc \
     init.recovery.qcom.rc
 
 PRODUCT_COPY_FILES += \
