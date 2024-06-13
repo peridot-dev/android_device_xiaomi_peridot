@@ -118,7 +118,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-V2-ndk.vendor
 
 PRODUCT_PACKAGES += \
-    libcamera2ndk_vendor
+    libcamera2ndk_vendor \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libutilscallstack.vendor \
+    libyuv.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -339,9 +343,12 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjson \
+    libjsoncpp.vendor \
     libqti_vndfwk_detect.vendor \
     libqti_vndfwk_detect_vendor \
+    libsqlite.vendor \
     libvndfwk_detect_jni.qti.vendor \
     libvndfwk_detect_jni.qti_vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
