@@ -68,22 +68,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-# Biometrics
-PRODUCT_PACKAGES += \
-    android.frameworks.cameraservice.device-V1-ndk.vendor \
-    android.frameworks.cameraservice.service-V1-ndk.vendor \
-    android.hardware.biometrics.common-V2-ndk.vendor \
-    android.hardware.biometrics.common-V3-ndk.vendor \
-    android.hardware.biometrics.common.thread \
-    android.hardware.biometrics.common.util \
-    android.hardware.biometrics.face-V2-ndk.vendor \
-    android.hardware.biometrics.face-V3-ndk.vendor \
-    android.hardware.biometrics.fingerprint-V3-ndk.vendor
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.biometrics.face.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-V3-ndk.vendor \
@@ -119,7 +103,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.contexthub-V2-ndk.vendor
 
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.context_hub.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.context_hub.xml
 
@@ -137,6 +120,15 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.common.thread \
+    android.hardware.biometrics.common.util \
+    android.hardware.biometrics.fingerprint-V3-ndk.vendor
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # Graphics
 PRODUCT_PACKAGES += \
