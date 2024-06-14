@@ -322,17 +322,6 @@ vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 
-# Boot control
-vendor/bin/hw/android.hardware.boot-service.qti
-vendor/etc/init/android.hardware.boot-service.qti.rc
-vendor/etc/vintf/manifest/boot-service.qti.xml
-vendor/lib64/android.hardware.boot-V1-ndk.so
-vendor/lib64/android.hardware.boot@1.0.so
-vendor/lib64/android.hardware.boot@1.1.so
-vendor/lib64/libboot_control_qti.so
-vendor/lib64/librecovery_updater.so
-vendor/lib64/librecovery_updater_msm.so
-
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
