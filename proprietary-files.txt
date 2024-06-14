@@ -1747,14 +1747,6 @@ vendor/etc/ftm_test_config_pineapple-qrd-sku2-snd-card
 vendor/etc/ftm_test_config_pineapple-qrd-snd-card
 vendor/lib64/ftm_fm_lib.so
 
-# Face
-odm/bin/hw/mifaced
-odm/etc/init/miface.rc
-odm/etc/vintf/manifest/miface.xml
-odm/lib64/libmiface.so
-vendor/bin/hw/android.hardware.biometrics.face@1.0-service.face
-vendor/etc/init/android.hardware.biometrics.face@1.0-service.face.rc
-
 # Fingerprint
 odm/app/JVFactoryTest/JVFactoryTest.apk
 odm/app/goodix_sz/goodix_sz.apk
