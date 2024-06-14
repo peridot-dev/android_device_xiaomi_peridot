@@ -1873,12 +1873,6 @@ vendor/firmware/gmu_gen70900.bin
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.pastel.so
 
-# Health
-vendor/bin/hw/android.hardware.health-service.qti
-vendor/etc/init/android.hardware.health-service.qti.rc
-vendor/etc/vintf/manifest/android.hardware.health-service.qti.xml
-vendor/lib64/libsystem_health_mon.so
-
 # HDCP
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
@@ -2753,6 +2747,7 @@ vendor/lib64/libril.so
 vendor/lib64/librilqmimiscservices.so
 vendor/lib64/librilutils.so
 vendor/lib64/librmnetctl.so
+vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libtlpd.so
 vendor/lib64/libtlpd_configmgr.so
 vendor/lib64/libtlpd_crypto.so
