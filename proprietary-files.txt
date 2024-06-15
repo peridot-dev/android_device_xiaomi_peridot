@@ -2314,8 +2314,6 @@ vendor/lib64/libspcom.so
 
 # Power
 odm/etc/powerhint.xml
-vendor/bin/hw/android.hardware.power-service
-vendor/etc/init/android.hardware.power-service.rc
 vendor/etc/powerhint.xml
 vendor/etc/pwr/AODPowerOptFeature.xml
 vendor/etc/pwr/GamePowerOptFeature.xml
@@ -2325,9 +2323,7 @@ vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/StandbyFeature.xml
 vendor/etc/pwr/VendorScenarioPowerOptFeature.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
-vendor/etc/vintf/manifest/power.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
-vendor/lib64/hw/power.default.so
 vendor/lib64/libaodoptfeature.so
 vendor/lib64/libgamepoweroptfeature.so
 vendor/lib64/liboffscreenpoweroptfeature.so
