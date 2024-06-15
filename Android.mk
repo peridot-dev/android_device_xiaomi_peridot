@@ -224,14 +224,6 @@ $(MISOUND_LIBS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MISOUND_LIBS_SYMLINKS)
 
-CAMERA_AON_LIBS_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64/camera/
-$(CAMERA_AON_LIBS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating camera AON symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /odm/lib64/camera/aon_front_1.pb $@aon_front_1.pb
-
-ALL_DEFAULT_INSTALLED_MODULES += $(CAMERA_AON_LIBS_SYMLINKS)
-
 CNE_LIBS_SYMLINKS := $(TARGET_OUT_VENDOR)/app/CneApp/lib/arm64
 $(CNE_LIBS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating CneApp symlinks: $@"
