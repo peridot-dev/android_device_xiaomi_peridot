@@ -13,7 +13,6 @@ odm/bin/flash_test_n16t.sh
 odm/bin/headset_detect.sh
 odm/bin/hw/mifaced
 odm/bin/hw/vendor.xiaomi.hardware.dtool1-service
-odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
 odm/bin/hw/vendor.xiaomi.hw.touchfeature-service
 odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl
 odm/bin/ispv4_ddr_boot
@@ -501,7 +500,6 @@ odm/etc/init/vendor.xiaomi.hardware.dtool1.rc
 odm/etc/init/vendor.xiaomi.hardware.mfidoca-service.rc
 odm/etc/init/vendor.xiaomi.hardware.mlipay-service.rc
 odm/etc/init/vendor.xiaomi.hardware.otrpagent@2.0-service.rc
-odm/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
 odm/etc/init/vendor.xiaomi.hardware.vsimapp-service.rc
 odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc
 odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc
@@ -532,7 +530,6 @@ odm/etc/permissions/android.hardware.se.omapi.ese.xml
 odm/etc/permissions/android.hardware.se.omapi.uicc.xml
 odm/etc/permissions/com.android.nfc_extras.xml
 odm/etc/permissions/com.nxp.mifare.xml
-odm/etc/permissions/vendor.hardware.vibratorfeature-permission.xml
 odm/etc/powerhint.xml
 odm/etc/qega/QEGA_Config.txt
 odm/etc/sensors/config/ak7323.json
@@ -666,7 +663,6 @@ odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.otrpagent@2.0.xml
 odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
 odm/etc/vintf/manifest/miface.xml
 odm/etc/vintf/manifest/mrm.xml
-odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
 odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature-service.xml
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice.aidl.xml
 odm/firmware/0_click_P_RTP.bin
@@ -1717,7 +1713,6 @@ vendor/etc/eva/facelandmark/weight_2.dat
 vendor/etc/eva/facelandmark/weight_3_1.dat
 vendor/etc/eva/facelandmark/weight_3_2.dat
 vendor/etc/eva/itof/tuning_params_sensor_type_1.json
-vendor/etc/excluded-input-devices.xml
 vendor/etc/fs_config_dirs
 vendor/etc/fs_config_files
 vendor/etc/ftm_test_config
@@ -2817,7 +2812,6 @@ vendor/lib64/hw/vendor.xiaomi.hardware.cld@1.0-impl.so
 vendor/lib64/hw/vendor.xiaomi.hardware.fbo@1.0-impl.so
 vendor/lib64/hw/vendor.xiaomi.hardware.miperf@1.0-impl.so
 vendor/lib64/hw/vendor.xiaomi.hardware.swap@1.0-impl.so
-vendor/lib64/hw/vibrator.default.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.pastel.so
 vendor/lib64/lib-imscommon.so
@@ -3528,7 +3522,6 @@ vendor/lib64/libubifocus.so
 vendor/lib64/libubwcp.so
 vendor/lib64/libultrahdr.so
 vendor/lib64/libultrasound_notify.so
-vendor/lib64/libvibratorutils.so
 vendor/lib64/libvideoBokeh.so
 vendor/lib64/libvideoml.so
 vendor/lib64/libvideooptfeature.so
@@ -3678,7 +3671,6 @@ vendor/lib64/vendor.display.config@2.0.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform.so
 vendor/lib64/vendor.libdpmctmgr.so
 vendor/lib64/vendor.libdpmfdmgr.so
 vendor/lib64/vendor.libdpmframework.so

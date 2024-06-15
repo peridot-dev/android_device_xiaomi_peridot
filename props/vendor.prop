@@ -337,9 +337,6 @@ vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
 
-# Vibrator
-ro.vendor.mm.vibrator.sys_path=/sys/class/qcom-haptics
-
 # Volume
 ro.config.alarm_vol_steps=15
 ro.config.media_vol_default=100
