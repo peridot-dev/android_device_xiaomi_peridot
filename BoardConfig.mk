@@ -183,7 +183,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 # Vendor security patch
-VENDOR_SECURITY_PATCH := 2024-03-01
+VENDOR_SECURITY_PATCH := 2024-05-01
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
