@@ -977,4 +977,12 @@
         "stopped" during initial boot of a device, or after an OTA update. Stopped state of
         an app is not changed during subsequent reboots.  -->
     <bool name="config_stopSystemPackagesByDefault">false</bool>
+
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false" >
+        <item>610</item>  <!-- <item>sensorLocationX</item> -->
+        <item>2437</item> <!-- <item>sensorLocationY</item> -->
+        <item>105</item>   <!-- <item>sensorRadius</item> -->
+    </integer-array>
+
 </resources>
