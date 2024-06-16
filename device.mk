@@ -327,6 +327,15 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# QMI
+PRODUCT_PACKAGES += \
+    libjson \
+    libqti_vndfwk_detect.vendor \
+    libqti_vndfwk_detect_vendor \
+    libvndfwk_detect_jni.qti.vendor \
+    libvndfwk_detect_jni.qti_vendor \
+    vendor.qti.hardware.systemhelper@1.0.vendor
+
 # QSPA
 PRODUCT_PACKAGES += \
     vendor.qti.qspa-service

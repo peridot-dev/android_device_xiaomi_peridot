@@ -2244,7 +2244,6 @@ vendor/etc/init/qesdk-secmanager.rc
 vendor/etc/seccomp_policy/qesdk.policy
 vendor/etc/seccomp_policy/qesdksec.policy
 vendor/etc/vintf/manifest/qesdk-manager.xml
-vendor/lib64/libjson.so
 vendor/lib64/liblocation_qesdk.so
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqesdk_manager.so
@@ -2305,12 +2304,8 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices.so
-vendor/lib64/libqti_vndfwk_detect.so
-vendor/lib64/libqti_vndfwk_detect_vendor.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsubsystem_control.so
-vendor/lib64/libvndfwk_detect_jni.qti.so
-vendor/lib64/libvndfwk_detect_jni.qti_vendor.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
@@ -2992,7 +2987,6 @@ vendor/lib64/libloadtrusteduiapp.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libsi.so
 vendor/lib64/libtaautoload.so
-vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
 
 # Trustzone
