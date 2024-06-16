@@ -47,15 +47,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qcom.factory.rc",
-    src: "etc/init.qcom.factory.rc",
+    name: "init.qcom.rc",
+    src: "etc/init.qcom.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.qcom.rc",
-    src: "etc/init.qcom.rc",
+    name: "init.qti.kernel.rc",
+    src: "etc/init.qti.kernel.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

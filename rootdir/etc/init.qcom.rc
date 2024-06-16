@@ -63,7 +63,6 @@ import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.qcom.factory.rc
 
 on early-init
     mount tracefs tracefs /sys/kernel/tracing
@@ -110,7 +109,6 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64KB
     setrlimit 8 65536 65536
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
-    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
     setprop vendor.display.mixer_resolution ${persist.sys.miui_resolution}
     mkdir /data/vendor/modem 0777 root root
@@ -599,12 +597,6 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service qmiproxy /system/bin/qmiproxy
-    class main
-    user radio
-    group radio diag
-    disabled
-
 service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwigig0 -Dnl80211 -c/data/vendor/wifi/wigig_supplicant.conf \
     -m/data/vendor/wifi/wigig_p2p_supplicant.conf \
@@ -621,95 +613,6 @@ service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
     oneshot
 
 # Data Migration
-service vendor.move_wifi_data /system/bin/move_wifi_data.sh
-    class main
-    user  wifi
-    group wifi
-    disabled
-    oneshot
-
-service wigignpt /vendor/bin/wigignpt
-    interface vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner default
-    class hal
-    socket wigig/wigignpt stream 660 system wifi
-    user system
-    group wifi
-    capabilities NET_ADMIN
-    disabled
-
-on property:persist.vendor.wigig.npt.enable=1
-    start wigignpt
-
-service vendor.sensingdaemon /vendor/bin/sensingdaemon
-    class hal
-    socket wigig/sensingdaemon stream 660 system wifi
-    user system
-    group wifi
-    disabled
-
-service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service dhcpcd_bond0 /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service dhcpcd_wigig0 /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_bond0 /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_p2p /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_wigig0 /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
-    class main
-    user wifi
-    group wifi system inet net_admin
-    capabilities NET_ADMIN
-    oneshot
-
-service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
-    user root
-    group root
-    disabled
-    oneshot
-
-service wifi_ftmd /system/vendor/bin/wifi_ftmd
-    user system
-    group system inet net_admin
-    socket wififtmd_server dgram 0660 system system
-    disabled
-    oneshot
-
-on property:vendor.wifi.ftmd.load=true
-    insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
-
 service cnss-daemon /system/vendor/bin/cnss-daemon -n -l --max_file_count 3 --max_file_size 20
     class late_start
     user system
@@ -719,19 +622,6 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l --max_file_count 3 --ma
 on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
     stop cnss-daemon
-
-on property:persist.sys.miui_resolution=*
-    setprop vendor.display.mixer_resolution ${persist.sys.miui_resolution}
-
-service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_bt-pan /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
 
 service ssgqmigd /vendor/bin/ssgqmigd
     class late_start
@@ -755,11 +645,6 @@ service qcom-sh /vendor/bin/init.qcom.sh
     user root
     group root system radio
     oneshot
-# Remove since is deprecated but throws AVC denial.
-# service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
-#    class late_start
-#    user root
-#    oneshot
 
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
@@ -768,24 +653,11 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     disabled
     oneshot
 
-service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-    seclabel u:r:qti-testscripts:s0
-
 on property:sys.boot_completed=1
     start qcom-post-boot
-    start qti-testscripts
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-service qvop-daemon /vendor/bin/qvop-daemon
-    class late_start
-    user system
-    group system drmrpc
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
@@ -800,139 +672,18 @@ service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/glob
     disabled
     oneshot
 
-service battery_monitor /system/bin/battery_monitor
-    user system
-    group system
-    disabled
-
-service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
-    class main
-    user radio
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
-
-service vendor.ril-daemon3 /vendor/bin/hw/rild -c 3
-    class main
-    user radio
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
-
-service profiler_daemon /system/bin/profiler_daemon
-    class late_start
-    user root
-    group root
-    disabled
-
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
     user system
     group system
     disabled
 
-service diag_mdlog_start /vendor/bin/diag_mdlog -q 0x2006 -j 1 -u -c -i -n 50
-    class late_start
-    user shell
-    group system oem_2902 oem_2905 sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
-
-service vendor.diag.tcpdump /vendor/bin/tcpdump -i any -C 500 -W 3 -nnXSs 0 -w /data/vendor/modem/diag_logs/tcpdump.pcap -Z system
-    class main
-    user root
-    group root wifi
-    disabled
-    oneshot
-
-on property:persist.logd.diag.tcpdump=true
-    start vendor.diag.tcpdump
-
-on property:persist.logd.diag.tcpdump=false
-    stop vendor.diag.tcpdump
-
-on boot && property:persist.logd.diag.bootup=* && property:persist.logd.diag.networklog=*
-    start vendor.diag.tcpdump
-
 on boot && property:persist.logd.diag.bootup=* && property:persist.logd.diag.mobilelog=*
     start logcatlog
-
-service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
-    class late_start
-    user shell
-    group system oem_2902 oem_2905 sdcard_rw sdcard_r media_rw
-    disabled
-    oneshot
-
-service qlogd /system/xbin/qlogd
-    socket qlogd stream 0662 system system
-    class main
-    disabled
-on property:persist.sys.qlogd=1
-    start qlogd
-on property:persist.sys.qlogd=0
-    stop qlogd
-
-service vm_bms /vendor/bin/vm_bms
-    user root
-    group root
-    disabled
-
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
-    class core
-    user root
-    group root
-    disabled
-
-service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_little_big.conf
-    class core
-    user root
-    group root
-    disabled
-
-service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_sdm630.conf
-    class core
-    user root
-    group root
-    disabled
-
-# service for USERDEBUG
-service vendor.LKCore-dbg /vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user root
-    group root system log diag net_raw
-
-# service for USER
-service vendor.LKCore-rel /vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user system
-    group system log diag
-
-service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
-    class late_start
-    user system
-    group system
-
-service esepmdaemon /system/vendor/bin/esepmdaemon
-    class core
-    user system
-    group nfc
 
 on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
-
-#add poweroffhandler
-service poweroffhandler /system/vendor/bin/poweroffhandler
-    class core
-    user media
-    group graphics audio
-    disabled
-    oneshot
 
 service time_daemon /vendor/bin/time_daemon
     class main
@@ -940,35 +691,11 @@ service time_daemon /vendor/bin/time_daemon
     group system
     capabilities SYS_TIME
 
-# Set vendor-ril lib path based on Meta version
-on property:vendor.rild.libpath=*
-    setprop rild.libpath ${vendor.rild.libpath}
-
-on property:ro.vendor.radio.noril=*
-    setprop ro.radio.noril ${ro.vendor.radio.noril}
-
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
     disabled
     oneshot
-
-service vendor.hbtp /vendor/bin/hbtp_daemon
-     class main
-     user system
-     group system
-     capabilities SYS_NICE
-     disabled
-
-service chre /vendor/bin/chre
-    class late_start
-    user system
-    group system
-    socket chre seqpacket 0660 root system
-    shutdown critical
-
-on property:vendor.chre.enabled=0
-   stop chre
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
@@ -976,13 +703,9 @@ service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.andro
     oneshot
     keycodes 114 115 116
 
-#Set GPU Opengles version
+# Set GPU Opengles version
 on property:vendor.opengles.version=*
     setprop ro.opengles.version ${vendor.opengles.version}
-
-#Set gpu available frequencies property
-on property:vendor.gpu.available_frequencies=*
-    setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
 
 on property:sys.boot_completed=1 && property:ro.product.debugfs_restrictions.enabled=true && \
     property:persist.dbg.keep_debugfs_mounted="" && property:ro.debuggable=1
