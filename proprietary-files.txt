@@ -319,7 +319,6 @@ vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.data.connectionaidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.data.iwlandata.xml
-vendor/lib64/framework-permission-aidl-cpp.so
 vendor/lib64/libCneAppJni.so
 vendor/lib64/libWlanServiceJni.so
 vendor/lib64/libandroid_runtime_lazy.so
