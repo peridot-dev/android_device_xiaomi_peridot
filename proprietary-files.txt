@@ -1299,10 +1299,6 @@ vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# DRM Clearkey
-vendor/lib64/mediacas/libclearkeycasplugin.so
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so
-
 # DRM Widevine
 odm/lib64/libwvkeybox.so
 vendor/apex/com.google.android.widevine.nonupdatable.apex
