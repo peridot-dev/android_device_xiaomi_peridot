@@ -315,6 +315,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# QSPA
+PRODUCT_PACKAGES += \
+    vendor.qti.qspa-service
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio-V2-ndk.vendor \
