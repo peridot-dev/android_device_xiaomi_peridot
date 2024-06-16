@@ -61,6 +61,7 @@ PRODUCT_PACKAGES += \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
     libagmclient \
+    libaudiochargerlistener \
     libbatterylistener \
     libfmpal \
     libhfp_pal \
