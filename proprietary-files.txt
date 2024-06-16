@@ -2357,13 +2357,6 @@ vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libvui_intf.so
 
-# QSPA
-vendor/bin/vendor.qti.qspa-service
-vendor/etc/init/qspa_vendor.rc
-vendor/etc/init/vendor.qti.qspa-service.rc
-vendor/etc/vintf/manifest/vendor.qti.qspa-service.xml
-vendor/lib64/vendor.qti.hardware.qspa-V1-ndk.so
-
 # QSPM
 vendor/bin/vendor.qti.qspmhal-service
 vendor/etc/init/vendor.qti.qspmhal-service.rc
