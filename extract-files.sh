@@ -58,6 +58,9 @@ function blob_fixup() {
         odm/etc/camera/enhance_motiontuning.xml|odm/etc/camera/motiontuning.xml|odm/etc/camera/night_motiontuning.xml)
             sed -i 's/xml=version/xml version/g' "${2}"
             ;;
+        system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml)
+            sed -i '1,6d' "${2}"
+            ;;
         vendor/etc/init/hw/init.batterysecret.rc)
             sed -i s/seclabel\ u:r:batterysecret:s0//g "${2}"
             ;;
