@@ -1227,7 +1227,6 @@ odm/lib64/camera/com.qti.tuned.peridot_ofilm_ov20b40_front.bin
 vendor/bin/batterysecret
 vendor/bin/charge_logger
 vendor/etc/charger_diag.cfg
-vendor/etc/charger_fw_fstab.qti
 vendor/etc/init/hw/init.batterysecret.rc
 vendor/etc/init/init.charge_logger.rc
 
@@ -1897,32 +1896,6 @@ vendor/lib64/liboffloadhal.so
 # IR
 odm/lib64/hw/consumerir.qcom.so
 
-# Init
-odm/etc/ueventd.rc
-vendor/bin/init.class_main.sh
-vendor/bin/init.crda.sh
-vendor/bin/init.mdm.sh
-vendor/bin/init.qcom.class_core.sh
-vendor/bin/init.qcom.coex.sh
-vendor/bin/init.qcom.early_boot.sh
-vendor/bin/init.qcom.efs.sync.sh
-vendor/bin/init.qcom.post_boot.sh
-vendor/bin/init.qcom.sdio.sh
-vendor/bin/init.qcom.sh
-vendor/bin/init.qti.kernel.debug-cliffs.sh
-vendor/bin/init.qti.kernel.debug-pineapple.sh
-vendor/bin/init.qti.kernel.debug.sh
-vendor/bin/init.qti.kernel.early_debug-pineapple.sh
-vendor/bin/init.qti.kernel.early_debug.sh
-vendor/bin/init.qti.media.sh
-vendor/bin/qca6234-service.sh
-vendor/etc/init/hw/init.qcom.factory.rc
-vendor/etc/init/hw/init.qcom.rc
-vendor/etc/init/hw/init.qti.ufs.rc
-vendor/etc/init/hw/init.target.rc
-vendor/etc/init/init.qti.media.rc
-vendor/etc/ueventd.rc
-
 # Kernel
 vendor/bin/init.kernel.extra_free_kbytes.sh
 vendor/bin/init.kernel.post_boot-cliffs.sh
@@ -2009,6 +1982,8 @@ odm/vendor/persist/display/dolby_vision.cfg
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
+vendor/bin/init.qti.media.sh
+vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
