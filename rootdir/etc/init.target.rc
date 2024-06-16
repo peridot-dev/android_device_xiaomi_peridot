@@ -403,13 +403,13 @@ on charger
 #   group system wakelock
 #   capabilities BLOCK_SUSPEND
 
-#pd-mapper
+# pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
     group system
 
-#Peripheral manager
+# Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
@@ -422,11 +422,6 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     group system
     disabled
 
-#service vendor.mdm_helper /vendor/bin/mdm_helper
-#    class core
-#    group system wakelock
-#    disabled
-
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
 
@@ -437,9 +432,8 @@ on property:sys.shutdown.requested=*
 # enable root version wlan log
 on property:ro.debuggable=1
     start vendor.cnss_diag
-    start vendor.tcpdump
 
-# add persist prop for tcpdump and cnss_diag
+# add persist prop for and cnss_diag
 #on property:vold.decrypt=trigger_restart_framework
 #   start vendor.cnss_diag
 
@@ -462,104 +456,7 @@ service vendor.nv_mac /vendor/bin/nv_mac
     group system inet net_admin wifi net_raw
     oneshot
 
-on early-boot && property:persist.vendor.pcie.boot_option=*
-    write /sys/bus/platform/devices/1c00000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
-    write /sys/bus/platform/devices/1c08000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
-
-service fatal_err_check /vendor/bin/check_fatal_err.sh
-    class late_start
-    user root
-    group root
-    oneshot
-
-on property:vendor.bluetooth.startwdsdaemon=true
-    start vendor.bt_wdsdaemon
-on property:vendor.bluetooth.startwdsdaemon=false
-    stop vendor.bt_wdsdaemon
-service vendor.bt_wdsdaemon /system/vendor/bin/wdsdaemon -su
-    class late_start
-    user root
-    group bluetooth diag system wakelock
-    disabled
-    oneshot
-
-#Enable WLAN SSR recovery
-on property:persist.vendor.ssr.restart_level=ALL_ENABLE
-    write /sys/kernel/cnss/recovery 3
-
-#Disable WLAN SSR recovery
-on property:persist.vendor.ssr.restart_level=ALL_DISABLE
-    write /sys/kernel/cnss/recovery 0
-
-#on property:sys.user.0.ce_available=true
-#    start vendor.tcpdump
-
-on property:vendor.hardware.wlan.runtcpdump=stop
-     stop vendor.tcpdump
-
-on property:vendor.hardware.wlan.runtcpdump=start && property:persist.vendor.tcpdump.enable=true
-     start vendor.tcpdump
-
-on property:vendor.hardware.wlan.runsniffer=stop
-     stop vendor.sniffer
-
-on property:vendor.hardware.wlan.runsniffer=start
-     start vendor.sniffer
-
-on property:vendor.hardware.wlan.runsniffer.circular=stop
-    stop vendor.sniffer.circular
-
-on property:vendor.hardware.wlan.runsniffer.circular=start
-    start vendor.sniffer.circular
-
-service ufs_ffu_service /vendor/bin/sh /vendor/bin/ufs_ffu.sh
-    class core
-    user root
-    oneshot
-
-on property:sys.boot_completed=1
-    start ufs_ffu_service
-
-# add sniffer and tcpdump output
-service vendor.tcpdump /vendor/bin/tcpdump -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap -Z system
-    class main
-    user root
-    group root wifi
-    disabled
-    oneshot
-
-service vendor.sniffer /vendor/bin/tcpdump -i wlan0 -w /data/vendor/wlan_logs/sniffer.pcap -Z system
-    class main
-    user root
-    group root wifi
-    disabled
-    oneshot
-
-service vendor.sniffer.circular /vendor/bin/tcpdump -i wlan0 -W 3 -C 300 -w /data/vendor/wlan_logs/sniffer.pcap -Z system
-    class main
-    user root
-    group root wifi
-    disabled
-    oneshot
-
-# add persist prop for tcpdump and cnss_diag
-on property:persist.vendor.tcpdump.enable=true
-    start vendor.tcpdump
-
-on property:persist.vendor.tcpdump.enable=false
-    stop vendor.tcpdump
-service fan_control_turn_on /vendor/bin/fan_service 1
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service fan_control_turn_off /vendor/bin/fan_service 0
-    class late_start
-    user root
-    disabled
-    oneshot
-
+# Add persist prop for tcpdump and cnss_diag
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal

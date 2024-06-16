@@ -297,8 +297,8 @@ PRODUCT_PACKAGES += \
     init.qti.media.sh
 
 PRODUCT_PACKAGES += \
-    init.qcom.factory.rc \
     init.qcom.rc \
+    init.qti.kernel.rc \
     init.recovery.qcom.rc \
     init.target.rc
 
