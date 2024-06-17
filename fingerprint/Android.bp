@@ -8,11 +8,11 @@ package {
 }
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint-service.example",
+    name: "android.hardware.biometrics.fingerprint-service.peridot",
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["fingerprint-example.rc"],
-    vintf_fragments: ["fingerprint-example.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint-service.peridot.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint-service.peridot.xml"],
     local_include_dirs: ["include"],
     srcs: [
         "FakeLockoutTracker.cpp",
@@ -32,7 +32,7 @@ cc_binary {
         "android.hardware.biometrics.common.thread",
         "android.hardware.biometrics.common.util",
     ],
-    static_libs: ["libandroid.hardware.biometrics.fingerprint.VirtualProps"],
+    static_libs: ["libandroid.hardware.biometrics.fingerprint.peridot"],
 }
 
 cc_test {
@@ -137,7 +137,7 @@ cc_test {
 }
 
 sysprop_library {
-    name: "android.hardware.biometrics.fingerprint.VirtualProps",
+    name: "android.hardware.biometrics.fingerprint.peridot",
     srcs: ["fingerprint.sysprop"],
     property_owner: "Vendor",
     vendor: true,
