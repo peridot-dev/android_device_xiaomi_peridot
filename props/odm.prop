@@ -189,3 +189,5 @@ persist.vendor.vcb.enable=false
 persist.vendor.wifi.interrupt_test_mode=true
 ro.miui.allow_app_playbackcapture=true
 sys.rhythmic_mode_default_level=50
+
+persist.vendor.fingerprint.virtual.type=udfps

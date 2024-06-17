@@ -1671,10 +1671,7 @@ odm/lib64/hw/fingerprint.goodix_fod.so
 odm/lib64/hw/fingerprint.jiiov.so
 odm/lib64/libgf_hal.so
 vendor/app/QFingerprintService/QFingerprintService.apk
-vendor/bin/hw/mfp-daemon
-vendor/etc/init/init.mfp-daemon.aidl.rc
 vendor/etc/permissions/qti_fingerprint_interface.xml
-vendor/etc/vintf/manifest/AHBF-V3-service.xml
 vendor/etc/vintf/manifest/fod-aidl.xml
 vendor/lib64/com.fingerprints.extension3-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension-V1-ndk.so
