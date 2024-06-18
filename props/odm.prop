@@ -191,3 +191,4 @@ ro.miui.allow_app_playbackcapture=true
 sys.rhythmic_mode_default_level=50
 
 persist.vendor.fingerprint.virtual.type=udfps
+persist.vendor.fingerprint.virtual.sensor_location=610:2437:105
