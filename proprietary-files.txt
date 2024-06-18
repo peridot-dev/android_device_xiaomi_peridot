@@ -1127,7 +1127,6 @@ odm/lib64/sensors.touch.detect.so
 odm/lib64/sensors.ultrasoundproximity.so
 odm/lib64/vendor.xiaomi.hardware.mrm-V1-ndk_platform.so
 odm/lib64/vendor.xiaomi.hardware.otrpagent@2.0-impl.so
-odm/overlay/FrameworksResTarget_Vendor.apk
 odm/vendor/etc/dolby_vision.cfg
 odm/vendor/persist/display/dolby_vision.cfg
 vendor/apex/com.google.android.widevine.nonupdatable.apex
@@ -4008,10 +4007,4 @@ vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.modem.qms@1.0.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
 vendor/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta
-vendor/overlay/SecureElementResTarget_Vendor.apk
-vendor/overlay/WifiResMainlineTarget.apk
-vendor/overlay/WifiResMainlineTarget_spf.apk
-vendor/overlay/WifiResTarget.apk
-vendor/overlay/WifiResTarget_sm8635.apk
-vendor/overlay/WifiResTarget_spf.apk
 vendor/rfs/rfs_symlinks
