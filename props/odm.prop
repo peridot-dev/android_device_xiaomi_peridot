@@ -154,6 +154,10 @@ persist.vendor.radio.dynamic_sar=1
 ro.telephony.default_network=33,33
 ro.vendor.net.enable_dual_wifi=1
 
+# SKU
+ro.product.property_source_order=odm,vendor,product,system_ext,system
+import /odm/etc/odm_${ro.boot.hwc}.prop
+
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
