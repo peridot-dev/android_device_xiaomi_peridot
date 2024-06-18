@@ -61,6 +61,9 @@ function blob_fixup() {
         system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml)
             sed -i '1,6d' "${2}"
             ;;
+        vendor/bin/init.qcom.usb.sh)
+            sed -i 's/ro.product.marketname/ro.product.odm.marketname/g' "${2}"
+            ;;
         vendor/etc/init/hw/init.batterysecret.rc)
             sed -i s/seclabel\ u:r:batterysecret:s0//g "${2}"
             ;;
