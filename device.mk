@@ -316,9 +316,13 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayPeridot \
     SecureElementOverlayPeridot \
     SettingsOverlayPeridot \
+    SettingsProviderOverlayPeridotPOCO \
+    SettingsProviderOverlayPeridotRedmi \
     SystemUIOverlayPeridot \
     TelephonyOverlayPeridot \
-    WifiOverlayPeridot
+    WifiOverlayPeridot \
+    WifiOverlayPeridotPOCO \
+    WifiOverlayPeridotRedmi
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
