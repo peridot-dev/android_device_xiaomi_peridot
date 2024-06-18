@@ -344,6 +344,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.qspa-service
 
+# SKU
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/props/odm_CN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_CN.prop \
+    $(LOCAL_PATH)/props/odm_GL.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_GL.prop \
+    $(LOCAL_PATH)/props/odm_IN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_IN.prop
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio-V2-ndk.vendor \
