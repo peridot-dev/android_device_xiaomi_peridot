@@ -12,10 +12,9 @@ vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 
 # ADSP
 vendor/bin/adsprpcd
-vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
 vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libloadalgo_stub.so
+vendor/lib64/libvmmem.so
 
 # ADSP modules
 odm/lib/rfsa/adsp/capi_elus_rx.so
@@ -2953,9 +2952,6 @@ vendor/etc/init/hw/init.qcom.usb.rc
 vendor/etc/usb_compositions.conf
 vendor/etc/vintf/manifest/android.hardware.usb-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.qti.xml
-
-# VM mem
-vendor/lib64/libvmmem.so
 
 # VM mgr
 vendor/bin/vmmgr
