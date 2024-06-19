@@ -1631,17 +1631,6 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
-# FTM
-vendor/bin/ftmdaemon
-vendor/bin/myftm
-vendor/etc/ftm_test_config
-vendor/etc/ftm_test_config_cliffs-mtp-wcd9395-snd-card
-vendor/etc/ftm_test_config_cliffs-mtp-wsa883x-snd-card
-vendor/etc/ftm_test_config_cliffs-qrd-snd-card
-vendor/etc/ftm_test_config_pineapple-qrd-sku2-snd-card
-vendor/etc/ftm_test_config_pineapple-qrd-snd-card
-vendor/lib64/ftm_fm_lib.so
-
 # Fingerprint
 odm/app/JVFactoryTest/JVFactoryTest.apk
 odm/app/goodix_sz/goodix_sz.apk
