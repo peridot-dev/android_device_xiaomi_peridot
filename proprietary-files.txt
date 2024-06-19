@@ -3151,6 +3151,3 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 # Xiaomi MAC address
 vendor/bin/nv_mac
 vendor/lib64/libxiaomi_qmi.so
-
-# Xiaomi TEE
-vendor/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta
