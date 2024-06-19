@@ -1258,7 +1258,6 @@ odm/firmware/evass-lt.b18
 odm/firmware/evass-lt.b19
 odm/firmware/evass-lt.mbn
 odm/firmware/evass-lt.mdt
-odm/firmware/evass-product.mk
 odm/firmware/evass.b00
 odm/firmware/evass.b01
 odm/firmware/evass.b02
