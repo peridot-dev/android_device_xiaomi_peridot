@@ -218,7 +218,6 @@ vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
-vendor/lib64/libsysmon_cdsp_skel.so
 
 # CIT Sensor
 odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl
