@@ -35,23 +35,6 @@ $(MODEM_FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT) $(MODEM_FIRMWARE_MOUNT_POINT)
 
-FIRMWARE_WLAN_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/
-$(FIRMWARE_WLAN_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating wlan firmware symlinks: $@"
-	@rm -rf $@/*
-	@mkdir -p $@
-	$(hide) ln -sf /data/vendor/firmware/wlanmdsp.mbn $@/wlanmdsp.otaupdate
-
-FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/qca6750/
-$(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating qca6750 qca_cld wlan firmware symlinks: $@"
-	@rm -rf $@/*
-	@mkdir -p $@
-	$(hide) ln -sf /vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-	$(hide) ln -sf /mnt/vendor/persist/wlan/wlan_mac.bin $@/wlan_mac.bin
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_WLAN_SYMLINKS) $(FIRMWARE_WLAN_QCA_CLD_QCA6750_SYMLINKS)
-
 CNE_LIBS_SYMLINKS := $(TARGET_OUT_VENDOR)/app/CneApp/lib/arm64
 $(CNE_LIBS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating CneApp symlinks: $@"
