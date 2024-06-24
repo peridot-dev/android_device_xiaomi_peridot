@@ -2633,15 +2633,6 @@ vendor/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.1.so
 
-# SLA
-vendor/bin/hw/vendor.qti.sla.service@1.0-service
-vendor/bin/slad
-vendor/etc/init/slad.rc
-vendor/etc/init/vendor.qti.sla.service@1.0-service.rc
-vendor/etc/sla/slad.conf
-vendor/lib64/vendor.qti.sla.service@1.0-impl.so
-vendor/lib64/vendor.qti.sla.service@1.0.so
-
 # SSR
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
