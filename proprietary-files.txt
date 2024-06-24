@@ -81,7 +81,6 @@ odm/etc/audio/sku_cliffs/mixer_paths_cliffs_mtp.xml
 odm/etc/audio/sku_cliffs/mixer_paths_overlay_dynamic.xml
 odm/etc/audio/sku_cliffs/mixer_paths_overlay_static.xml
 odm/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp.xml
-odm/etc/audio/sku_cliffs_qssi/audio_policy_configuration.xml
 odm/etc/audio/spk.wav
 odm/etc/audio/spk_cal_silence.wav
 odm/etc/audio/spk_dsm_test.wav
@@ -1449,7 +1448,6 @@ vendor/etc/Hapticsconfig.xml
 vendor/etc/IPACM_Filter_cfg.xml
 vendor/etc/IPACM_cfg.xml
 vendor/etc/ITVDD.txt
-vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp
 vendor/etc/acdbdata/cliffs_cdp/CDP_cliffs_acdb_cal.acdb
@@ -1524,7 +1522,6 @@ vendor/etc/ambient_para.conf
 vendor/etc/apdr.conf
 vendor/etc/audio/sku_cliffs/audio_effects.conf
 vendor/etc/audio/sku_cliffs/audio_effects.xml
-vendor/etc/audio/sku_cliffs/audio_policy_configuration.xml
 vendor/etc/audio/sku_cliffs/mixer_paths_cliffs_cdp.xml
 vendor/etc/audio/sku_cliffs/mixer_paths_cliffs_mtp.xml
 vendor/etc/audio/sku_cliffs/mixer_paths_cliffs_mtp_wcd9395.xml
@@ -1533,12 +1530,10 @@ vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_cdp.xml
 vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp.xml
 vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp_wcd9395.xml
 vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_qrd.xml
-vendor/etc/audio/sku_cliffs_qssi/audio_policy_configuration.xml
 vendor/etc/audio/sku_pineapple/adsp_sleep_monitor.conf
 vendor/etc/audio/sku_pineapple/adsp_sleep_monitor_factory.conf
 vendor/etc/audio/sku_pineapple/audio_effects.conf
 vendor/etc/audio/sku_pineapple/audio_effects.xml
-vendor/etc/audio/sku_pineapple/audio_policy_configuration.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp_wsa883x.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
@@ -1548,14 +1543,10 @@ vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
 vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
-vendor/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/audio_diag.cfg
-vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/batching.conf
-vendor/etc/bluetooth_qti_audio_policy_configuration.xml
-vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 vendor/etc/camera/102_SummerDay.png
 vendor/etc/camera/103_Fantasy.png
 vendor/etc/camera/104_Meet.png
@@ -2070,7 +2061,6 @@ vendor/etc/qvr/cfg/557/0/65536/mtplanai_qvr_3dof_tracker_config.txt
 vendor/etc/qvr/qvr_hid_device_list.txt
 vendor/etc/qvr/qvr_usb_device_list.txt
 vendor/etc/qvr/qvrservice_config.txt
-vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/read_vddpa.txt
 vendor/etc/sap.conf
 vendor/etc/sec_config
@@ -2145,7 +2135,6 @@ vendor/etc/thermal-map.conf
 vendor/etc/thermald-devices.conf
 vendor/etc/tzlog.dict
 vendor/etc/ueventd.rc
-vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/usb_compositions.conf
 vendor/etc/usecaseKvManager.xml
 vendor/etc/vintf/manifest/AHBF-V3-service.xml
