@@ -1774,6 +1774,7 @@ vendor/lib64/libmm-hdcpmgr.so
 odm/lib64/hw/consumerir.qcom.so
 
 # Kernel
+vendor/bin/init.qti.write.sh
 vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
@@ -2276,9 +2277,6 @@ vendor/lib64/libqspm-mem-utils-vendor.so
 vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 vendor/lib64/vendor.qti.qspmhal-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
-
-# QTI
-vendor/bin/init.qti.write.sh
 
 # QTI factory
 vendor/bin/hw/vendor.qti.hardware.factory-service
