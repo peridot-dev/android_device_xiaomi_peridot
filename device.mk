@@ -260,6 +260,7 @@ PRODUCT_PACKAGES += \
     android.se.omapi-V1-ndk.vendor \
     android.system.keystore2-V1-ndk.vendor \
     lib_android_keymaster_keymint_utils.vendor \
+    libgatekeeper.vendor \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor
 
