@@ -1775,6 +1775,9 @@ vendor/lib64/libxtadapter.so
 vendor/lib64/sqlite3.so
 vendor/lib64/vendor.qti.gnss-V5-ndk.so
 vendor/lib64/vendor.qti.gnss-service.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper-service-qti
@@ -2282,18 +2285,15 @@ vendor/etc/qguard.json
 
 # QMI
 vendor/bin/irsc_util
-vendor/bin/qcc-vendor
 vendor/bin/qmi-framework-tests/qmi_test_mt_client_init_instance
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
-vendor/etc/init/init.qccvendor.rc
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
 vendor/etc/sec_config
 vendor/etc/seccomp_policy/qti-systemd.policy
-vendor/etc/vintf/manifest/vendor.qti.qccvndhal_aidl-service.xml
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -2323,11 +2323,6 @@ vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsubsystem_control.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
-vendor/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
-vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 
 # QSAP
 vendor/bin/qsap_dcfd
