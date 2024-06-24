@@ -2689,12 +2689,11 @@ vendor/lib64/hw/vendor.qti.hardware.soter-impl.so
 vendor/lib64/vendor.qti.hardware.soter-V1-ndk.so
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal-service.qti
-vendor/etc/init/android.hardware.thermal-service.qti.rc
-vendor/etc/vintf/manifest/android.hardware.thermal-service.qti.xml
+vendor/bin/mi_thermald
+vendor/etc/init/hw/init.mi_thermald.rc
 vendor/lib64/libthermalclient.so
 
-# Thermal engine
+# Thermal configs
 odm/etc/thermal-4k.conf
 odm/etc/thermal-arvr.conf
 odm/etc/thermal-boost.conf
@@ -2743,10 +2742,6 @@ odm/etc/thermal-tgame.conf
 odm/etc/thermal-video.conf
 odm/etc/thermal-videochat.conf
 odm/etc/thermal-yuanshen.conf
-vendor/bin/mi_thermald
-vendor/bin/thermal-engine-v2
-vendor/etc/init/hw/init.mi_thermald.rc
-vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
 vendor/etc/thermald-devices.conf
