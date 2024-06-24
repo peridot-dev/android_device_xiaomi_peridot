@@ -1,6 +1,12 @@
 #! /vendor/bin/sh
-
-# Copyright (c) 2012, The Linux Foundation. All rights reserved.
+#==============================================================================
+#       init.qti.media.sh
+#
+# Copyright (c) 2020-2022, Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,10 +32,8 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-#
+#===============================================================================
 
-PATH=/system/bin:$PATH
-export PATH
-cat /sys/devices/platform/rs300000a7.65536/force_sync
-cat /sys/devices/platform/rs300100a7.65536/force_sync
+setprop vendor.mm.target.enable.qcom_parser 524304
+setprop vendor.media.target_variant "_cliffs_v0"
+setprop vendor.netflix.bsp_rev "Q8635-38577-1"

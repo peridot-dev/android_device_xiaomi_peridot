@@ -298,6 +298,7 @@ vendor.power.pasr.enabled=true
 
 # QCOM
 ro.soc.manufacturer=QTI
+ro.soc.model=SM8635
 
 # QCOMsysD
 persist.vendor.qcomsysd.enabled=1
@@ -321,6 +322,9 @@ persist.vendor.rcs.singlereg.feature=1
 ro.com.android.dataroaming=true
 ro.vendor.radio.build_profile=miui
 ro.vendor.radio.build_region=global
+
+# SKU
+ro.boot.product.vendor.sku=cliffs
 
 # USB
 ro.recovery.usb.adb.pid=D001

@@ -5,26 +5,8 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.crda.sh",
-    src: "bin/init.crda.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mdm.sh",
-    src: "bin/init.mdm.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.class_core.sh",
-    src: "bin/init.qcom.class_core.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.coex.sh",
-    src: "bin/init.qcom.coex.sh",
+    name: "init.kernel.post_boot.sh",
+    src: "bin/init.kernel.post_boot.sh",
     vendor: true,
 }
 
@@ -35,20 +17,8 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.efs.sync.sh",
-    src: "bin/init.qcom.efs.sync.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qcom.post_boot.sh",
     src: "bin/init.qcom.post_boot.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.sdio.sh",
-    src: "bin/init.qcom.sdio.sh",
     vendor: true,
 }
 
@@ -59,8 +29,8 @@ sh_binary {
 }
 
 sh_binary {
-    name: "qca6234-service.sh",
-    src: "bin/qca6234-service.sh",
+    name: "init.qti.media.sh",
+    src: "bin/init.qti.media.sh",
     vendor: true,
 }
 

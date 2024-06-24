@@ -1872,18 +1872,6 @@ vendor/lib64/liboffloadhal.so
 odm/lib64/hw/consumerir.qcom.so
 
 # Kernel
-vendor/bin/init.kernel.extra_free_kbytes.sh
-vendor/bin/init.kernel.post_boot-cliffs.sh
-vendor/bin/init.kernel.post_boot-cliffs_2_2_1.sh
-vendor/bin/init.kernel.post_boot-cliffs_2_3_0.sh
-vendor/bin/init.kernel.post_boot-cliffs_3_3_1.sh
-vendor/bin/init.kernel.post_boot-cliffs_default_3_4_1.sh
-vendor/bin/init.kernel.post_boot-pineapple.sh
-vendor/bin/init.kernel.post_boot-pineapple_2_3_1_1.sh
-vendor/bin/init.kernel.post_boot-pineapple_2_3_2_0.sh
-vendor/bin/init.kernel.post_boot-pineapple_default_2_3_2_1.sh
-vendor/bin/init.kernel.post_boot.sh
-vendor/bin/init.qti.kernel.sh
 vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
@@ -1957,7 +1945,6 @@ odm/vendor/persist/display/dolby_vision.cfg
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
-vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
@@ -2304,10 +2291,6 @@ vendor/lib64/libprotobuf-cpp-lite-21.7.so
 vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 vendor/lib64/libpsi.so
-
-# QCV
-vendor/bin/init.qti.qcv.sh
-vendor/etc/init/init.qti.qcv.rc
 
 # QESDK
 vendor/bin/qesdk-manager
