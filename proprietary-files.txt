@@ -670,7 +670,6 @@ odm/etc/camera/xmi_slmt_4x_1080p.dlc
 odm/etc/camera/xmi_slmt_4x_720p.dlc
 odm/lib64/anc.hal.so
 odm/lib64/camera/aon_front_1.pb
-odm/lib64/camera/aon_front_1.pb:vendor/lib64/camera/aon_front_1.pb|ac591b6ecb28ac52ac88883f532770868186747a
 odm/lib64/camera/components/com.jigan.node.videobokeh.so
 odm/lib64/camera/components/com.mi.node.aiasd.so
 odm/lib64/camera/components/com.mi.node.facealign.so
