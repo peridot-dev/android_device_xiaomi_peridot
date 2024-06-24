@@ -2198,7 +2198,6 @@ vendor/etc/qguard.json
 
 # QMI
 vendor/bin/irsc_util
-vendor/bin/qmi-framework-tests/qmi_test_mt_client_init_instance
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
