@@ -2545,12 +2545,6 @@ vendor/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.1.so
 
-# SXR
-vendor/bin/hw/sxrservice
-vendor/etc/seccomp_policy/sxr@2.0.policy
-vendor/lib64/libsxrservice.so
-vendor/lib64/libsxrservice_client.qti.so
-
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.qti
 vendor/etc/init/android.hardware.secure_element-service.qti.rc
