@@ -207,6 +207,7 @@ vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
+vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
@@ -2278,8 +2279,6 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # QTI
 vendor/bin/init.qti.write.sh
-vendor/lib64/libsoc_helper.so
-vendor/lib64/libsoc_helper_jni.so
 
 # QTI factory
 vendor/bin/hw/vendor.qti.hardware.factory-service
