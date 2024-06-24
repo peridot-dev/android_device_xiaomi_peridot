@@ -2641,21 +2641,6 @@ vendor/etc/vintf/manifest/secure_element-service.xml
 vendor/lib64/hw/libEseUtils.so
 vendor/lib64/libGPQeSE.so
 
-# Secureprocessor
-vendor/bin/hw/vendor.qti.hardware.secureprocessor
-vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
-vendor/etc/init/vendor.qti.hardware.secureprocessor.rc
-vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.secureprocessor.xml
-vendor/lib64/vendor.qti.hardware.secureprocessor.common-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common-helper.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
-
 # Sensors
 odm/bin/test-nusensors
 odm/etc/sensors/config/ak7323.json
