@@ -2898,11 +2898,6 @@ vendor/etc/usb_compositions.conf
 vendor/etc/vintf/manifest/android.hardware.usb-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.qti.xml
 
-# VM mgr
-vendor/bin/vmmgr
-vendor/etc/init/vmmgr.rc
-vendor/etc/vmmgr.conf
-
 # VPP
 vendor/bin/hw/qconfigservice
 vendor/bin/qconfigfunctest
