@@ -2211,8 +2211,6 @@ vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
 # Power
-odm/etc/powerhint.xml
-vendor/etc/powerhint.xml
 vendor/etc/pwr/AODPowerOptFeature.xml
 vendor/etc/pwr/GamePowerOptFeature.xml
 vendor/etc/pwr/OffScreenPowerOptFeature.xml
