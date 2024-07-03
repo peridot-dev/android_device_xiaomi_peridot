@@ -1811,11 +1811,6 @@ vendor/lib64/libjc_keymint_transport_nxp.so
 vendor/lib64/libqtiidentitycredential.so
 vendor/lib64/libqtikeymint.so
 
-# Lights
-vendor/bin/hw/vendor.qti.hardware.lights.service
-vendor/etc/init/vendor.qti.hardware.lights.service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
-
 # Listen
 vendor/lib64/hw/sound_trigger.primary.pineapple.so
 vendor/lib64/libeai_fixed.so
