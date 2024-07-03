@@ -1882,11 +1882,6 @@ vendor/lib64/libqtiidentitycredential.so
 vendor/lib64/libqtikeymint.so
 vendor/lib64/libsoft_attestation_cert.so
 
-# Lights
-vendor/bin/hw/vendor.qti.hardware.lights.service
-vendor/etc/init/vendor.qti.hardware.lights.service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
-
 # Listen
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
