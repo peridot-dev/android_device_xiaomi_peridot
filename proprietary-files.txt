@@ -1816,14 +1816,6 @@ vendor/bin/hw/vendor.qti.hardware.lights.service
 vendor/etc/init/vendor.qti.hardware.lights.service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 
-# Limits
-vendor/bin/hw/vendor.qti.hardware.limits@1.2-service
-vendor/etc/init/vendor.qti.hardware.limits-service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
-vendor/lib64/vendor.qti.hardware.limits@1.0.so
-vendor/lib64/vendor.qti.hardware.limits@1.1.so
-vendor/lib64/vendor.qti.hardware.limits@1.2.so
-
 # Listen
 vendor/lib64/hw/sound_trigger.primary.pineapple.so
 vendor/lib64/libeai_fixed.so
