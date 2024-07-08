@@ -99,7 +99,7 @@ function blob_fixup() {
             ;;
         vendor/etc/media_codecs.xml|vendor/etc/media_codecs_cliffs_v0.xml|vendor/etc/media_codecs_performance_cliffs_v0.xml)
             [ "$2" = "" ] && return 0
-            sed -i -E '/media_codecs_(google_audio|google_telephony|vendor_audio)/d' "${2}"
+            sed -i -E '/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d' "${2}"
             ;;
         *)
             return 1
