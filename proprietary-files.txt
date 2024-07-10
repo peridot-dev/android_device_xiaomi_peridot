@@ -1977,9 +1977,6 @@ vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_pineapple/video_system_specs.json
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_cliffs_v0.xml
-vendor/etc/media_profiles_cliffs_v1.xml
-vendor/etc/media_profiles_pineapple.xml
 
 # Mlipay
 odm/bin/fidoca
