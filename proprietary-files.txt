@@ -1347,68 +1347,68 @@ vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiagjni.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
-# Display HDR
-vendor/lib64/libgame_enhance.so
-vendor/lib64/libhdr_backlight_adapter.so
-vendor/lib64/libhdr_tm.so
+# Display HDR - miui_HOUJIPREDPP_OS1.0.240520.1.VNCCNXM.PRE-DPP
+vendor/lib64/libgame_enhance.so|0354213147c3b2e624ccf8a5943fbae9dd97f2af
+vendor/lib64/libhdr_backlight_adapter.so|88967e53b72aa4b7f2ef95aef758267e26ced981
+vendor/lib64/libhdr_tm.so|c743b456a18df2e9cf1df99fda1b649f1d025131
 
-# Display HDR dynamic
-vendor/lib64/libhdrdynamic.so
-vendor/lib64/libhdrdynamicootf.so
+# Display HDR dynamic - miui_HOUJIPREDPP_OS1.0.240520.1.VNCCNXM.PRE-DPP
+vendor/lib64/libhdrdynamic.so|ba2cb7fdb235f52df7229c097efdcd5a275ab6f2
+vendor/lib64/libhdrdynamicootf.so|432abb2677e2ed4a6c32524129bda568e878ad0e
 
-# Display HWC
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
-vendor/lib64/libbacklight-calib.so
-vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdpps.so
-vendor/lib64/libmemutils.so
-vendor/lib64/libqdcm-algo.so
-vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
+# Display HWC - miui_HOUJIPREDPP_OS1.0.240520.1.VNCCNXM.PRE-DPP
+vendor/bin/qdcmss|59c0151b7a92b2e560d4a43fbcf676243300e968
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor/lib64/libbacklight-calib.so|19ce892c7216a31ada9a20110f52eca19d1e467b
+vendor/lib64/libdigital-dimming.so|41fc30e7bfed82ad745b7f8fae7fe2a18882055a
+vendor/lib64/libdpps.so|93d09ed2e95060c1ee8723f42e0c7cb929ad473b
+vendor/lib64/libmemutils.so|dcd7b4fb359131fed3998deb24b87e92b6342a55
+vendor/lib64/libqdcm-algo.so|f47bb1e572b138f080c830a6f75771fc2f5cec27
+vendor/lib64/libqdcm-json-mode-parser.so|af3da533ed98c3c725e1e3bcf8a6e111bf2ca2b2
+vendor/lib64/libqdcm-mode-parser.so|db42dab29818e4fd1b418082f9b1fb162c496fcd
+vendor/lib64/libsnapdragoncolor-manager.so|924e5bb56d23bbc27b41fd52a8c8145226b2948a
+vendor/lib64/libsnapdragoncolor-qdcm.so|72c2ace3ceaf25a4e3c4fa2a6f4297f1f90d5bf0
 
-# Display postprocessing
-vendor/bin/hw/vendor.qti.hardware.display.color-service
-vendor/bin/ppd
-vendor/etc/init/vendor.qti.hardware.display.color-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Display postprocessing - miui_HOUJIPREDPP_OS1.0.240520.1.VNCCNXM.PRE-DPP
+vendor/bin/hw/vendor.qti.hardware.display.color-service|b4a591344442e4e651e4df571ae46a44d4bed280
+vendor/bin/ppd|61aa7d33860783915441425c783b007a2f6b51e6
+vendor/etc/init/vendor.qti.hardware.display.color-service.rc|c9e7bd7964270453b14a5f64d5d08cab4b71a274
+vendor/lib64/libdisp-aba.so|453e44d10917be08dd75e3f3ca63e30dad2e78c1
+vendor/lib64/vendor.display.color@1.0.so|e79bacefcac0d6778856d731eda92648d5149f57
+vendor/lib64/vendor.display.color@1.1.so|528ea771170a27c66b1d25b8adab7fe9e53328b7
+vendor/lib64/vendor.display.color@1.2.so|d99f0edb308b8fe8516ff67e881c809b1206073d
+vendor/lib64/vendor.display.color@1.3.so|a4be6f57a6d1ce4ae56dc017a2e83ff53073f0ef
+vendor/lib64/vendor.display.color@1.4.so|bb5afdda83c30a01f4e37cf78892a4623b97f18d
+vendor/lib64/vendor.display.color@1.5.so|3d789e751ec65b82e04e05f1b5ef80354ad9efac
+vendor/lib64/vendor.display.postproc@1.0.so|8a3095624999eab253c4c0148a90956e24f2c50e
 
-# Display SDM
-vendor/bin/feature_enabler_client
-vendor/bin/init.qti.graphics.sh
-vendor/etc/clstc_config_library.xml
-vendor/etc/display/DPU1010.xml
-vendor/etc/display/DPU10__.xml
-vendor/etc/display/DPU870.xml
-vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/display/thermallevel_to_fps.xml
-vendor/etc/init/init.qti.graphics.rc
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libfeutils.so
-vendor/lib64/libintervmipc.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
+# Display SDM - miui_HOUJIPREDPP_OS1.0.240520.1.VNCCNXM.PRE-DPP
+vendor/bin/feature_enabler_client|cd2c877953d52f0a0b865bb207ef96972bf66c41
+vendor/bin/init.qti.graphics.sh|5ddd2dcf5d181f7332f3f4ebaf3d72f5a3ff5def
+vendor/etc/clstc_config_library.xml|aca644160ba627e87bd4a86fff03dfbb1fe0c687
+vendor/etc/display/DPU1010.xml|71c1760aac43506bd38e7421ff6b61def5e7a0d8
+vendor/etc/display/DPU10__.xml|0f19bb3e57483d45a603e13b0211ea3e2cac6a1b
+vendor/etc/display/DPU870.xml|e6b94992ec046ad4c8d0d319b0b211cd59ace7fb
+vendor/etc/display/DPU9__.xml|691b8c27d488efb486520ecda6a7b52c1d4fa582
+vendor/etc/display/advanced_sf_offsets.xml|6e6ecdc4ab94ca596c6c697727cfdd7a53a9c29e
+vendor/etc/display/thermallevel_to_fps.xml|bc38035c8f41308fc25cc30969fbbf16ab86c43f
+vendor/etc/init/init.qti.graphics.rc|12ac6285511be84c583855e04a188fec9ea4ec51
+vendor/lib64/libclstc_algorithm_adapter.so|c35ddfa8d636de14060e6e414d7a20d9ae56d464
+vendor/lib64/libclstc_gcp_adapter.so|e9976547955976c3ec20294a8d8c780591dca003
+vendor/lib64/libclstc_tm.so|75250b18a17bf2a143f472b4fe864ee5e1e3bf14
+vendor/lib64/libdisplayqos.so|04fd02e985a8a5a597013ea9a427a4645fcb6f18
+vendor/lib64/libdisplayskuutils.so|512697a548b546da76b46dde663f6dc7371efd16
+vendor/lib64/libfeutils.so|f43c8f46ea50b7981dbc171a49ba2674904c167f
+vendor/lib64/libintervmipc.so|ae450b73bccb323edb903df784d922e61b23065f
+vendor/lib64/libqseed3.so|2d2eff4694a64ef109c9734ccfaf2bc0245729ba
+vendor/lib64/librcmask.so|e19720774887b5a463974dbcaf73ec62c66642c5
+vendor/lib64/libsdm-color.so|0db54020e3349d0281c6b00ace1b0fc3800474ee
+vendor/lib64/libsdm-colormgr-algo.so|05f7af3bc6f9325658b9dae6aed8b3716e07807c
+vendor/lib64/libsdm-disp-vndapis.so|e16181d6c6c2b10ba8206c0299c736bb8c96aa56
+vendor/lib64/libsdmextension.so|51c87d5b6fe733ac1c277f7ed5351df33fe1e0eb
+vendor/lib64/libtestutils.so|9b00b16ceaa42120e22697fe0918f8f0442cea15
+vendor/lib64/libtinyxml2_1.so|54bd3e105c80618d49c49c0271abd61438c5353c
+vendor/lib64/libvmfilexfer.so|c84135f211de1df7942480bfb421a1ad0845d637
 
 # Display Calibration
 odm/etc/display/qdcm_calib_data_xiaomi_36_0f_0b_video_mode_dsc_dsi_panel.json
