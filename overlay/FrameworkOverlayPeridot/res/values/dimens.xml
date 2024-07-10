@@ -27,7 +27,7 @@
     <dimen name="rounded_corner_radius_bottom">108.0px</dimen>
 
     <!-- Default paddings for content around the corners. -->
-    <dimen name="rounded_corner_content_padding">0.0dip</dimen>
+    <dimen name="rounded_corner_content_padding">50px</dimen>
 
     <!-- Height of a small notification in the status bar -->
     <dimen name="notification_min_height">106.0dip</dimen>
