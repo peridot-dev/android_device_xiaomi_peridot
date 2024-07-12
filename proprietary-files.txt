@@ -1409,7 +1409,6 @@ vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.color-service
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/hw/vendor.qti.hardware.display.demura-service
-vendor/bin/init.qti.display_boot.sh
 vendor/bin/ppd
 vendor/bin/qdcmss
 vendor/etc/clstc_config_library.xml
@@ -1419,7 +1418,6 @@ vendor/etc/display/DPU870.xml
 vendor/etc/display/DPU9__.xml
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/thermallevel_to_fps.xml
-vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
 vendor/etc/init/vendor.qti.hardware.display.color-service.rc
