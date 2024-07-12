@@ -22,6 +22,9 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 # Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
