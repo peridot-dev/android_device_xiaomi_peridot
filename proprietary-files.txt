@@ -2733,9 +2733,6 @@ vendor/lib64/libsi.so
 vendor/lib64/libtaautoload.so
 vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
 
-# Trustzone
-vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
-
 # UBWC
 vendor/lib64/libstreamparser.so
 vendor/lib64/libstreamprocessor.so
