@@ -150,6 +150,9 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh
 
 PRODUCT_PACKAGES += \
+    vendor.display.config@1.11.vendor
+
+PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
     vendor.qti.hardware.display.config-V5-ndk.vendor \
     vendor.qti.hardware.display.config-V7-ndk.vendor
