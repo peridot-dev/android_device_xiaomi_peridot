@@ -153,7 +153,8 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh
 
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti
+    libdisplayconfig.qti \
+    libqdMetaData
 
 PRODUCT_PACKAGES += \
     vendor.display.config@1.11.vendor
