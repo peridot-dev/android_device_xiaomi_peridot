@@ -144,6 +144,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdrm.vendor
 
+# Display
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.config-V2-ndk.vendor \
+    vendor.qti.hardware.display.config-V5-ndk.vendor \
+    vendor.qti.hardware.display.config-V7-ndk.vendor
+
 # DumpState
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate-V1-ndk.vendor

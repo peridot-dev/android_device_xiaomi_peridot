@@ -1507,17 +1507,6 @@ vendor/lib64/vendor.qti.hardware.display.color-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.display.composer3-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.display.composer@1.0.so
 vendor/lib64/vendor.qti.hardware.display.composer@2.0.so
-vendor/lib64/vendor.qti.hardware.display.config-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V10-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V11-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V2-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V3-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V4-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V5-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V6-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V7-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V8-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V9-ndk.so
 vendor/lib64/vendor.qti.hardware.display.demura-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@1.1.so
