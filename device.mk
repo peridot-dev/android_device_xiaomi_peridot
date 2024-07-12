@@ -150,6 +150,9 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh
 
 PRODUCT_PACKAGES += \
+    libdisplayconfig.qti
+
+PRODUCT_PACKAGES += \
     vendor.display.config@1.11.vendor
 
 PRODUCT_PACKAGES += \

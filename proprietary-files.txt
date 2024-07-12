@@ -1436,7 +1436,6 @@ vendor/lib64/libclstc_tm.so
 vendor/lib64/libdfintf.so
 vendor/lib64/libdigital-dimming.so
 vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
