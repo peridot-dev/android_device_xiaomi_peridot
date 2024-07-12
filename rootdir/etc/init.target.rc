@@ -85,6 +85,9 @@ on init
     chown system system /dev/cpuctl/general/tasks
     chmod 0644 /dev/cpuctl/general/tasks
 
+    chmod 0666 /sys/devices/virtual/thermal/thermal_message/sconfig
+    chown system system /sys/devices/virtual/thermal/thermal_message/sconfig
+
 # MIUI ADD: Performance_BoostFramework
     mkdir /dev/cpuctl/misc
     chown system system /dev/cpuctl/misc
@@ -382,6 +385,9 @@ on boot
     #END Memory_CLD
 
     chown system system /sys/devices/platform/goodix_ts.0/double_tap_enable
+
+on property:sys.boot_completed=1
+    write /sys/devices/virtual/thermal/thermal_message/sconfig 20
 
 on init && property:ro.boot.mode=charger
     wait_for_prop vendor.all.modules.ready 1
