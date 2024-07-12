@@ -156,6 +156,12 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.11.vendor
 
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.3.vendor
+
+PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
     vendor.qti.hardware.display.config-V5-ndk.vendor \
     vendor.qti.hardware.display.config-V7-ndk.vendor
