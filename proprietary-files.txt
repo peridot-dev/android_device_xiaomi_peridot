@@ -1401,7 +1401,6 @@ vendor/lib64/libdiagjni.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
-odm/etc/init.panel_info.sh
 odm/lib64/libclient2slpi.notifier.so
 odm/lib64/libdisplaylog.so
 odm/lib64/librhytheyecare.so
@@ -2787,6 +2786,7 @@ vendor/lib64/libtime_genoff.so
 
 # Touchfeature
 odm/bin/hw/vendor.xiaomi.hw.touchfeature-service
+odm/etc/init.panel_info.sh
 odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc
 odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature-service.xml
 vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so
