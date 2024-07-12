@@ -1,8 +1,8 @@
-service vibratorfeature-wrapper /system/bin/hw/vibratorfeature-wrapper
+service vendor.vibratorfeature-wrapper /odm/bin/hw/vibratorfeature-wrapper
     class hal
     user system
     group system
     oneshot
 
 on property:init.svc.vibratorfeature-hal-service=restarting
-    start vibratorfeature-wrapper
+    start vendor.vibratorfeature-wrapper
