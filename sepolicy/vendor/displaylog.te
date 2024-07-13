@@ -1,0 +1,17 @@
+type vendor_displaylog, domain;
+type vendor_displaylog_exec, exec_type, file_type, vendor_file_type;
+
+allow vendor_displaylog sysfs:file { open read write };
+allow vendor_displaylog vendor_display_vendor_data_file:dir create_dir_perms;
+allow vendor_displaylog vendor_display_vendor_data_file:file create_file_perms;
+allow vendor_displaylog vendor_sysfs_displayfeature:dir r_dir_perms;
+allow vendor_displaylog vendor_sysfs_displayfeature:file rw_file_perms;
+allow vendor_displaylog vendor_displayfeature_device:chr_file { ioctl open read write };
+allow vendor_displaylog vendor_displaylog_device:chr_file { ioctl open read write };
+allow vendor_displaylog device:dir write;
+allow vendor_displaylog graphics_device:chr_file rw_file_perms;
+allow vendor_displaylog graphics_device:dir r_dir_perms;
+init_daemon_domain(vendor_displaylog)
+r_dir_file(vendor_displaylog, sysfs)
+r_dir_file(vendor_displaylog, rootfs)
+r_dir_file(vendor_displaylog, cgroup)

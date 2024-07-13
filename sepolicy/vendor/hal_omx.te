@@ -1,0 +1,1 @@
+neverallow hal_omx_server domain:tcp_socket *;

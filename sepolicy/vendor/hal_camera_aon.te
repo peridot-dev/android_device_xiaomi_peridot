@@ -1,0 +1,11 @@
+allow hal_camera_aon_client hal_camera_aon_server:binder { call transfer };
+allow hal_camera_aon_client hal_camera_aon_server:binder transfer;
+allow hal_camera_aon_client hal_camera_aon_server:fd *;
+allow hal_camera_aon_client hal_camera_aon_service:service_manager find;
+allow hal_camera_aon_server hal_camera_aon_client:binder transfer;
+allow hal_camera_aon_server hal_camera_aon_client:binder { call transfer };
+allow hal_camera_aon_server hal_camera_aon_client:fd *;
+allow hal_camera_aon system_app:binder transfer;
+allow hal_camera_aon system_app:binder { call transfer };
+allow hal_camera_aon system_app:fd *;
+add_service(hal_camera_aon_server, hal_camera_aon_service)

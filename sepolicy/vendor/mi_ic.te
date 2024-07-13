@@ -1,0 +1,24 @@
+type mi_ic, domain, mlstrustedsubject;
+type mi_ic_exec, exec_type, file_type, vendor_file_type;
+
+allow mi_ic mi_ic_exec:file { entrypoint execute getattr open read };
+allow mi_ic sysfs:file { getattr open read };
+allow mi_ic rootfs:file { execute execute_no_trans };
+allow mi_ic rootfs:lnk_file { getattr setattr };
+allow mi_ic vendor_shell_exec:file { execute execute_no_trans getattr open read };
+allow mi_ic console_device:chr_file { getattr open read setattr write };
+allow mi_ic mi_ic_data_file:dir create_dir_perms;
+allow mi_ic mi_ic_data_file:file create_file_perms;
+allow mi_ic mi_ic_data_file:blk_file { getattr ioctl open read setattr write };
+allow mi_ic self:capability { chown fsetid };
+allow mi_ic vendor_file:file execute_no_trans;
+allow mi_ic tmpfs:dir search;
+allow mi_ic mnt_user_file:dir search;
+allow mi_ic mnt_user_file:lnk_file read;
+allow mi_ic storage_file:lnk_file read;
+allow mi_ic vendor_toolbox_exec:file { execute execute_no_trans getattr open read };
+allow mi_ic sysfs_devices_block:dir search;
+init_daemon_domain(mi_ic)
+r_dir_file(mi_ic, sysfs)
+r_dir_file(mi_ic, sysfs_memory)
+set_prop(mi_ic, vendor_mi_ic_prop)

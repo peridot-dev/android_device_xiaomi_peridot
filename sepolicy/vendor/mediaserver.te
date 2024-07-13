@@ -1,0 +1,9 @@
+allow mediaserver hal_ozonotify_service:service_manager find;
+allow mediaserver hal_ozonotify_hwservice:hwservice_manager find;
+allow mediaserver hal_ozonotify:binder { call transfer };
+allow mediaserver hal_ozonotify:fd *;
+allow mediaserver hal_ozonotify_default:binder call;
+allow mediaserver sound_device:chr_file rw_file_perms;
+allow mediaserver vendor_sys_video_prop:file read;
+get_prop(mediaserver, vendor_video_prop)
+hal_client_domain(mediaserver, vendor_hal_qconfig)

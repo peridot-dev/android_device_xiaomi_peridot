@@ -1,0 +1,27 @@
+type hal_blackboximpl_default, domain, mlstrustedsubject;
+type hal_blackboximpl_default_exec, exec_type, file_type, vendor_file_type;
+
+allow hal_blackboximpl_server dumpstate:fifo_file write;
+allow hal_blackboximpl_server dumpstate:fd *;
+allow hal_blackboximpl_server hal_blackboximpl_client:binder transfer;
+allow hal_blackboximpl_server hal_blackboximpl_client:binder { call transfer };
+allow hal_blackboximpl_server hal_blackboximpl_client:fd *;
+allow hal_blackboximpl_server servicemanager:binder { call transfer };
+allow hal_blackboximpl_server servicemanager:fd *;
+allow hal_blackboximpl_client hal_blackboximpl_server:binder { call transfer };
+allow hal_blackboximpl_client hal_blackboximpl_server:binder transfer;
+allow hal_blackboximpl_client hal_blackboximpl_server:fd *;
+allow hal_blackboximpl_client hal_blackboximpl_service:service_manager find;
+allow hal_blackboximpl_default block_device:dir r_dir_perms;
+allow hal_blackboximpl_default blackbox_block_device:blk_file rw_file_perms;
+allow hal_blackboximpl_default minidump_data_file:dir { getattr search };
+allow hal_blackboximpl_default minidump_data_file:file { getattr open read setattr write };
+allow hal_blackboximpl_default fuse:dir rw_file_perms;
+allow hal_blackboximpl_default fuse:file rw_file_perms;
+allow hal_blackboximpl_default kmsg_device:chr_file rw_file_perms;
+allow hal_blackboximpl_default kernel:system syslog_read;
+init_daemon_domain(hal_blackboximpl_default)
+r_dir_file(hal_blackboximpl_default, sysfs)
+binder_use(hal_blackboximpl_default)
+hal_server_domain(hal_blackboximpl_default, hal_blackboximpl)
+add_service(hal_blackboximpl_server, hal_blackboximpl_service)

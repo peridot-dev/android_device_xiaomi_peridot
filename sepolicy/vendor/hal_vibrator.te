@@ -1,0 +1,8 @@
+allow hal_vibrator_default sysfs:dir { open read };
+allow hal_vibrator_default sysfs:file { open read write };
+allow hal_vibrator_default fwk_sensor_hwservice:hwservice_manager find;
+allow hal_vibrator_default proc_asound:dir search;
+allow hal_vibrator_default vendor_sysfs_sndcard:file rw_file_perms;
+allow hal_vibrator_default audio_device:dir search;
+allow hal_vibrator_default hal_audio_hwservice:hwservice_manager find;
+hal_client_domain(hal_vibrator_default, hal_audio)

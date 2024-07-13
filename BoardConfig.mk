@@ -8,6 +8,7 @@ DEVICE_PATH := device/xiaomi/peridot
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+SELINUX_IGNORE_NEVERALLOWS := true
 BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 # A/B
@@ -101,8 +102,7 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=true \
     androidboot.vendor.qspa=true \
-    androidboot.hypervisor.protected_vm.supported=false \
-    androidboot.selinux=permissive
+    androidboot.hypervisor.protected_vm.supported=false
 
 # Kernel (prebuilt)
 PREBUILT_PATH := device/xiaomi/peridot-prebuilt
@@ -187,6 +187,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor security patch
 VENDOR_SECURITY_PATCH := 2024-05-01

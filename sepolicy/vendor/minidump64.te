@@ -1,0 +1,28 @@
+type minidump64, domain;
+type minidump64_exec, exec_type, file_type, vendor_file_type;
+
+allow minidump64 minidump64_exec:file { entrypoint execute getattr open read };
+allow minidump64 sysfs:file { getattr open read };
+allow minidump64 rootfs:file { execute execute_no_trans };
+allow minidump64 rootfs:lnk_file { getattr setattr };
+allow minidump64 vendor_shell_exec:file { execute execute_no_trans getattr open read };
+allow minidump64 minidump_data_file:dir create_dir_perms;
+allow minidump64 minidump_data_file:file create_file_perms;
+allow minidump64 minidump_data_file:blk_file { getattr ioctl open read setattr write };
+allow minidump64 self:capability { chown fsetid };
+allow minidump64 tmpfs:dir search;
+allow minidump64 mnt_user_file:dir search;
+allow minidump64 mnt_user_file:lnk_file read;
+allow minidump64 storage_file:lnk_file read;
+allow minidump64 vendor_toolbox_exec:file { execute execute_no_trans getattr open read };
+allow minidump64 block_device:dir r_dir_perms;
+allow minidump64 minidump_partition:blk_file rw_file_perms;
+allow minidump64 blackbox_block_device:blk_file rw_file_perms;
+allow minidump64 kmsg_device:chr_file rw_file_perms;
+allow minidump64 kernel:system syslog_read;
+allow minidump64 sysfs_bootinfo:dir r_dir_perms;
+allow minidump64 sysfs_bootinfo:file rw_file_perms;
+allow minidump64 vfat:dir rw_dir_perms;
+allow minidump64 vfat:file { rename rw_file_perms };
+init_daemon_domain(minidump64)
+set_prop(minidump64, vendor_minidump64_prop)

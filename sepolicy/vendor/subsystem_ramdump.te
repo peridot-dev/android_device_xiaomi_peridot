@@ -1,0 +1,27 @@
+allow vendor_subsystem_ramdump vendor_ramdump_microdump_modem_device:chr_file { open read };
+allow vendor_subsystem_ramdump self:netlink_kobject_uevent_socket create;
+allow vendor_subsystem_ramdump self:capability { kill net_admin sys_nice };
+allow vendor_subsystem_ramdump vendor_ramdump_vendor_data_file:fifo_file { create open write };
+allow vendor_subsystem_ramdump vendor_sysfs_msm_subsys_restart:dir search;
+allow vendor_subsystem_ramdump sysfs_ramdump:file rw_file_perms;
+allow vendor_subsystem_ramdump block_device:dir r_dir_perms;
+allow vendor_subsystem_ramdump storage_file:dir search;
+allow vendor_subsystem_ramdump storage_file:lnk_file r_file_perms;
+allow vendor_subsystem_ramdump mnt_user_file:dir search;
+allow vendor_subsystem_ramdump mnt_user_file:dir r_dir_perms;
+allow vendor_subsystem_ramdump mnt_user_file:lnk_file r_file_perms;
+allow vendor_subsystem_ramdump fuse:dir create_dir_perms;
+allow vendor_subsystem_ramdump fuse:file create_file_perms;
+allow vendor_subsystem_ramdump fuse:fifo_file { create open read unlink write };
+allow vendor_subsystem_ramdump sdcardfs:dir create_dir_perms;
+allow vendor_subsystem_ramdump sdcardfs:file create_file_perms;
+allow vendor_subsystem_ramdump kernel:system syslog_read;
+allow vendor_subsystem_ramdump proc_ramdump:file r_file_perms;
+allow vendor_subsystem_ramdump ctl_start_prop:property_service set;
+allow vendor_subsystem_ramdump vendor_bsp_data_log_file:dir create_dir_perms;
+allow vendor_subsystem_ramdump vendor_bsp_data_log_file:file create_file_perms;
+allow vendor_subsystem_ramdump vendor_checknv_prop:property_service set;
+r_dir_file(vendor_subsystem_ramdump, sysfs)
+unix_socket_connect(vendor_subsystem_ramdump, property, logd)
+unix_socket_connect(vendor_subsystem_ramdump, logdr, init)
+unix_socket_connect(vendor_subsystem_ramdump, logdr, logd)

@@ -1,0 +1,4 @@
+type tidaservice, coredomain, domain, mlstrustedsubject;
+
+binder_use(tidaservice)
+hal_client_domain(tidaservice, hal_tidaservice)

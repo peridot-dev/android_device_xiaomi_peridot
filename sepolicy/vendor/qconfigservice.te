@@ -1,0 +1,15 @@
+allow vendor_qconfigservice hidl_manager_hwservice:hwservice_manager find;
+allow vendor_qconfigservice hwservicemanager:hwservice_manager list;
+allow vendor_qconfigservice mediacodec:process signal;
+allow vendor_qconfigservice mediacodec:process sigkill;
+allow vendor_qconfigservice vendor_vppservice:process signal;
+allow vendor_qconfigservice vendor_vppservice:process sigkill;
+allow vendor_qconfigservice vendor_data_file:dir search;
+allow vendor_qconfigservice vendor_data_file:dir write;
+allow vendor_qconfigservice vendor_data_file:dir add_name;
+allow vendor_qconfigservice vendor_data_file:file create;
+allow vendor_qconfigservice vendor_data_file:file write;
+allow vendor_qconfigservice vendor_data_file:file read;
+allow vendor_qconfigservice vendor_data_file:file open;
+allow vendor_qconfigservice vendor_data_file:file getattr;
+set_prop(vendor_qconfigservice, vendor_video_mi_prop)

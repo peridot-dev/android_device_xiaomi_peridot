@@ -1,0 +1,1 @@
+type hal_misight_service, protected_service, service_manager_type;

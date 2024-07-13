@@ -1,0 +1,67 @@
+type hal_misysimpl_default, domain, mlstrustedsubject;
+type hal_misysimpl_default_exec, exec_type, file_type, vendor_file_type;
+
+allow hal_misysimpl_client hal_misysimpl_server:binder { call transfer };
+allow hal_misysimpl_client hal_misysimpl_server:binder transfer;
+allow hal_misysimpl_client hal_misysimpl_server:fd *;
+allow hal_misysimpl_client hal_misysimpl_service:service_manager find;
+allow hal_misysimpl_server hal_misysimpl_client:binder transfer;
+allow hal_misysimpl_server hal_misysimpl_client:binder { call transfer };
+allow hal_misysimpl_server hal_misysimpl_client:fd *;
+allow hal_misysimpl_server servicemanager:binder { call transfer };
+allow hal_misysimpl_server servicemanager:fd *;
+allow hal_misysimpl_default mnt_vendor_file:dir { getattr open read search setattr };
+allow hal_misysimpl_default mnt_vendor_file:dir write;
+allow hal_misysimpl_default mnt_vendor_file:dir { add_name remove_name rmdir };
+allow hal_misysimpl_default mnt_vendor_file:dir create_dir_perms;
+allow hal_misysimpl_default mnt_vendor_file:file { getattr open read };
+allow hal_misysimpl_default mnt_vendor_file:file write;
+allow hal_misysimpl_default mnt_vendor_file:file { create unlink };
+allow hal_misysimpl_default mnt_vendor_file:file { create getattr open read setattr write };
+allow hal_misysimpl_default proc:file { getattr open read setattr write };
+allow hal_misysimpl_default vendor_data_file:file r_file_perms;
+allow hal_misysimpl_default vendor_data_file:file { create getattr open read setattr write };
+allow hal_misysimpl_default vendor_data_file:dir { add_name write };
+allow hal_misysimpl_default vendor_audio_data_file:dir create_dir_perms;
+allow hal_misysimpl_default vendor_audio_data_file:file create_file_perms;
+allow hal_misysimpl_default platform_app:binder transfer;
+allow hal_misysimpl_default vendor_bsp_data_log_file:dir { add_name write };
+allow hal_misysimpl_default vendor_bsp_data_log_file:dir { getattr open search };
+allow hal_misysimpl_default vendor_bsp_data_log_file:file { create getattr open read setattr write };
+allow hal_misysimpl_default vendor_bsp_data_log_file:file { getattr open read };
+allow hal_misysimpl_default minidump_data_file:dir create_dir_perms;
+allow hal_misysimpl_default minidump_data_file:file create_file_perms;
+allow hal_misysimpl_default system_app:binder transfer;
+allow hal_misysimpl_default su:binder { call transfer };
+allow hal_misysimpl_default proc_meminfo:file read;
+allow hal_misysimpl_default appdomain_tmpfs:file read;
+allow hal_misysimpl_default camera_persist_file:dir create_dir_perms;
+allow hal_misysimpl_default camera_persist_file:file create_file_perms;
+allow hal_misysimpl_default vendor_camera_data_file:dir rw_dir_perms;
+allow hal_misysimpl_default vendor_camera_data_file:file create_file_perms;
+allow hal_misysimpl_default vendor_ramdump_vendor_data_file:dir { getattr open read search };
+allow hal_misysimpl_default vendor_ramdump_vendor_data_file:file { getattr open read };
+allow hal_misysimpl_default vendor_display_vendor_data_file:dir create_dir_perms;
+allow hal_misysimpl_default vendor_display_vendor_data_file:file create_file_perms;
+allow hal_misysimpl_default dumpstate:fd *;
+allow hal_misysimpl_default dumpstate:fifo_file write;
+allow hal_misysimpl_default vendor_wifi_vendor_data_file:dir create_dir_perms;
+allow hal_misysimpl_default vendor_wifi_vendor_data_file:file create_file_perms;
+allow hal_misysimpl_default mitee_data_file:dir search;
+allow hal_misysimpl_default mitee_data_file:file { getattr open read };
+allow hal_misysimpl_default thermal_data_file:dir { getattr open read search };
+allow hal_misysimpl_default thermal_data_file:file { getattr open read };
+allow hal_misysimpl_default vendor_mi_ic_prop:property_service set;
+allow hal_misysimpl_default mi_ic_data_file:dir search;
+allow hal_misysimpl_default mi_ic_data_file:file { getattr open read };
+allow hal_misysimpl_default vendor_mi_ric_prop:property_service set;
+allow hal_misysimpl_default vendor_ffu_prop:property_service set;
+allow hal_misysimpl_default ffu_data_file:dir search;
+allow hal_misysimpl_default ffu_data_file:file { getattr open read };
+init_daemon_domain(hal_misysimpl_default)
+get_prop(hal_misysimpl_default, vendor_default_prop)
+set_prop(hal_misysimpl_default, vendor_system_prop)
+binder_use(hal_misysimpl_default)
+hal_server_domain(hal_misysimpl_default, hal_misysimpl)
+hal_client_domain(hal_misysimpl_default, hal_misyscore)
+add_service(hal_misysimpl_server, hal_misysimpl_service)

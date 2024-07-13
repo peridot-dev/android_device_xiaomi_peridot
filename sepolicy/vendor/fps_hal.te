@@ -1,0 +1,8 @@
+type fps_hal, domain;
+type fps_hal_exec, exec_type, file_type, vendor_file_type;
+
+allow fps_hal system_server:binder { call transfer };
+allow fps_hal system_server:fd *;
+allow fps_hal vendor_mfp-daemon:binder { call transfer };
+allow fps_hal vendor_mfp-daemon:fd *;
+init_daemon_domain(fps_hal)

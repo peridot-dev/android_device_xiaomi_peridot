@@ -1,0 +1,36 @@
+type hal_mitrustedui_default, domain;
+type hal_mitrustedui_default_exec, exec_type, file_type, vendor_file_type;
+
+allow hal_mitrustedui_client hal_mitrustedui_server:binder { call transfer };
+allow hal_mitrustedui_client hal_mitrustedui_server:binder transfer;
+allow hal_mitrustedui_client hal_mitrustedui_server:fd *;
+allow hal_mitrustedui_client hal_mitrustedui_service:service_manager find;
+allow hal_mitrustedui_server hal_mitrustedui_client:binder transfer;
+allow hal_mitrustedui_server hal_mitrustedui_client:binder { call transfer };
+allow hal_mitrustedui_server hal_mitrustedui_client:fd *;
+allow hal_mitrustedui_server servicemanager:binder { call transfer };
+allow hal_mitrustedui_server servicemanager:fd *;
+allow hal_mitrustedui_default vendor_hal_trustedui_qti:binder { call transfer };
+allow hal_mitrustedui_default vendor_hal_trustedui_qti:fd *;
+allow hal_mitrustedui_default untrusted_app:binder { call transfer };
+allow hal_mitrustedui_default hal_graphics_composer_default:binder { call transfer };
+allow hal_mitrustedui_default vendor_qdisplay_service:service_manager find;
+allow hal_mitrustedui_default vendor_hal_display_config_hwservice:hwservice_manager find;
+allow hal_mitrustedui_default hidl_memory_hwservice:hwservice_manager find;
+allow hal_mitrustedui_default vendor_mitrustedui_persist_file:file { getattr open read unlink };
+allow hal_mitrustedui_default mnt_vendor_file:dir search;
+allow hal_mitrustedui_default tee_device:chr_file rw_file_perms;
+allow hal_mitrustedui_default untrusted_app_32:binder transfer;
+allow hal_mitrustedui_default untrusted_app_32:binder { call transfer };
+allow hal_mitrustedui_default untrusted_app_32:binder call;
+allow hal_mitrustedui_default untrusted_app_32:fd *;
+init_daemon_domain(hal_mitrustedui_default)
+set_prop(hal_mitrustedui_default, vendor_mitrustedui_prop)
+binder_use(hal_mitrustedui_default)
+hwbinder_use(hal_mitrustedui_default)
+vndbinder_use(hal_mitrustedui_default)
+hal_server_domain(hal_mitrustedui_default, hal_mitrustedui)
+hal_client_domain(hal_mitrustedui_default, hal_graphics_composer)
+hal_client_domain(hal_mitrustedui_default, vendor_hal_trustedui)
+hal_client_domain(hal_mitrustedui_default, vendor_hal_qvirtservice)
+add_service(hal_mitrustedui_server, hal_mitrustedui_service)

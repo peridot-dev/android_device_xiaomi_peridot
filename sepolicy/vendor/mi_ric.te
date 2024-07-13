@@ -1,0 +1,28 @@
+type mi_ric, domain, mlstrustedsubject;
+type mi_ric_exec, exec_type, file_type, vendor_file_type;
+
+allow mi_ric mi_ric_exec:file { entrypoint execute getattr open read };
+allow mi_ric console_device:chr_file { getattr open read setattr write };
+allow mi_ric mi_ic_data_file:dir { add_name search write };
+allow mi_ric mi_ic_data_file:file { create getattr open read setattr write };
+allow mi_ric mi_ic_data_file:blk_file { getattr ioctl open read setattr write };
+allow mi_ric rootfs:lnk_file { getattr setattr };
+allow mi_ric self:capability { chown fsetid };
+allow mi_ric tmpfs:dir search;
+allow mi_ric mnt_user_file:dir search;
+allow mi_ric mnt_user_file:lnk_file read;
+allow mi_ric storage_file:lnk_file read;
+allow mi_ric vendor_toolbox_exec:file { execute execute_no_trans getattr open read };
+allow mi_ric proc_uptime:file { open read };
+allow mi_ric procfs_memory:file { getattr open read };
+allow mi_ric proc_meminfo:file { getattr open read };
+allow mi_ric block_device:dir search;
+allow mi_ric sysfs_devices_block:dir search;
+allow mi_ric gsort_block_device:lnk_file { open read write };
+allow mi_ric gsort_block_device:blk_file { open read write };
+allow mi_ric sysfs_bootinfo:dir r_dir_perms;
+allow mi_ric sysfs_bootinfo:file r_file_perms;
+init_daemon_domain(mi_ric)
+r_dir_file(mi_ric, sysfs)
+r_dir_file(mi_ric, sysfs_memory)
+set_prop(mi_ric, vendor_mi_ric_prop)

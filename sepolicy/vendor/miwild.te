@@ -1,0 +1,14 @@
+type miwild, domain;
+type miwild_exec, exec_type, file_type, vendor_file_type;
+
+allow miwild self:netlink_generic_socket { bind create getattr read setopt write };
+allow miwild self:netlink_route_socket nlmsg_write;
+allow miwild self:capability net_admin;
+allow miwild socket_device:dir { remove_name write };
+allow miwild socket_device:dir add_name;
+allow miwild socket_device:sock_file { create setattr unlink };
+allow miwild miwild_socket:sock_file unlink;
+allow miwild vendor_shell_exec:file execute_no_trans;
+init_daemon_domain(miwild)
+set_prop(miwild, vendor_miwild_prop)
+net_domain(miwild)

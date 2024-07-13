@@ -1,0 +1,77 @@
+type hal_misys_default, domain;
+type hal_misys_default_exec, exec_type, file_type, vendor_file_type;
+type hal_misys_hwservice, hwservice_manager_type;
+
+allow hal_misys_default camera_persist_file:dir create_dir_perms;
+allow hal_misys_default camera_persist_file:file create_file_perms;
+allow hal_misys_default vendor_camera_data_file:dir rw_dir_perms;
+allow hal_misys_default vendor_camera_data_file:file create_file_perms;
+allow hal_misys_default mnt_vendor_file:dir { getattr open read search };
+allow hal_misys_default mnt_vendor_file:dir write;
+allow hal_misys_default mnt_vendor_file:dir { add_name remove_name rmdir };
+allow hal_misys_default mnt_vendor_file:file { getattr open read };
+allow hal_misys_default mnt_vendor_file:file write;
+allow hal_misys_default mnt_vendor_file:file { create unlink };
+allow hal_misys_default proc:file { getattr open read setattr write };
+allow hal_misys_default vendor_data_file:file r_file_perms;
+allow hal_misys_default vendor_data_file:file { create getattr open read setattr write };
+allow hal_misys_default vendor_data_file:dir { add_name write };
+allow hal_misys_default vendor_audio_data_file:dir create_dir_perms;
+allow hal_misys_default vendor_audio_data_file:file create_file_perms;
+allow hal_misys_default platform_app:binder transfer;
+allow hal_misys_default vendor_wifi_vendor_data_file:dir create_dir_perms;
+allow hal_misys_default vendor_wifi_vendor_data_file:file create_file_perms;
+allow hal_misys_default minidump_data_file:dir create_dir_perms;
+allow hal_misys_default minidump_data_file:dir { getattr search };
+allow hal_misys_default minidump_data_file:file create_file_perms;
+allow hal_misys_default minidump_data_file:file { getattr open read setattr };
+allow hal_misys_default vendor_display_vendor_data_file:dir create_dir_perms;
+allow hal_misys_default vendor_display_vendor_data_file:file create_file_perms;
+allow hal_misys_default dumpstate:fd *;
+allow hal_misys_default mediaserver:binder call;
+allow hal_misys_default mediaserver:binder transfer;
+allow hal_misys_default servicemanager:binder { call transfer };
+allow hal_misys_default vndservicemanager:binder { call transfer };
+allow hal_misys_default mediametrics:binder call;
+allow hal_misys_default mediaserver_service:service_manager find;
+allow hal_misys_default permission_service:service_manager find;
+allow hal_misys_default mediacodec:binder transfer;
+allow hal_misys_default system_server:binder { call transfer };
+allow hal_misys_default hal_graphics_allocator_default:fd *;
+allow hal_misys_default mediametrics_service:service_manager find;
+allow hal_misys_default hal_graphics_mapper_hwservice:hwservice_manager find;
+allow hal_misys_default surfaceflinger:binder call;
+allow hal_misys_default surfaceflinger_service:service_manager find;
+allow hal_misys_default hidl_memory_hwservice:hwservice_manager find;
+allow hal_misys_default system_app:binder transfer;
+allow hal_misys_default hal_allocator_server:binder call;
+allow hal_misys_default hal_allocator_server:fd *;
+allow hal_misys_default su:binder { call transfer };
+allow hal_misys_default proc_meminfo:file read;
+allow hal_misys_default block_device:dir r_dir_perms;
+allow hal_misys_default blackbox_block_device:blk_file r_file_perms;
+allow hal_misys_default minidump_partition:blk_file r_file_perms;
+allow hal_misys_default super_block_device:blk_file r_file_perms;
+allow hal_misys_default oops_block_device:blk_file r_file_perms;
+allow hal_misys_default rescue_block_device:blk_file r_file_perms;
+allow hal_misys_default cust_block_device:blk_file r_file_perms;
+allow hal_misys_default vendor_logdump_partition:blk_file r_file_perms;
+allow hal_misys_client hal_misys_server:binder { call transfer };
+allow hal_misys_client hal_misys_server:binder transfer;
+allow hal_misys_client hal_misys_server:fd *;
+allow hal_misys_server hal_misys_client:binder transfer;
+allow hal_misys_server hal_misys_client:binder { call transfer };
+allow hal_misys_server hal_misys_client:fd *;
+allow hal_misys dmabuf_system_heap_device:chr_file r_file_perms;
+dontaudit hal_misys_default default_prop:file read;
+init_daemon_domain(hal_misys_default)
+unix_socket_connect(hal_misys_default, property, hal_camera_default)
+get_prop(hal_misys_default, vendor_audio_prop)
+get_prop(hal_misys_default, vendor_default_prop)
+set_prop(hal_misys_default, vendor_system_prop)
+hwbinder_use(hal_misys_default)
+hal_server_domain(hal_misys_default, hal_misys)
+hal_client_domain(hal_misys_default, hal_allocator)
+hal_client_domain(hal_misys_default, hal_codec2)
+hal_client_domain(hal_misys_default, hal_omx)
+add_hwservice(hal_misys_server, hal_misys_hwservice)

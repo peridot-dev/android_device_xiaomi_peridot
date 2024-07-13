@@ -1,0 +1,57 @@
+type mpbe, domain, mlstrustedsubject;
+type mpbe_exec, exec_type, file_type, vendor_file_type;
+
+allow mpbe mpbe_exec:file { execute getattr open read };
+allow mpbe mpbe_exec:file { entrypoint execute getattr open read };
+allow mpbe sysfs:file rw_file_perms;
+allow mpbe sysfs_memory:file rw_file_perms;
+allow mpbe vendor_hal_iop_default:binder call;
+allow mpbe vendor_hal_perf_default:binder call;
+allow mpbe vendor_hal_perf_default:dir { open read search write };
+allow mpbe vendor_hal_perf_hwservice:hwservice_manager find;
+allow mpbe vendor_hal_iop_hwservice:hwservice_manager find;
+allow mpbe hwservicemanager:binder { call transfer };
+allow mpbe servicemanager:binder { call transfer };
+allow mpbe proc:file { getattr open read setattr write };
+allow mpbe cgroup:file rw_file_perms;
+allow mpbe mpbe_data_file:dir rw_dir_perms;
+allow mpbe mpbe_data_file:fifo_file create_file_perms;
+allow mpbe mpbe_data_file:file create_file_perms;
+allow mpbe proc_mpbe:file r_file_perms;
+allow mpbe proc_mpbe:dir r_dir_perms;
+allow mpbe proc_perfmgr:file r_file_perms;
+allow mpbe proc_perfmgr:dir r_dir_perms;
+allow mpbe proc_version:file r_file_perms;
+allow mpbe self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow mpbe self:perf_event { kernel open };
+allow mpbe self:capability { chown fsetid sys_admin };
+allow mpbe rootfs:lnk_file { getattr setattr };
+allow mpbe vendor_shell_exec:file rx_file_perms;
+allow mpbe vendor_toolbox_exec:file { execute execute_no_trans getattr open read };
+allow mpbe procfs_ufsirq:dir r_dir_perms;
+allow mpbe procfs_ufsirq:file rw_file_perms;
+allow mpbe sysfs_ufs:dir r_dir_perms;
+allow mpbe sysfs_ufs:file rw_file_perms;
+allow mpbe sysfs_blockio:dir r_dir_perms;
+allow mpbe sysfs_blockio:file rw_file_perms;
+allow mpbe vendor_sysfs_scsi_target:dir r_dir_perms;
+allow mpbe vendor_sysfs_scsi_target:file rw_file_perms;
+allow mpbe sysfs_devices_system_cpu:dir r_dir_perms;
+allow mpbe sysfs_devices_system_cpu:file rw_file_perms;
+allow mpbe vendor_sysfs_devfreq:dir r_dir_perms;
+allow mpbe vendor_sysfs_devfreq:file rw_file_perms;
+allow mpbe vendor_sysfs_msm_power:dir r_dir_perms;
+allow mpbe vendor_sysfs_msm_power:file rw_file_perms;
+allow mpbe vendor_sysfs_scsi_host:dir r_dir_perms;
+allow mpbe vendor_sysfs_scsi_host:file rw_file_perms;
+allow mpbe vendor_configs_file:dir r_dir_perms;
+allow mpbe vendor_configs_file:file { getattr map open read watch };
+allow mpbe proc_pressure_io:file r_file_perms;
+dontaudit mpbe default_prop:file { getattr map open read };
+init_daemon_domain(mpbe)
+r_dir_file(mpbe, sysfs)
+r_dir_file(mpbe, sysfs_memory)
+set_prop(mpbe, hwservicemanager_prop)
+set_prop(mpbe, vendor_mpbe_prop)
+set_prop(mpbe, vendor_msm_irqbalance_prop)
+hal_attribute(mpbe)

@@ -1,0 +1,112 @@
+# Touchfeature
+attribute hal_touchfeature_xiaomi;
+attribute hal_touchfeature_xiaomi_client;
+attribute hal_touchfeature_xiaomi_server;
+
+# Displatfeature
+attribute vendor_hal_displayfeature_xiaomi;
+attribute vendor_hal_displayfeature_xiaomi_client;
+attribute vendor_hal_displayfeature_xiaomi_server;
+
+# Camera
+attribute hal_camera_mivi;
+attribute hal_camera_mivi_client;
+attribute hal_camera_mivi_server;
+
+attribute hal_quickcamera;
+attribute hal_quickcamera_client;
+attribute hal_quickcamera_server;
+
+attribute hal_camera_aon;
+attribute hal_camera_aon_client;
+attribute hal_camera_aon_server;
+
+attribute hal_dms;
+attribute hal_dms_client;
+attribute hal_dms_server;
+
+attribute hal_mtdservice;
+attribute hal_mtdservice_client;
+attribute hal_mtdservice_server;
+
+attribute hal_ozonotify;
+attribute hal_ozonotify_client;
+attribute hal_ozonotify_server;
+
+attribute hal_blackboximpl;
+attribute hal_blackboximpl_client;
+attribute hal_blackboximpl_server;
+
+attribute hal_cld;
+attribute hal_cld_client;
+attribute hal_cld_server;
+
+attribute hal_tidaservice;
+attribute hal_tidaservice_client;
+attribute hal_tidaservice_server;
+
+attribute hal_slaservice;
+attribute hal_slaservice_client;
+attribute hal_slaservice_server;
+
+attribute hal_vsimapp;
+attribute hal_vsimapp_client;
+attribute hal_vsimapp_server;
+
+attribute hal_misyscore;
+attribute hal_misyscore_client;
+attribute hal_misyscore_server;
+
+attribute hal_misysimpl;
+attribute hal_misysimpl_client;
+attribute hal_misysimpl_server;
+
+attribute hal_misys;
+attribute hal_misys_client;
+attribute hal_misys_server;
+
+
+attribute hal_miface;
+attribute hal_miface_client;
+attribute hal_miface_server;
+
+attribute hal_mfidoca;
+attribute hal_mfidoca_client;
+attribute hal_mfidoca_server;
+
+
+attribute hal_mlipay;
+attribute hal_mlipay_client;
+attribute hal_mlipay_server;
+
+attribute hal_mrm;
+attribute hal_mrm_client;
+attribute hal_mrm_server;
+
+attribute hal_minet;
+attribute hal_minet_client;
+attribute hal_minet_server;
+
+attribute hal_miwill;
+attribute hal_miwill_client;
+attribute hal_miwill_server;
+
+attribute hal_fbo;
+attribute hal_fbo_client;
+attribute hal_fbo_server;
+
+attribute hal_micharge;
+attribute hal_micharge_client;
+attribute hal_micharge_server;
+
+attribute hal_mitrustedui;
+attribute hal_mitrustedui_client;
+attribute hal_mitrustedui_server;
+
+attribute hal_mimd;
+attribute hal_mimd_client;
+attribute hal_mimd_server;
+
+attribute hal_miperf;
+attribute hal_miperf_client;
+attribute hal_miperf_server;

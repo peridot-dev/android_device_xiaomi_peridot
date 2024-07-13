@@ -1,0 +1,2 @@
+type hal_miface_service, protected_service, service_manager_type;
+type hal_mrm_service, protected_service, service_manager_type;

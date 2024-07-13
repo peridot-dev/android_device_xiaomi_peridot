@@ -1,0 +1,26 @@
+type hal_mrm_default, domain;
+type hal_mrm_default_exec, exec_type, file_type, vendor_file_type;
+type hal_mrm_hwservice, hwservice_manager_type;
+
+allow hal_mrm_server dumpstate:fifo_file write;
+allow hal_mrm_server dumpstate:fd *;
+allow hal_mrm_server hal_mrm_client:binder transfer;
+allow hal_mrm_server hal_mrm_client:binder { call transfer };
+allow hal_mrm_server hal_mrm_client:fd *;
+allow hal_mrm_server servicemanager:binder { call transfer };
+allow hal_mrm_server servicemanager:fd *;
+allow hal_mrm_client hal_mrm_server:binder { call transfer };
+allow hal_mrm_client hal_mrm_server:binder transfer;
+allow hal_mrm_client hal_mrm_server:fd *;
+allow hal_mrm_client hal_mrm_service:service_manager find;
+allow hal_mrm_default tee_device:chr_file rw_file_perms;
+allow hal_mrm_default ion_device:chr_file rw_file_perms;
+allow hal_mrm_default selinuxfs:file { open read };
+allow hal_mrm_default vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
+allow hal_mrm_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };
+init_daemon_domain(hal_mrm_default)
+get_prop(hal_mrm_default, system_boot_reason_prop)
+set_prop(hal_mrm_default, vendor_payment_security_prop)
+binder_use(hal_mrm_default)
+hal_server_domain(hal_mrm_default, hal_mrm)
+add_service(hal_mrm_server, hal_mrm_service)

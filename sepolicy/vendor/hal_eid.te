@@ -1,0 +1,21 @@
+type hal_eid_default, domain;
+type hal_eid_default_exec, exec_type, file_type, vendor_file_type;
+
+allow vendor_hal_eid_client vendor_hal_eid_server:binder { call transfer };
+allow vendor_hal_eid_client vendor_hal_eid_server:binder transfer;
+allow vendor_hal_eid_client vendor_hal_eid_server:fd *;
+allow vendor_hal_eid_client vendor_hal_eid_service:service_manager find;
+allow vendor_hal_eid_server vendor_hal_eid_client:binder transfer;
+allow vendor_hal_eid_server vendor_hal_eid_client:binder { call transfer };
+allow vendor_hal_eid_server vendor_hal_eid_client:fd *;
+allow vendor_hal_eid_server servicemanager:binder { call transfer };
+allow vendor_hal_eid_server servicemanager:fd *;
+allow hal_eid_default tee_device:chr_file rw_file_perms;
+allow hal_eid_default ion_device:chr_file r_file_perms;
+init_daemon_domain(hal_eid_default)
+r_dir_file(hal_eid_default, firmware_file)
+get_prop(hal_eid_default, vendor_tee_listener_prop)
+binder_use(hal_eid_default)
+hal_server_domain(hal_eid_default, vendor_hal_eid)
+hal_client_domain(hal_eid_default, vendor_hal_qteeconnector)
+add_service(vendor_hal_eid_server, vendor_hal_eid_service)

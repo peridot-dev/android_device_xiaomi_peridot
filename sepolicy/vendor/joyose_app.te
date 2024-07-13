@@ -1,0 +1,4 @@
+type joyose_app, coredomain, domain, mlstrustedsubject;
+
+allow joyose_app vendor_displayfeature_prop:file read;
+get_prop(joyose_app, vendor_displayfeature_prop)

@@ -1,0 +1,1 @@
+type hal_misysimpl_service, protected_service, service_manager_type;

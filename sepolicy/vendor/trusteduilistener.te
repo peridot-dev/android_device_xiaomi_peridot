@@ -1,0 +1,1 @@
+allow vendor_trusteduilistener sysfs_touch_hostprocess:file rw_file_perms;

@@ -1,0 +1,4 @@
+type mqsasd, coredomain, domain, mlstrustedsubject;
+
+allow mqsasd data_log_camera_file:file { getattr open read setattr write };
+allow mqsasd data_log_camera_file:dir { getattr open read search write };

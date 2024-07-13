@@ -1,0 +1,2 @@
+type miuibpfdispatcher, bpfdomain, coredomain, domain;
+type miuibpfdispatcher_exec, exec_type, file_type, system_file_type;

@@ -1,0 +1,3 @@
+allow vendor_ssr_setup vendor_sysfs_ssr_coredump_toggle:file rw_file_perms;
+allow vendor_ssr_setup sysfs_ispv4_dump:dir search;
+allow vendor_ssr_setup sysfs_ispv4_dump:file { open read write };

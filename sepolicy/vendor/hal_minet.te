@@ -1,0 +1,18 @@
+type hal_minet_default, domain;
+type hal_minet_default_exec, exec_type, file_type, vendor_file_type;
+type hal_minet_hwservice, hwservice_manager_type;
+
+allow hal_minet_default vendor_minetd_prop:file read;
+allow hal_minet_default minetd_socket:sock_file { getattr read unlink write };
+allow hal_minet_default socket_device:sock_file write;
+allow hal_minet_default system_app:binder call;
+allow hal_minet_default system_server:binder call;
+allow hal_minet_client hal_minet_server:binder { call transfer };
+allow hal_minet_client hal_minet_server:fd *;
+allow hal_minet_client hal_minet_hwservice:hwservice_manager find;
+allow hal_minet_server hal_minet_client:binder transfer;
+init_daemon_domain(hal_minet_default)
+unix_socket_connect(hal_minet_default, property, minetd)
+set_prop(hal_minet_default, vendor_minetd_prop)
+hal_server_domain(hal_minet_default, hal_minet)
+add_hwservice(hal_minet_server, hal_minet_hwservice)

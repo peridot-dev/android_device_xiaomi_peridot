@@ -1,0 +1,23 @@
+type hal_cld_default, domain;
+type hal_cld_default_exec, exec_type, file_type, vendor_file_type;
+type hal_cld_hwservice, hwservice_manager_type;
+
+allow hal_cld_client hal_cld_server:binder { call transfer };
+allow hal_cld_client hal_cld_server:binder transfer;
+allow hal_cld_client hal_cld_server:fd *;
+allow hal_cld_client hal_cld_hwservice:hwservice_manager find;
+allow hal_cld_server hal_cld_client:binder transfer;
+allow hal_cld_server hal_cld_client:binder { call transfer };
+allow hal_cld_server hal_cld_client:fd *;
+allow hal_cld_default system_server:binder call;
+allow hal_cld_default sysfs:dir { getattr open read search };
+allow hal_cld_default sysfs:file rw_file_perms;
+allow hal_cld_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow hal_cld_default sysfs_devices_block:dir search;
+allow hal_cld_default sysfs_devices_block:file rw_file_perms;
+allow hal_cld_default block_device:dir search;
+allow hal_cld_default gsort_block_device:lnk_file { open read write };
+allow hal_cld_default gsort_block_device:blk_file { open read write };
+init_daemon_domain(hal_cld_default)
+hal_server_domain(hal_cld_default, hal_cld)
+add_hwservice(hal_cld_server, hal_cld_hwservice)
