@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
@@ -18,9 +21,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
-
-# Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -384,10 +384,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.voice-V2-ndk.vendor \
     android.hardware.radio@1.6.vendor
 
-PRODUCT_PACKAGES += \
-    rfs_msm_mpss_readonly_mbnconfig_symlink \
-    rfs_msm_mpss_readonly_modem_firmware_symlink
-
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -512,11 +508,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     android.hardware.wifi.supplicant-V2-ndk.vendor \
     android.hardware.wifi.hostapd-V1-ndk.vendor
-
-PRODUCT_PACKAGES += \
-    firmware_wlanmdsp.otaupdate_symlink \
-    firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6750/WCNSS_qcom_cfg.ini \
