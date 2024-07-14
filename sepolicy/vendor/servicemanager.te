@@ -1,2 +1,3 @@
 allow servicemanager bluetooth:binder transfer;
+allow servicemanager hal_vibrator_default:binder call;
 allow servicemanager vendor_hal_citsensorservice_xiaomi_server:binder transfer;
