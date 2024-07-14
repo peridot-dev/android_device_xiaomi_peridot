@@ -1,0 +1,2 @@
+set_prop(vendor_init,audio_prop)
+set_prop(vendor_init, vendor_deviceid_prop)

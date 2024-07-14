@@ -1,0 +1,7 @@
+type vendor_mbnota, domain;
+type vendor_mbnota_exec, exec_type, file_type, vendor_file_type;
+
+allow vendor_mbnota vendor_firmware_data_file:dir create_dir_perms;
+allow vendor_mbnota vendor_firmware_data_file:file create_file_perms;
+init_daemon_domain(vendor_mbnota)
+set_prop(vendor_mbnota, vendor_radio_prop)
