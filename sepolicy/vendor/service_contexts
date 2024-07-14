@@ -29,3 +29,6 @@ com.android.ozoaudio.notify.IOzoNotify/default                       u:object_r:
 
 # Touch
 vendor.xiaomi.hw.touchfeature.ITouchFeature/default          u:object_r:hal_touchfeature_xiaomi_service:s0
+
+# Vibrator
+android.hardware.vibrator.IVibrator/vibratorfeature                          u:object_r:hal_vibrator_service:s0

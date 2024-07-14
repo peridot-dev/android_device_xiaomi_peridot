@@ -102,3 +102,7 @@ sys/class/qcom-battery/fg_vendor u:object_r:vendor_sysfs_battery:s0
 # Charge
 /(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
 /data/vendor/charge_logger(/.*)? u:object_r:vendor_charge_log_file:s0
+
+# Vibrator
+/(odm|vendor/odm)/bin/hw/vibratorfeature-wrapper u:object_r:hal_vibrator_default_exec:s0
+/(odm|system/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service u:object_r:hal_vibrator_default_exec:s0
