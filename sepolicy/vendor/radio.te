@@ -1,0 +1,20 @@
+allow radio vendor_hal_datafactory_hwservice:hwservice_manager find;
+allow radio vendor_hal_latency_hwservice:hwservice_manager find;
+allow radio vendor_cnd:binder { call transfer };
+allow radio vendor_cnd:fd *;
+allow radio vendor_audio_prop:file read;
+allow radio vendor_audio_prop:file open;
+allow radio vendor_audio_prop:file getattr;
+allow radio vendor_audio_prop:file map;
+allow radio wifinl80211_service:service_manager find;
+allow radio wificond:binder { call transfer };
+allow radio vendor_modem_data_file:dir rw_dir_perms;
+allow radio vendor_modem_data_file:file { create getattr open read unlink write };
+allow radio logd_prop:property_service set;
+allow radio fuse:dir create_dir_perms;
+allow radio fuse:file create_file_perms;
+allow radio vendor_sysfs_qcom_battery:file rw_file_perms;
+allow radio vendor_sysfs_qcom_battery:dir r_dir_perms;
+allow radio vendor_sysfs_qcom_battery:dir search;
+binder_use(radio)
+hal_client_domain(radio, vendor_hal_datafactory_qti)

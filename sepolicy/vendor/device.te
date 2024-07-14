@@ -1,0 +1,11 @@
+# Audio
+type sound_device, dev_type, mlstrustedobject;
+
+# Display
+type vendor_displayfeature_device, dev_type;
+
+# Fingerprint
+type vendor_fingerprint_device, dev_type;
+
+# Touch
+type touchfeature_device, dev_type;
