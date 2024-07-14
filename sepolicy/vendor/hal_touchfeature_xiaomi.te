@@ -15,8 +15,6 @@ allow hal_touchfeature_xiaomi_default touchfeature_device:file { getattr map rea
 allow hal_touchfeature_xiaomi_default uhid_device:chr_file rw_file_perms;
 allow hal_touchfeature_xiaomi_default sysfs_tp_virtual_prox:file { open read write };
 allow hal_touchfeature_xiaomi_default sysfs_tp_virtual_prox:file rw_file_perms;
-allow hal_touchfeature_xiaomi_default sysfs_touch_suspend:file { open read write };
-allow hal_touchfeature_xiaomi_default sysfs_touch_suspend:file rw_file_perms;
 allow hal_touchfeature_xiaomi_default input_device:chr_file rw_file_perms;
 allow hal_touchfeature_xiaomi_default input_device:dir r_dir_perms;
 allow hal_touchfeature_xiaomi_default proc_tp_file:file { open read write };

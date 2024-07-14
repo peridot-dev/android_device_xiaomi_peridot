@@ -21,3 +21,5 @@ allow vendor_wcnss_service fuse:file { append create getattr open read rename se
 allow vendor_wcnss_service vendor_radio_prop:file read;
 allow vendor_wcnss_service vendor_modem_data_file:dir { add_name getattr open read remove_name search setattr write };
 allow vendor_wcnss_service vendor_modem_data_file:file { append create getattr open read rename setattr unlink write };
+
+get_prop(vendor_wcnss_service, vendor_radio_prop)

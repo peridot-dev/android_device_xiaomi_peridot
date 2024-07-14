@@ -51,8 +51,3 @@ attribute hal_mfidoca_server;
 attribute hal_ozonotify;
 attribute hal_ozonotify_client;
 attribute hal_ozonotify_server;
-
-attribute hal_slaservice;
-attribute hal_slaservice_client;
-attribute hal_slaservice_server;
-

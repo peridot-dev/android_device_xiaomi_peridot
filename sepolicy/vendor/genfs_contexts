@@ -1,10 +1,6 @@
 
-genfscon sysfs "/devices/virtual/touch/touch_dev/palm_sensor_data" u:object_r:sysfs_tp_virtual_prox:s0
-genfscon sysfs "/devices/virtual/touch/touch_dev/ear_sensor_data" u:object_r:sysfs_tp_virtual_prox:s0
 genfscon sysfs "/devices/virtual/touch/touch_dev/palm_sensor" u:object_r:sysfs_tp_virtual_prox:s0
-genfscon sysfs "/devices/virtual/touch/touch_dev/hold_sensor" u:object_r:sysfs_tp_virtual_prox:s0
 genfscon sysfs "/devices/virtual/touch/touch_dev/ear_sensor" u:object_r:sysfs_tp_virtual_prox:s0
-genfscon sysfs "/devices/virtual/touch/touch_dev/suspend_state" u:object_r:sysfs_touch_suspend:s0
 genfscon sysfs "/devices/platform/soc/soc:xiaomi_fingerprint/fingerdown" u:object_r:vendor_sysfs_displayfeature:s0
 genfscon sysfs "/devices/platform/soc/soc:xiaomi_fingerprint/actpower" u:object_r:vendor_sysfs_displayfeature:s0
 
@@ -35,3 +31,20 @@ genfscon proc "/sys/vm/percpu_pagelist_high_fraction" u:object_r:proc_percpu_pag
 genfscon proc "/modem_t1_gpio_ctrl" u:object_r:proc_modem_enhance:s0
 genfscon proc "/modem_sleep_stats" u:object_r:proc_modem_enhance:s0
 genfscon proc "/apss_sleep_stats" u:object_r:proc_modem_enhance:s0
+
+# Wakeup
+genfscon sysfs /devices/platform/soc/soc:xiaomi_fingerprint/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300:pwrkey-resin-bark/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300:pwrkey-bark/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/884000.i2c/i2c-6/6-0028/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_master/spi1/spi1.0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/goodix_ts.0/wakeup u:object_r:sysfs_wakeup:s0
+
+
+# extcon
+genfscon sysfs "/sys/devices/platform/soc/88e0000.qcom,msm-eud/extcon/extcon0/cable.0/" u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs "/sys/devices/platform/soc/88e0000.qcom,msm-eud/extcon/extcon0/cable.1/" u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs "/sys/devices/platform/soc/88e0000.qcom,msm-eud/extcon/extcon0/cable.2/" u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs "/sys/devices/platform/soc/88e0000.qcom,msm-eud/extcon/extcon0/cable.3/" u:object_r:vendor_sysfs_graphics:s0

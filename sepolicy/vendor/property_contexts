@@ -128,10 +128,11 @@ persist.vendor.fpc. u:object_r:vendor_fp_prop:s0
 persist.vendor.goodix. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp. u:object_r:vendor_fp_prop:s0
 ro.hardware.fp. u:object_r:vendor_fp_prop:s0
-vendor.panel.display. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.info u:object_r:vendor_fp_info_prop:s0
 persist.vendor.sys.fp.uid u:object_r:vendor_fp_info_prop:s0
 vendor.panel.touch_vendor u:object_r:vendor_fp_info_prop:s0
+vendor.panel. u:object_r:vendor_panel_info_prop:s0
+vendor.panel.display. u:object_r:vendor_fp_prop:s0
 
 vendor.camera.sensor. u:object_r:vendor_camera_sensor_prop:s0
 vendor.video.scene.recognition u:object_r:vendor_video_mi_prop:s0
@@ -140,3 +141,41 @@ persist.vendor.XDRVersion u:object_r:vendor_camera_xdrversion_prop:s0
 
 ro.vendor.nfc. u:object_r:vendor_nfc_mi_prop:s0
 ro.vendor.se. u:object_r:vendor_nfc_mi_prop:s0
+
+ro.vendor.oem.imei u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.psno u:object_r:vendor_sno_prop:s0
+ro.vendor.oem.sno u:object_r:vendor_sno_prop:s0
+ro.boot.cpuid u:object_r:vendor_cpuid_prop:s0
+ro.vendor.miui.build.region u:object_r:vendor_miui_region_prop:s0
+ro.vendor.miui.singlesim u:object_r:vendor_miui_singlesim_prop:s0
+persist.odm.radio u:object_r:vendor_radio_prop:s0
+ro.vendor.oem.meid u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.serialno u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.boot_completed u:object_r:vendor_deviceid_prop:s0
+persist.vendor.radio.imei u:object_r:vendor_deviceid_prop:s0
+
+persist.vendor.sensors.ins. u:object_r:vendor_mi_ins_prop:s0
+persist.vendor.sensors.ins_debug u:object_r:vendor_mi_ins_prop:s0
+
+odm.security.rootpub.load u:object_r:vendor_payment_security_prop:s0
+odm.security.rootpub.trigger u:object_r:vendor_payment_security_prop:s0
+odm.security.rotatekey.load u:object_r:vendor_payment_security_prop:s0
+odm.security.rotatekey.trigger u:object_r:vendor_payment_security_prop:s0
+persist.vendor.otrp.preview u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.attestation.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.disable_gpio.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.ese_attestation.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.ese_provision.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.fido u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.fido2 u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.ifaa u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.soter u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.widevine u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.provision.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.rkp.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.strongbox_upgrade.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.wv_rkp.status u:object_r:vendor_payment_security_prop:s0
+vendor.sys.feature_state u:object_r:vendor_payment_security_prop:s0
+vendor.sys.rpmb_state u:object_r:vendor_payment_security_prop:s0
+
+vendor.sys.thermal.data.path u:object_r:vendor_thermal_normal_prop:s0

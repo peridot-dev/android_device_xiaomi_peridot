@@ -64,14 +64,12 @@ sys/class/qcom-battery/fg_vendor u:object_r:vendor_sysfs_battery:s0
 /dev/xiaomi-fp u:object_r:vendor_fingerprint_device:s0
 
 # Touch
+/sys/devices/platform/goodix_ts.0/double_tap_enable u:object_r:touchpanel_sysfs:s0
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hw\.touchfeature-service u:object_r:hal_touchfeature_xiaomi_default_exec:s0
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /(vendor|odm)/etc/init.panel_info.sh u:object_r:vendor_touch_init_shell_exec:s0
 /sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
-/sys/devices/virtual/touch/touch_dev/ear_sensor_data u:object_r:sysfs_tp_virtual_prox:s0
-/sys/devices/virtual/touch/touch_dev/hold_sensor u:object_r:sysfs_tp_virtual_prox:s0
 /sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
-/sys/devices/virtual/touch/touch_dev/suspend_state u:object_r:sysfs_touch_suspend:s0
 
 # Mlipay
 /(odm|vendor/odm|system/vendor)/bin/fidoca u:object_r:hal_mfidoca_default_exec:s0
@@ -92,7 +90,6 @@ sys/class/qcom-battery/fg_vendor u:object_r:vendor_sysfs_battery:s0
 /data/vendor/thermal(/.*)? u:object_r:thermal_data_file:s0
 /sys/devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 /sys/class/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
-/(vendor|system/vendor)/bin/slad u:object_r:slad_exec:s0
 
 # Mac Address
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
@@ -101,55 +98,9 @@ sys/class/qcom-battery/fg_vendor u:object_r:vendor_sysfs_battery:s0
 # Modem
 /dev/smd8 u:object_r:vendor_radio_smd_device:s0
 
-/data/vendor/bsplog(/.*)? u:object_r:vendor_bsp_data_log_file:s0
-/data/vendor/perfspy(/.*)? u:object_r:vendor_camera_data_file:s0
-/dev/camlog u:object_r:camlog_device:s0
-/sys/kernel/reserve_pool(/.*)? u:object_r:sysfs_perf:s0
-/dev/socket/camera(/.*)? u:object_r:vendor_camera_socket:s0
-/sys/kernel/sched_penalty/parameters(/.*)? u:object_r:vendor_sysfs_sched_penalty:s0
-/(odm|system/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service u:object_r:hal_vibrator_default_exec:s0
+# GNSS
+/data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
+
+# Charge
 /(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
 /data/vendor/charge_logger(/.*)? u:object_r:vendor_charge_log_file:s0
-/data/misc/display(/.*)? u:object_r:display_trace_data_file:s0
-/data/misc/power(/.*)? u:object_r:power_dump_data_file:s0
-/data/miuilog/camera(/.*)? u:object_r:data_log_camera_file:s0
-/data/vendor/diag(/.*)? u:object_r:minidump_data_file:s0
-/data/vendor/dolby(/.*)? u:object_r:vendor_data_file:s0
-/data/vendor/images(/.*)? u:object_r:ta_data_file:s0
-/data/vendor/log/tt_log(/.*)? u:object_r:tt_log_data_file:s0
-/data/vendor/mbnconfig(/.*)? u:object_r:vendor_firmware_data_file:s0
-/data/vendor/sla(/.*)? u:object_r:sla_data_file:s0
-/data/vendor/wlan_logs(/.*)? u:object_r:vendor_wifi_vendor_data_file:s0
-/dev/block/by-name/crash_history u:object_r:minidump_partition:s0
-/dev/block/by-name/gsort u:object_r:gsort_block_device:s0
-/dev/block/by-name/minidump u:object_r:minidump_partition:s0
-/dev/block/by-name/rawdump u:object_r:minidump_partition:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/countrycode_[ab] u:object_r:vendor_custom_ab_block_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/cust u:object_r:cust_block_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/logdump u:object_r:vendor_logdump_partition:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/modemfirmware_[ab] u:object_r:vendor_modem_block_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/oops u:object_r:oops_block_device:s0
-/dev/block/platform/soc/1d84000.ufshc/by-name/rescue u:object_r:rescue_block_device:s0
-/dev/gsmtty1 u:object_r:gsmtty1_device:s0
-/dev/gsmtty2 u:object_r:gsmtty2_device:s0
-/dev/gsmtty3 u:object_r:gsmtty3_device:s0
-/dev/gsmtty4 u:object_r:gsmtty4_device:s0
-/dev/mi_cam_sched u:object_r:micam_sched_device:s0
-/dev/mxc-bt u:object_r:bt1_power_dev:s0
-/dev/qcom_haptic u:object_r:aac_richtap_dev_device:s0
-/dev/socket/slad u:object_r:slad_socket:s0
-/dev/tt_chip u:object_r:tt_chip_device:s0
-/dev/ttyHS3 u:object_r:hci1_attach_dev:s0
-/dev/ttyHS5 u:object_r:ttyHS5_device:s0
-/mnt/rescue(/.*)? u:object_r:cache_file:s0
-/mnt/rescue/mqsas(/.*)? u:object_r:mqsas_data_file:s0
-/mnt/rescue/recovery(/.*)? u:object_r:cache_recovery_file:s0
-/mnt/rescue/update_engine_log(/.*)? u:object_r:update_engine_log_data_file:s0
-/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,flash_led@ee00/leds/flashlight/brightness u:object_r:sysfs_flashlight:s0
-/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,flash_led@ee00/leds/led:flash_[0-3](/.*) u:object_r:sysfs_led_torch:s0
-/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,flash_led@ee00/leds/led:switch_[0-3](/.*) u:object_r:sysfs_led_torch:s0
-/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,flash_led@ee00/leds/led:torch_[0-3](/.*) u:object_r:sysfs_led_torch:s0
-/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pmxr2230@1:qcom,flash_led@ee00/leds/led:flash_[0-3](/.*) u:object_r:sysfs_led_torch:s0
-/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pmxr2230@1:qcom,flash_led@ee00/leds/led:switch_[0-3](/.*) u:object_r:sysfs_led_torch:s0
-/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pmxr2230@1:qcom,flash_led@ee00/leds/led:torch_[0-3](/.*) u:object_r:sysfs_led_torch:s0
-/persist/fdsd(/.*)? u:object_r:vendor_persist_drm_file:s0

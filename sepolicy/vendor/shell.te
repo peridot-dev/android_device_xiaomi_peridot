@@ -1,4 +1,0 @@
-get_prop(shell, vendor_touchfeature_prop)
-get_prop(shell, vendor_fp_prop)
-get_prop(shell, vendor_fp_info_prop)
-get_prop(shell, vendor_payment_security_prop)

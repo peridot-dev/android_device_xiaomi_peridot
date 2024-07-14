@@ -1,5 +1,0 @@
-allow cameraserver camlog_device:chr_file { ioctl open read write };
-allow cameraserver vendor_hal_perf_hwservice:hwservice_manager find;
-allow cameraserver vendor_hal_perf_default:binder call;
-allow cameraserver vendor_hal_perf2_service:service_manager find;
-hal_client_domain(cameraserver, vendor_hal_perf)
