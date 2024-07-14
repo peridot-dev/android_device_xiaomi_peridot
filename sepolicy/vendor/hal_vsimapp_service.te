@@ -1,1 +1,0 @@
-type hal_vsimapp_service, hal_service_type, protected_service, service_manager_type;

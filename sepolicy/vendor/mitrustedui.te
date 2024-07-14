@@ -1,4 +1,0 @@
-type mitrustedui, coredomain, domain, mlstrustedsubject;
-
-binder_use(mitrustedui)
-hal_client_domain(mitrustedui, hal_mitrustedui)

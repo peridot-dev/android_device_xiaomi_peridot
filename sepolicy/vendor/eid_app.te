@@ -1,8 +1,0 @@
-type vendor_eid_app, domain;
-
-allow vendor_eid_app vendor_eid_app_userfaultfd:anon_inode { create ioctl read };
-allow vendor_eid_app app_api_service:service_manager find;
-binder_use(vendor_eid_app)
-app_domain(vendor_eid_app)
-hal_client_domain(vendor_eid_app, vendor_hal_perf)
-hal_client_domain(vendor_eid_app, vendor_hal_eid)

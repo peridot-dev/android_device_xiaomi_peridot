@@ -1,6 +1,7 @@
 type hal_mfidoca_default, domain;
 type hal_mfidoca_default_exec, exec_type, file_type, vendor_file_type;
 type hal_mfidoca_hwservice, hwservice_manager_type;
+type hal_mfidoca_service, hal_service_type, protected_service, service_manager_type;
 
 allow hal_mfidoca_client hal_mfidoca_server:binder { call transfer };
 allow hal_mfidoca_client hal_mfidoca_server:binder transfer;

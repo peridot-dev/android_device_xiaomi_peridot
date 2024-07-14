@@ -39,14 +39,6 @@ allow hal_camera_default vendor_displayfeature_device:chr_file { ioctl open read
 allow hal_camera_default vendor_camera_data_file:sock_file { create getattr read setattr unlink write };
 allow hal_camera_default sysfs_ufs:dir r_dir_perms;
 allow hal_camera_default sysfs_ufs:file rw_file_perms;
-allow hal_camera_default platform_app:binder transfer;
-allow hal_camera_default priv_app:binder transfer;
-allow hal_camera_default priv_app:binder { call transfer };
-allow hal_camera_default priv_app:fd *;
-allow hal_camera_default camlog_device:chr_file { ioctl open read write };
-allow hal_camera_default system_app:binder transfer;
-allow hal_camera_default system_app:binder { call transfer };
-allow hal_camera_default system_app:fd *;
 allow hal_camera_default sysfs_perf:dir { open read search };
 allow hal_camera_default sysfs_perf:file { getattr open read };
 allow hal_camera_default vendor_video_mi_prop:file read;
@@ -77,8 +69,3 @@ add_service(hal_camera_server, hal_quickcamera_service)
 add_service(hal_camera_server, hal_aidlbgservice_service)
 add_hwservice(hal_camera_server, hal_camera_mivi_hwservice)
 allow hal_camera_default miuibpf_export_socket:sock_file { read write };
-allow hal_camera_default stmvl53l5_device:chr_file { ioctl open read write };
-allow hal_camera_default sysfs_ispv4_dump:dir search;
-allow hal_camera_default sysfs_ispv4_dump:file { getattr open read };
-allow hal_camera_default sysfs_ispv4_training:dir search;
-allow hal_camera_default sysfs_ispv4_training:file { getattr open read write };

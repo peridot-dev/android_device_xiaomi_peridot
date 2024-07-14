@@ -19,8 +19,6 @@ allow slad socket_device:dir write;
 allow slad socket_device:dir remove_name;
 allow slad socket_device:dir add_name;
 allow slad socket_device:sock_file { create setattr unlink };
-allow slad qti_proc_sla:dir search;
-allow slad qti_proc_sla:file { map open read write };
 allow slad vendor_shell_exec:file execute_no_trans;
 dontaudit slad self:capability dac_read_search;
 init_daemon_domain(slad)

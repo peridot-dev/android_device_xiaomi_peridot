@@ -2,8 +2,6 @@ persist.vendor.touchfeature. u:object_r:vendor_touchfeature_prop:s0
 ro.vendor.touch.touchscheduler.enable u:object_r:vendor_touchfeature_prop:s0
 ro.vendor.touchfeature.type u:object_r:vendor_touchfeature_prop:s0
 vendor.touchfeature. u:object_r:vendor_touchfeature_prop:s0
-persist.vendor.hostprocess.filmstatus u:object_r:vendor_touch_hostprocess_prop:s0
-persist.vendor.hostprocess.waterproof u:object_r:vendor_touch_hostprocess_prop:s0
 
 init.svc.vendor.displayfeatureaidl-hal u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.dc_backlight.enable u:object_r:vendor_displayfeature_prop:s0
@@ -32,7 +30,6 @@ ro.vendor.disable_idle_fps.threshold u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.adaptive_hdr.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.ai_disp.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.aod_monitor_default_fps u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.display.benchmark_app u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.bl_lut_calib.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.darkmode_dither.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.display.default_fps u:object_r:vendor_displayfeature_prop:s0
@@ -131,8 +128,6 @@ persist.vendor.fpc. u:object_r:vendor_fp_prop:s0
 persist.vendor.goodix. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp. u:object_r:vendor_fp_prop:s0
 ro.hardware.fp. u:object_r:vendor_fp_prop:s0
-vendor.dtool. u:object_r:vendor_fp_prop:s0
-vendor.fps_hal. u:object_r:vendor_fp_prop:s0
 vendor.panel.display. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.info u:object_r:vendor_fp_info_prop:s0
 persist.vendor.sys.fp.uid u:object_r:vendor_fp_info_prop:s0

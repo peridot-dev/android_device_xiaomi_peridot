@@ -1,15 +1,11 @@
 allow init block_device:blk_file setattr;
 allow init vendor_file:file execute;
 allow init debugfs_tracing_debug:dir mounton;
-allow init touchreport_exec:file { execute getattr open read };
-allow init touchreport:process { rlimitinh siginh transition };
 allow init vendor_sysfs_qcom_battery:file setattr;
 allow init vendor_sysfs_usb_supply:file setattr;
 allow init vendor_sysfs_battery_supply:file setattr;
 allow vendor_init block_device:lnk_file { relabelfrom relabelto setattr };
 allow vendor_init block_device:file { mounton relabelfrom relabelto setattr };
-allow vendor_init vendor_ramdump_block_device:lnk_file { relabelfrom relabelto setattr };
-allow vendor_init vendor_ramdump_block_device:blk_file { relabelfrom relabelto setattr };
 allow vendor_init debugfs_tracing_debug:file w_file_perms;
 set_prop(vendor_init, vendor_displayfeature_prop)
 set_prop(vendor_init, vendor_touchfeature_prop)

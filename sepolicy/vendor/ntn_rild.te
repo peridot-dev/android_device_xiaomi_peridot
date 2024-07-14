@@ -1,5 +1,0 @@
-type ntn_rild, coredomain, domain, mlstrustedsubject;
-
-binder_use(ntn_rild)
-hal_attribute(ntn_rild)
-hal_client_domain(ntn_rild, hal_ntn_rild)

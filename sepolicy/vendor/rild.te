@@ -31,13 +31,6 @@ allow rild vendor_radio_smd_device:chr_file { open read write };
 allow rild vendor_modem_data_file:dir create_dir_perms;
 allow rild vendor_modem_data_file:file create_file_perms;
 allow rild vendor_sysfs_ssr_toggle:file rw_file_perms;
-allow rild vendor_ramdump_vendor_data_file:dir rw_dir_perms;
-allow rild vendor_ramdump_vendor_data_file:fifo_file { create getattr open read unlink write };
-allow rild vendor_ramdump_vendor_data_file:file { create getattr open read setattr unlink write };
-allow rild vendor_hal_display_config_hwservice:hwservice_manager find;
-allow rild vendor_hal_display_config_hwservice:binder { call transfer };
-allow rild vendor_hal_display_config_hwservice:fd *;
-allow rild proc_ramdump:file r_file_perms;
 get_prop(rild, vendor_cpuid_prop)
 get_prop(rild, vendor_miui_region_prop)
 get_prop(rild, vendor_miui_singlesim_prop)

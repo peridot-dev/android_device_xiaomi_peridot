@@ -1,1 +1,0 @@
-allow vendor_location_engine_service tee_device:chr_file rw_file_perms;

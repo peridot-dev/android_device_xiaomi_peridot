@@ -1,7 +1,0 @@
-allow vendor_hal_trustedui_qti sysfs_touch_hostprocess:file rw_file_perms;
-allow vendor_hal_trustedui_qti tmpfs:file { getattr open read };
-allow vendor_hal_trustedui_qti platform_app:binder { call transfer };
-allow vendor_hal_trustedui_qti platform_app:fd *;
-allow vendor_hal_trustedui_qti untrusted_app_32:binder { call transfer };
-allow vendor_hal_trustedui_qti untrusted_app_32:fd *;
-allow vendor_hal_trustedui_qti appdomain_tmpfs:file read;

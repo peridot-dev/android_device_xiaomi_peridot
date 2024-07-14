@@ -10,5 +10,4 @@ allow vendor_qcarcam_edrm_rvc hal_graphics_mapper_hwservice:hwservice_manager fi
 allow vendor_qcarcam_edrm_rvc hwservicemanager:binder call;
 allow vendor_qcarcam_edrm_rvc vendor_sysfs_kgsl:file { getattr open read };
 init_daemon_domain(vendor_qcarcam_edrm_rvc)
-unix_socket_connect(vendor_qcarcam_edrm_rvc, vendor_camera, vendor_ais_server)
 get_prop(vendor_qcarcam_edrm_rvc, hwservicemanager_prop)

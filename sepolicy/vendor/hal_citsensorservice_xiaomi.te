@@ -1,5 +1,6 @@
 type vendor_hal_citsensorservice_xiaomi_default, domain;
 type vendor_hal_citsensorservice_xiaomi_default_exec, exec_type, file_type, vendor_file_type;
+type vendor_hal_citsensorservice_xiaomi_service, hal_service_type, protected_service, service_manager_type;
 
 add_service(vendor_hal_citsensorservice_xiaomi_server, vendor_hal_citsensorservice_xiaomi_service)
 
@@ -29,9 +30,6 @@ allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:dir
 allow vendor_hal_citsensorservice_xiaomi_default vendor_sysfs_displayfeature:file { getattr open read };
 allow vendor_hal_citsensorservice_xiaomi_default vendor_displayfeature_device:chr_file { ioctl open read write };
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_mapper_hwservice:hwservice_manager find;
-allow vendor_hal_citsensorservice_xiaomi_default vendor_hal_display_config_hwservice:hwservice_manager find;
-allow vendor_hal_citsensorservice_xiaomi_default vendor_hal_display_config_hwservice:binder { call transfer };
-allow vendor_hal_citsensorservice_xiaomi_default vendor_hal_display_config_hwservice:fd *;
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_composer:binder { call transfer };
 allow vendor_hal_citsensorservice_xiaomi_default hal_graphics_composer:fd *;
 allow vendor_hal_citsensorservice_xiaomi_default vendor_qdisplay_service:service_manager find;

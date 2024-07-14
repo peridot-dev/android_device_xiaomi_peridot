@@ -1,1 +1,0 @@
-type hal_mtdservice_service, hal_service_type, protected_service, service_manager_type;

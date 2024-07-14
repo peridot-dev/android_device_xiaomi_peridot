@@ -2,10 +2,6 @@ type vendor_mfp-daemon, domain;
 type vendor_mfp-daemon_exec, exec_type, file_type, vendor_file_type;
 
 allow vendor_mfp-daemon surfaceflinger:binder transfer;
-allow vendor_mfp-daemon fps_hal:binder transfer;
-allow vendor_mfp-daemon system_app:binder transfer;
-allow vendor_mfp-daemon system_app:binder { call transfer };
-allow vendor_mfp-daemon system_app:fd *;
 allow vendor_mfp-daemon system_server:binder transfer;
 allow vendor_mfp-daemon tee_device:chr_file rw_file_perms;
 allow vendor_mfp-daemon vendor_hal_perf_hwservice:hwservice_manager find;
@@ -24,9 +20,6 @@ allow vendor_mfp-daemon vendor_fingerprint_data_file:file create_file_perms;
 allow vendor_mfp-daemon vendor_fingerprint_data_file_fpdump:dir create_dir_perms;
 allow vendor_mfp-daemon vendor_fingerprint_data_file_fpdump:file create_file_perms;
 allow vendor_mfp-daemon vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
-allow vendor_mfp-daemon platform_app:binder { call transfer };
-allow vendor_mfp-daemon platform_app:binder transfer;
-allow vendor_mfp-daemon platform_app:fd *;
 allow vendor_mfp-daemon sysfs:file write;
 allow vendor_mfp-daemon vendor_sysfs_spss:dir search;
 allow vendor_mfp-daemon vendor_sysfs_spss:file { open read };
@@ -47,8 +40,6 @@ allow vendor_mfp-daemon vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_per
 allow vendor_mfp-daemon vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
 allow vendor_mfp-daemon sysfs_tp_fodstatus:chr_file r_file_perms;
 allow vendor_mfp-daemon sysfs_tp_fodstatus:file r_file_perms;
-allow vendor_mfp-daemon sysfs_touch_hostprocess:chr_file r_file_perms;
-allow vendor_mfp-daemon sysfs_touch_hostprocess:file r_file_perms;
 allow vendor_mfp-daemon dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_mfp-daemon hal_touchfeature_xiaomi_default:binder { call transfer };
 allow vendor_mfp-daemon hal_touchfeature_xiaomi_default:fd *;
@@ -56,9 +47,6 @@ allow vendor_mfp-daemon servicemanager:binder { call transfer };
 allow vendor_mfp-daemon fwk_sensor_hwservice:hwservice_manager find;
 allow vendor_mfp-daemon unlabeled:filesystem getattr;
 allow vendor_mfp-daemon unlabeled:lnk_file read;
-allow vendor_mfp-daemon vendor_dtool:binder transfer;
-allow vendor_mfp-daemon vendor_dtool:binder { call transfer };
-allow vendor_mfp-daemon vendor_dtool:fd *;
 init_daemon_domain(vendor_mfp-daemon)
 r_dir_file(vendor_mfp-daemon, firmware_file)
 r_dir_file(vendor_mfp-daemon, mnt_vendor_file)

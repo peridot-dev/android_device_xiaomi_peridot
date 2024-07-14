@@ -1,4 +1,0 @@
-type check_fatal_err, domain;
-type check_fatal_err_exec, exec_type, file_type, vendor_file_type;
-
-init_daemon_domain(check_fatal_err)

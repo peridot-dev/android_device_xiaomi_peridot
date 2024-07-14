@@ -1,4 +1,0 @@
-type vsimapp, coredomain, domain, mlstrustedsubject;
-
-binder_use(vsimapp)
-hal_client_domain(vsimapp, hal_vsimapp)
