@@ -46,8 +46,3 @@ attribute hal_mfidoca_server;
 attribute hal_ozonotify;
 attribute hal_ozonotify_client;
 attribute hal_ozonotify_server;
-
-# Touchfeature
-attribute hal_touchfeature_xiaomi;
-attribute hal_touchfeature_xiaomi_client;
-attribute hal_touchfeature_xiaomi_server;
