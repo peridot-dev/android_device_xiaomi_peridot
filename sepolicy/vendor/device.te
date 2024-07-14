@@ -1,15 +1,11 @@
-type vendor_displayfeature_device, dev_type;
-type touchfeature_device, dev_type;
-type oops_block_device, dev_type;
-type rescue_block_device, dev_type;
-type cust_block_device, dev_type;
-type camlog_device, dev_type;
-type micam_sched_device, dev_type;
+# Audio
 type sound_device, dev_type, mlstrustedobject;
-type hci1_attach_dev, dev_type;
-type bt1_power_dev, dev_type;
+
+# Display
+type vendor_displayfeature_device, dev_type;
+
+# Fingerprint
 type vendor_fingerprint_device, dev_type;
-type minidump_partition, dev_type;
-type gsort_block_device, dev_type;
-type vendor_radio_smd_device, dev_type;
-type tt_chip_device, dev_type;
+
+# Touch
+type touchfeature_device, dev_type;

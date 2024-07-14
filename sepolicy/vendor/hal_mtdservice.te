@@ -21,8 +21,6 @@ allow hal_mtdservice_default mnt_vendor_file:dir { create_dir_perms relabelfrom 
 allow hal_mtdservice_default proc:file r_file_perms;
 allow hal_mtdservice_default tee_device:chr_file rw_file_perms;
 allow hal_mtdservice_default system_data_file:dir getattr;
-allow hal_mtdservice_default ta_data_file:file create_file_perms;
-allow hal_mtdservice_default ta_data_file:dir rw_dir_perms;
 allow hal_mtdservice_default sysfs:dir { open read };
 allow hal_mtdservice_default sysfs:file { open read write };
 allow hal_mtdservice_default vendor_qce_device:chr_file rw_file_perms;

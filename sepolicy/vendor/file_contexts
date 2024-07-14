@@ -95,9 +95,6 @@ sys/class/qcom-battery/fg_vendor u:object_r:vendor_sysfs_battery:s0
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
 /vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
 
-# Modem
-/dev/smd8 u:object_r:vendor_radio_smd_device:s0
-
 # GNSS
 /data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
 

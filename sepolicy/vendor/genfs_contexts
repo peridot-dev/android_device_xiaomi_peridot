@@ -18,19 +18,12 @@ genfscon sysfs "/devices/platform/soc/1d84000.ufshc/clkscale_enable" u:object_r:
 genfscon sysfs "/devices/platform/soc/1d84000.ufshc/clkgate_enable" u:object_r:sysfs_ufs:s0
 genfscon sysfs "/devices/platform/soc/1d84000.ufshc/ufscld/trigger" u:object_r:sysfs_ufs:s0
 
-genfscon proc "/perflock_records" u:object_r:vendor_proc_perflock_records:s0
-genfscon proc "/perflock_exception" u:object_r:vendor_proc_perflock_exception:s0
-genfscon sysfs "/fs/mpam/partitions" u:object_r:sysfs_mpam:s0
 genfscon sysfs "/kernel/sched_penalty/parameters/target_pid" u:object_r:vendor_sysfs_sched_penalty:s0
 genfscon sysfs "/kernel/sched_penalty/parameters/fps" u:object_r:vendor_sysfs_sched_penalty:s0
 genfscon sysfs "/kernel/sched_penalty/parameters" u:object_r:vendor_sysfs_sched_penalty:s0
 
 genfscon sysfs "/class/qcom-battery" u:object_r:vendor_sysfs_qcom_battery:s0
 genfscon sysfs "/kernel/mi_wmark/extra_free_kbytes" u:object_r:vendor_sysfs_extra_free_kbytes:s0
-genfscon proc "/sys/vm/percpu_pagelist_high_fraction" u:object_r:proc_percpu_pagelist_high_fraction:s0
-genfscon proc "/modem_t1_gpio_ctrl" u:object_r:proc_modem_enhance:s0
-genfscon proc "/modem_sleep_stats" u:object_r:proc_modem_enhance:s0
-genfscon proc "/apss_sleep_stats" u:object_r:proc_modem_enhance:s0
 
 # Wakeup
 genfscon sysfs /devices/platform/soc/soc:xiaomi_fingerprint/wakeup u:object_r:sysfs_wakeup:s0

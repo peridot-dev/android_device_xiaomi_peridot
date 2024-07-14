@@ -21,8 +21,6 @@ allow charge_logger vendor_charge_log_file:dir { add_name remove_name search wri
 allow charge_logger vendor_charge_log_file:dir search;
 allow charge_logger vendor_charge_log_file:file create_file_perms;
 allow charge_logger kmsg_device:chr_file { open read write };
-allow charge_logger vendor_bsp_data_log_file:dir create_dir_perms;
-allow charge_logger vendor_bsp_data_log_file:file create_file_perms;
 init_daemon_domain(charge_logger)
 r_dir_file(charge_logger, sysfs_type)
 r_dir_file(charge_logger, rootfs)
