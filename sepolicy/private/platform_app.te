@@ -1,0 +1,4 @@
+hal_client_domain(platform_app, hal_touchfeature_xiaomi)
+binder_call(platform_app, hal_touchfeature_xiaomi)
+
+allow platform_app vendor_hal_fingerprint_service_xiaomi:service_manager { find };
