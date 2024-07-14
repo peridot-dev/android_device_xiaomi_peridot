@@ -1,0 +1,13 @@
+type hal_quickcamera_service, hal_service_type, protected_service, service_manager_type;
+
+allow hal_quickcamera system_server:binder transfer;
+allow hal_quickcamera system_server:binder { call transfer };
+allow hal_quickcamera system_server:fd *;
+allow hal_quickcamera_client hal_quickcamera_server:binder { call transfer };
+allow hal_quickcamera_client hal_quickcamera_server:binder transfer;
+allow hal_quickcamera_client hal_quickcamera_server:fd *;
+allow hal_quickcamera_client hal_quickcamera_service:service_manager find;
+allow hal_quickcamera_server hal_quickcamera_client:binder transfer;
+allow hal_quickcamera_server hal_quickcamera_client:binder { call transfer };
+allow hal_quickcamera_server hal_quickcamera_client:fd *;
+add_service(hal_quickcamera_server, hal_quickcamera_service)

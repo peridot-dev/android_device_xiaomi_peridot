@@ -1,0 +1,60 @@
+allow hal_camera_client hal_camera_mivi_hwservice:hwservice_manager find;
+allow hal_camera_client hal_camera_aon_service:service_manager find;
+allow hal_camera_client hal_quickcamera_service:service_manager find;
+allow hal_camera_client hal_aidlbgservice_service:service_manager find;
+allow hal_camera fwk_sensor_hwservice:hwservice_manager find;
+allow hal_camera system_server:binder { call transfer };
+allow hal_camera system_server:binder transfer;
+allow hal_camera system_server:fd *;
+allow hal_camera_default sysfs_wake_lock:file { open read write };
+allow hal_camera_default self:process execmem;
+allow hal_camera_default self:capability ipc_lock;
+allow hal_camera_default proc_pressure_cpu:file { getattr open read write };
+allow hal_camera_default proc_pressure_cpu:file { getattr open read };
+allow hal_camera_default proc_pressure_io:file { getattr open read write };
+allow hal_camera_default proc_pressure_io:file { getattr open read };
+allow hal_camera_default proc_pressure_mem:file { getattr open read write };
+allow hal_camera_default proc_pressure_mem:file { getattr open read };
+allow hal_camera_default proc_meminfo:file { getattr open read };
+allow hal_camera_default mnt_vendor_file:dir search;
+allow hal_camera_default camera_persist_file:dir search;
+allow hal_camera_default vendor_persist_sensors_file:dir search;
+allow hal_camera_default sysfs_dmabuf_stats:dir { open read search };
+allow hal_camera_default sysfs_dmabuf_stats:file { getattr open read };
+allow hal_camera_default vendor_sysfs_kgsl_proc:dir search;
+allow hal_camera_default vendor_sysfs_kgsl_proc:file { getattr open read };
+allow hal_camera_default vendor_sysfs_displayfeature:dir search;
+allow hal_camera_default vendor_sysfs_displayfeature:file { open read };
+allow hal_camera_default vendor_sysfs_kgsl:file { getattr open read };
+allow hal_camera_default vendor_sysfs_battery_supply:dir search;
+allow hal_camera_default vendor_sysfs_battery_supply:file { getattr open read };
+allow hal_camera_default vendor_sysfs_battery_supply:file open;
+allow hal_camera_default vendor_sysfs_battery_supply:file read;
+allow hal_camera_default sysfs:file { open read };
+allow hal_camera_default sysfs:file r_file_perms;
+allow hal_camera_default vendor_displayfeature_device:chr_file { ioctl open read };
+allow hal_camera_default vendor_camera_data_file:sock_file { create getattr read setattr unlink write };
+allow hal_camera_default vendor_video_mi_prop:file read;
+allow hal_camera_default sys_thermal_flash_state:file { getattr write };
+allow hal_camera_default sys_thermal_flash_state:file w_file_perms;
+allow hal_camera_default sys_thermal_torch_real_level:file { getattr write };
+allow hal_camera_default sys_thermal_torch_real_level:file w_file_perms;
+r_dir_file(hal_camera_default, mnt_vendor_file)
+r_dir_file(hal_camera_default, camera_persist_file)
+r_dir_file(hal_camera_default, vendor_persist_sensors_file)
+unix_socket_connect(hal_camera_default, vendor_ssgtzd, init)
+unix_socket_connect(hal_camera_default, property, vendor_ssgtzd)
+get_prop(hal_camera_default, exported_system_prop)
+get_prop(hal_camera_default, vendor_video_mi_prop)
+set_prop(hal_camera, vendor_camera_sensor_prop)
+set_prop(hal_camera_default, vendor_camera_p3enable_prop)
+set_prop(hal_camera_default, vendor_camera_xdrversion_prop)
+set_prop(hal_camera_default, log_prop)
+hal_server_domain(hal_camera_default, hal_camera_mivi)
+hal_server_domain(hal_camera_default, hal_camera_aon)
+hal_server_domain(hal_camera_default, hal_quickcamera)
+hal_server_domain(hal_camera_default, hal_aidlbgservice)
+add_service(hal_camera_server, hal_camera_aon_service)
+add_service(hal_camera_server, hal_quickcamera_service)
+add_service(hal_camera_server, hal_aidlbgservice_service)
+add_hwservice(hal_camera_server, hal_camera_mivi_hwservice)
