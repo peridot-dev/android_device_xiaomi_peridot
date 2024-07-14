@@ -100,8 +100,7 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=true \
     androidboot.vendor.qspa=true \
-    androidboot.hypervisor.protected_vm.supported=false \
-    androidboot.selinux=permissive
+    androidboot.hypervisor.protected_vm.supported=false
 
 # Kernel (prebuilt)
 PREBUILT_PATH := device/xiaomi/peridot-prebuilt
