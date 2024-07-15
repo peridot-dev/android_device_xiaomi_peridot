@@ -2656,10 +2656,10 @@ odm/firmware/vpu30_2v.mbn
 odm/firmware/vpu33_4v.mbn
 
 # Vibrator
-odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
-odm/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
-odm/etc/permissions/vendor.hardware.vibratorfeature-permission.xml
-odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
+odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service:vendor/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
+odm/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc:vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
+odm/etc/permissions/vendor.hardware.vibratorfeature-permission.xml:vendor/etc/permissions/vendor.hardware.vibratorfeature-permission.xml
+odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml:vendor/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
 vendor/etc/excluded-input-devices.xml
 vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform.so
 
