@@ -64,6 +64,9 @@ function blob_fixup() {
         vendor/bin/init.qcom.usb.sh)
             sed -i 's/ro.product.marketname/ro.product.odm.marketname/g' "${2}"
             ;;
+        vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc)
+            sed -i "s/\/odm\/bin\//\/vendor\/bin\//g" "${2}"
+            ;;
     esac
 }
 
