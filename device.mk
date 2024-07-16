@@ -448,6 +448,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor
 
 PRODUCT_PACKAGES += \
+    librmnetctl
+
+PRODUCT_PACKAGES += \
     rfs_msm_mpss_readonly_mbnconfig_symlink \
     rfs_msm_mpss_readonly_modem_firmware_symlink
 
