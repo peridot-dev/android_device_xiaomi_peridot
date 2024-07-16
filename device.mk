@@ -562,6 +562,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
     hostapd_cli \
+    libcld80211 \
     libkeystore-engine-wifi-hidl \
     libkeystore-wifi-hidl \
     libwifi-hal \
