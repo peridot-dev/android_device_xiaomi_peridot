@@ -1028,14 +1028,11 @@ vendor/lib64/libhis_face_tracking.so
 vendor/lib64/libhme.so
 vendor/lib64/libhta_hexagon_runtime_snpe.so
 vendor/lib64/libiccprofile.so
-vendor/lib64/libimage_io.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libipebpsstriping480.so
 vendor/lib64/libisphwsetting.so
-vendor/lib64/libjpegdecoder.so
 vendor/lib64/libjpege.so
-vendor/lib64/libjpegencoder.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmemunreachable.so
 vendor/lib64/libmfGhostDetection.so
@@ -1083,7 +1080,6 @@ vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libubifocus.so
-vendor/lib64/libultrahdr.so
 vendor/lib64/libvideoBokeh.so
 vendor/lib64/libvideoml.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
@@ -2083,7 +2079,6 @@ vendor/lib64/liblmthermallistner.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters-ns.so
-vendor/lib64/libpasn.so
 vendor/lib64/libpasrutils.so
 vendor/lib64/libprefapps.so
 vendor/lib64/libprekill.so
