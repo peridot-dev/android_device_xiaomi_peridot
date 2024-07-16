@@ -65,7 +65,6 @@ sys/class/qcom-battery/fg_vendor u:object_r:vendor_sysfs_battery:s0
 /dev/xiaomi-fp u:object_r:vendor_fingerprint_device:s0
 
 # Touch
-/sys/devices/platform/goodix_ts.0/double_tap_enable u:object_r:touchpanel_sysfs:s0
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hw\.touchfeature-service u:object_r:hal_touchfeature_xiaomi_default_exec:s0
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /(vendor|odm)/etc/init.panel_info.sh u:object_r:vendor_touch_init_shell_exec:s0
