@@ -1,0 +1,20 @@
+type parts_app, domain;
+typeattribute parts_app mlstrustedsubject;
+
+app_domain(parts_app)
+
+binder_use(parts_app)
+
+allow parts_app activity_service:service_manager find;
+allow parts_app content_capture_service:service_manager find;
+allow parts_app game_service:service_manager find;
+allow parts_app netstats_service:service_manager find;
+allow parts_app sensorservice_service:service_manager find;
+allow parts_app vendor_perf_service:service_manager find;
+allow parts_app system_app_data_file:dir create_dir_perms;
+allow parts_app system_app_data_file:file create_file_perms;
+allow parts_app system_app_data_file:lnk_file create_file_perms;
+
+hal_client_domain(parts_app, hal_touchfeature_xiaomi)
+binder_call(parts_app, hal_touchfeature_xiaomi)
+allow parts_app hal_touchfeature_xiaomi_service:service_manager find;
