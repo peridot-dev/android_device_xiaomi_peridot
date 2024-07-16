@@ -2547,10 +2547,7 @@ vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
-vendor/lib64/libril.so
 vendor/lib64/librilqmimiscservices.so
-vendor/lib64/librilutils.so
-vendor/lib64/librmnetctl.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libtlpd.so
 vendor/lib64/libtlpd_configmgr.so
