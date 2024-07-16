@@ -3199,7 +3199,6 @@ vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/vendor.mbnota.rc
 vendor/lib64/libcert_parse.wpa_s.so
-vendor/lib64/libcld80211.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 
 # WiFi Display
