@@ -2065,10 +2065,6 @@ vendor/lib64/libskewknob.so
 vendor/lib64/libspl.so
 vendor/lib64/libsplh.so
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.perf@2.0.so
-vendor/lib64/vendor.qti.hardware.perf@2.1.so
-vendor/lib64/vendor.qti.hardware.perf@2.2.so
-vendor/lib64/vendor.qti.hardware.perf@2.3.so
 
 # Perf LM
 vendor/bin/hw/pasrknob
