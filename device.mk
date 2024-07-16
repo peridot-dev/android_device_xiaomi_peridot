@@ -117,7 +117,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.common-V1-ndk.vendor \
     android.hardware.camera.device-V2-ndk.vendor \
     android.hardware.camera.metadata-V2-ndk.vendor \
-    android.hardware.camera.provider-V2-ndk.vendor
+    android.hardware.camera.provider-V2-ndk.vendor \
+    vendor.qti.hardware.camera.aon-V1-ndk.vendor \
+    vendor.qti.hardware.camera.offlinecamera-V1-ndk.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
