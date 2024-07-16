@@ -1923,7 +1923,6 @@ odm/etc/libnfc-nci.conf
 odm/etc/libnfc-nxp.conf
 odm/etc/libnfc-nxp_RF.conf
 vendor/bin/hw/android.hardware.nqnfc-service.nxp
-vendor/bin/nqnfcinfo
 vendor/bin/pnscr
 vendor/bin/pnscr-mi
 vendor/bin/pnscr-rf
