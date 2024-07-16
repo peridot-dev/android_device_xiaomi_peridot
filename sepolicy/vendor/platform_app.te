@@ -1,0 +1,8 @@
+allow platform_app app_data_file:file execute;
+
+binder_call(platform_app, hal_camera_default)
+
+get_prop(platform_app, vendor_camera_prop)
+get_prop(platform_app, vendor_fp_prop)
+get_prop(platform_app, vendor_display_prop)
+get_prop(platform_app, vendor_panel_info_prop)
