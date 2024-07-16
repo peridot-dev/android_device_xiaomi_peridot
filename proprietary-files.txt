@@ -1780,26 +1780,21 @@ vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 
 # Keymint
-vendor/bin/hw/android.hardware.authsecret-service.nxp
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp
 vendor/bin/hw/android.hardware.weaver-service.nxp-qti
 vendor/etc/hal_uuid_map_peridot.xml
-vendor/etc/init/android.hardware.authsecret-service.nxp.rc
 vendor/etc/init/android.hardware.identity-service-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service.strongbox-nxp.rc
 vendor/etc/init/android.hardware.weaver-service.nxp.rc
 vendor/etc/permissions/android.hardware.hardware_keystore.jc-strongbox-keymint3-nxp.xml
-vendor/etc/vintf/manifest/android.hardware.authsecret-service.nxp.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint3-service.strongbox-nxp.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret3-service.strongbox-nxp.xml
 vendor/etc/vintf/manifest/android.hardware.weaver-service.nxp.xml
 vendor/etc/vintf/manifest/manifest_identity_credential.xml
 vendor/lib64/ese_weaver.so
-vendor/lib64/libcppbor_external.so
-vendor/lib64/libcppcose_rkp.so
 vendor/lib64/libjc_keymint_nxp.so
 vendor/lib64/libjc_keymint_transport_nxp.so
 vendor/lib64/libqtiidentitycredential.so
