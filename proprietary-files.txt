@@ -2655,6 +2655,14 @@ vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 odm/firmware/vpu30_2v.mbn
 odm/firmware/vpu33_4v.mbn
 
+# Vibrator
+odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
+odm/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
+odm/etc/permissions/vendor.hardware.vibratorfeature-permission.xml
+odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
+vendor/etc/excluded-input-devices.xml
+vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform.so
+
 # Vibrator firmware
 odm/firmware/0_click_P_RTP.bin
 odm/firmware/101_offlineCountdown_RTP.bin
