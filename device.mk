@@ -299,7 +299,9 @@ PRODUCT_COPY_FILES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.authsecret-V1-ndk.vendor \
+    android.hardware.authsecret-service.nxp
+
+PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor \
     android.hardware.gatekeeper-V1-ndk.vendor \
     android.hardware.gatekeeper@1.0.vendor \
@@ -314,7 +316,6 @@ PRODUCT_PACKAGES += \
     android.hardware.security.rkp-V3-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor \
-    android.se.omapi-V1-ndk.vendor \
     android.system.keystore2-V1-ndk.vendor \
     lib_android_keymaster_keymint_utils.vendor \
     libgatekeeper.vendor \
