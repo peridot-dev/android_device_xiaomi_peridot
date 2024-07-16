@@ -385,6 +385,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
 PRODUCT_PACKAGES += \
+    nqnfcinfo \
     vendor.nxp.nxpese@1.0.vendor \
     vendor.nxp.nxpnfc_aidl-V1-ndk.vendor
 
