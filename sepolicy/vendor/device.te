@@ -7,5 +7,8 @@ type vendor_displayfeature_device, dev_type;
 # Fingerprint
 type vendor_fingerprint_device, dev_type;
 
+# IR
+type ir_spi_device, dev_type;
+
 # Touch
 type touchfeature_device, dev_type;
