@@ -67,6 +67,21 @@ function blob_fixup() {
         vendor/bin/init.qcom.usb.sh)
             sed -i 's/ro.product.marketname/ro.product.odm.marketname/g' "${2}"
             ;;
+        # MiuiCamera
+        system/lib64/libgui-xiaomi.so)
+            patchelf --set-soname libgui-xiaomi.so "${2}"
+            ;;
+        system/lib64/libcamera_algoup_jni.xiaomi.so|system/lib64/libcamera_mianode_jni.xiaomi.so)
+            patchelf --replace-needed libgui.so libgui-xiaomi.so "${2}"
+            ;;
+        system/priv-app/MiuiCamera/MiuiCamera.apk)
+            tmp_dir="${EXTRACT_TMP_DIR}/MiuiCamera"
+            apktool d -q "$2" -o "$tmp_dir" -f
+            grep -rl "com.miui.gallery" "$tmp_dir" | xargs sed -i 's|"com.miui.gallery"|"com.google.android.apps.photos"|g'
+            apktool b -q "$tmp_dir" -o "$2"
+            rm -rf "$tmp_dir"
+            split --bytes=20M -d "$2" "$2".part
+            ;;
     esac
 }
 
