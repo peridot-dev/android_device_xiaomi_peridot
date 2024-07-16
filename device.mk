@@ -384,6 +384,10 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element-V1-ndk.vendor \
     android.hardware.secure_element@1.2.vendor
 
+PRODUCT_PACKAGES += \
+    vendor.nxp.nxpese@1.0.vendor \
+    vendor.nxp.nxpnfc_aidl-V1-ndk.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.hce.xml \
