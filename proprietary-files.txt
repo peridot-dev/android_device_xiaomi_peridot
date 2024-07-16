@@ -1760,18 +1760,6 @@ vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
 
-# IPACM
-vendor/bin/ipacm
-vendor/bin/ipacm-diag
-vendor/etc/IPACM_Filter_cfg.xml
-vendor/etc/IPACM_cfg.xml
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/ipacm.rc
-vendor/lib64/libipanat.so
-vendor/lib64/libnetfilter_conntrack.so
-vendor/lib64/libnfnetlink.so
-vendor/lib64/liboffloadhal.so
-
 # IR
 odm/lib64/hw/consumerir.qcom.so
 
@@ -3210,7 +3198,6 @@ vendor/bin/mbnota
 vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/vendor.mbnota.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.tetheroffload.service.xml
 vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib64/libcld80211.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
