@@ -2140,7 +2140,6 @@ vendor/lib64/libprotobuf-cpp-lite-21.7.so
 # Psiclient
 vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-vendor/lib64/libpsi.so
 
 # QESDK
 -system_ext/app/QesdkSysService/QesdkSysService.apk

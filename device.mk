@@ -427,6 +427,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# Psiclient
+PRODUCT_PACKAGES += \
+    libpsi.vendor
+
 # QMI
 PRODUCT_PACKAGES += \
     libcurl.vendor \
