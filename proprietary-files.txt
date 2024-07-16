@@ -1927,7 +1927,7 @@ vendor/bin/pnscr
 vendor/bin/pnscr-mi
 vendor/bin/pnscr-rf
 vendor/etc/1-SN1X0_SPC.txt
-vendor/etc/init/nfc-service-nxp.rc
+vendor/etc/init/nfc-service-nxp.rc:vendor/etc/init/nqnfc-service-nxp.rc
 vendor/etc/libnfc-SN220_19_2MHZ.conf
 vendor/etc/libnfc-SN220_38_4MHZ.conf
 vendor/etc/libnfc-mtp-SN100.conf
