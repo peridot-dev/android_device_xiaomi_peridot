@@ -326,6 +326,7 @@ PRODUCT_PACKAGES += \
     android.system.keystore2-V1-ndk.vendor \
     lib_android_keymaster_keymint_utils.vendor \
     libgatekeeper.vendor \
+    libsoft_attestation_cert.vendor \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor
 

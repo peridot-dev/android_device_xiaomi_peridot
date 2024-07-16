@@ -1790,7 +1790,6 @@ vendor/lib64/libjc_keymint_nxp.so
 vendor/lib64/libjc_keymint_transport_nxp.so
 vendor/lib64/libqtiidentitycredential.so
 vendor/lib64/libqtikeymint.so
-vendor/lib64/libsoft_attestation_cert.so
 
 # Lights
 vendor/bin/hw/vendor.qti.hardware.lights.service
