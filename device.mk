@@ -485,7 +485,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.multihal
+    android.hardware.sensors-service.xiaomi-multihal
 
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
