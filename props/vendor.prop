@@ -182,7 +182,6 @@ camera.disable_zsl_mode=true
 persist.sys.miui.camera.version=3.0
 ro.camera.enableCamera1MaxZsl=1
 ro.camerax.extensions.enabled=true
-ro.hardware.camera=xiaomi
 ro.vendor.beluga.c=0x4800
 ro.vendor.beluga.p=0x3
 ro.vendor.beluga.s=0x900
