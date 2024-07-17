@@ -578,7 +578,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     socket audio_us_socket_0 seqpacket 0666 system system
     onrestart restart audioserver
 
-service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-service.multihal
+service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-service.xiaomi-multihal
     override
     class hal
     user system
