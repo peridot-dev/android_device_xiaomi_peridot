@@ -2577,23 +2577,6 @@ vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.qsh.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
 
-# Sensors elliptic
-odm/bin/EL_calib
-odm/bin/audio-factory-test
-odm/bin/elliptic_uscal.sh
-odm/bin/elliptic_uscal_v2.sh
-odm/bin/engine_runner
-odm/bin/headset_detect.sh
-odm/bin/playback_headset.sh
-odm/bin/setup_rcv2backmic.sh
-odm/bin/setup_rcv2mainmic.sh
-odm/bin/setup_rcv2topmic.sh
-odm/bin/spk_dsm_test.sh
-odm/bin/us_cal.sh
-odm/etc/init/init.elliptic.rc
-odm/lib64/libelliptic_engine.so
-odm/lib64/libelliptic_serializer.so
-
 # Sensors ultrasound
 odm/lib64/sensors.ultrasoundproximity.so
 vendor/lib64/libultrasound_notify.so
