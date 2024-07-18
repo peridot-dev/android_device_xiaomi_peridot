@@ -1,5 +1,4 @@
 vendor.dolby.hardware.dms::IDms          u:object_r:hal_dms_hwservice:s0
-com.android.ozoaudio.notify::IOzoNotify                         u:object_r:hal_ozonotify_hwservice:s0
 
 vendor.xiaomi.hardware.bgservice::IBGService                 u:object_r:hal_camera_mivi_hwservice:s0
 vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                        u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
