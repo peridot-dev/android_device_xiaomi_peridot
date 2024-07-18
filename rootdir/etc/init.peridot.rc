@@ -56,6 +56,9 @@ on boot
     chown system system /sys/class/thermal/thermal_message/board_sensor_temp_comp
     chown system system /sys/class/thermal/thermal_message/cpu_nolimit_temp
 
+    # Set thermal mode to mgame
+    write /sys/devices/virtual/thermal/thermal_message/sconfig 19
+    
     # Xiaomi touch
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
