@@ -85,9 +85,6 @@
 /(odm|vendor/odm|system/vendor)/bin/mtd u:object_r:hal_mtdservice_default_exec:s0
 /(odm|vendor/odm|system/vendor)/bin/tidad u:object_r:hal_tidaservice_default_exec:s0
 
-# OZO Audio
-/(vendor|system/vendor)/bin/hw/vendor\.ozoaudio\.notify@1\.0-service u:object_r:hal_ozonotify_default_exec:s0
-
 # MiThermal
 /(vendor|system/vendor)/bin/mi_ambient u:object_r:mi_ambient_exec:s0
 /sys/class/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0

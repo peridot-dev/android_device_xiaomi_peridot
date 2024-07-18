@@ -1,12 +1,5 @@
 <compatibility-matrix version="7.0" type="framework">
     <hal format="aidl" optional="true">
-        <name>com.android.ozoaudio.notify</name>
-        <interface>
-            <name>IOzoNotify</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>com.fingerprints.extension3</name>
         <interface>
             <name>IFingerprintNavigation</name>
