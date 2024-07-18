@@ -41,8 +41,3 @@ attribute hal_tidaservice_server;
 attribute hal_mfidoca;
 attribute hal_mfidoca_client;
 attribute hal_mfidoca_server;
-
-# OZO
-attribute hal_ozonotify;
-attribute hal_ozonotify_client;
-attribute hal_ozonotify_server;

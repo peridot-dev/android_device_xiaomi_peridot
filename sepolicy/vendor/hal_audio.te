@@ -1,9 +1,4 @@
 allow hal_audio bluetooth:binder transfer;
-allow hal_audio_default hal_ozonotify_hwservice:hwservice_manager find;
-allow hal_audio_default hal_ozonotify_service:service_manager find;
-allow hal_audio_default hal_ozonotify:binder { call transfer };
-allow hal_audio_default hal_ozonotify:binder transfer;
-allow hal_audio_default hal_ozonotify:fd *;
 allow hal_audio_default vendor_persist_audio_file:dir rw_dir_perms;
 allow hal_audio_default vendor_persist_audio_file:file { create rw_file_perms };
 allow hal_audio_default mnt_vendor_file:dir r_dir_perms;
