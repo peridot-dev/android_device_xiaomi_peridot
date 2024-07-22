@@ -1606,7 +1606,6 @@ odm/lib64/libtruetone.so
 odm/lib64/libvideomode.so
 vendor/bin/displayfeature
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature_aidl-service
-vendor/bin/init.qti.graphics.sh
 vendor/etc/display/3dlut-pt-onnx-ptq-htp-fp16.dlc
 vendor/etc/display/8635_sr_2x_y1280x720.dlc
 vendor/etc/display/8635_sr_2x_y540x960.dlc
@@ -1618,7 +1617,6 @@ vendor/etc/display/LUT.txt
 vendor/etc/display/LUT0.txt
 vendor/etc/display/LUT1.txt
 vendor/etc/display/LUT2.txt
-vendor/etc/init/init.qti.graphics.rc
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature_aidl-service.xml
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
@@ -1775,12 +1773,9 @@ vendor/bin/hw/android.hardware.gatekeeper-service-qti
 vendor/etc/init/android.hardware.gatekeeper-service-qti.rc
 vendor/lib64/hw/libqtigatekeeper.so
 
-# Graphics (Adreno)
-vendor/app/com.qualcomm.qti.gpudrivers.pineapple.api34/com.qualcomm.qti.gpudrivers.pineapple.api34.apk
-vendor/gpu/kbc/sequence_manifest.bin
-vendor/gpu/kbc/unified_kbcs_32.bin
-vendor/gpu/kbc/unified_kbcs_64.bin
-vendor/gpu/kbc/unified_ksqs.bin
+# Graphics
+vendor/bin/init.qti.graphics.sh
+vendor/etc/init/init.qti.graphics.rc
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libEGL_angle.so
@@ -1788,15 +1783,14 @@ vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv1_CM_angle.so
 vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libGLESv2_angle.so
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libOpenCL_adreno.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
-vendor/lib64/libgpudataproducer.so
 vendor/lib64/libgsl.so
 vendor/lib64/libkcl.so
 vendor/lib64/libkernelmanager.so
@@ -1805,7 +1799,7 @@ vendor/lib64/libllvm-qcom.so
 vendor/lib64/libllvm-qgl.so
 vendor/lib64/libopencl_loader.so
 
-# Graphics (Adreno firmware)
+# Graphics firmware
 odm/firmware/gen70900_zap.mbn
 odm/firmware/gen71100_zap.mbn
 vendor/firmware/gen70900_aqe.fw
@@ -1813,10 +1807,6 @@ vendor/firmware/gen70900_sqe.fw
 vendor/firmware/gen71100_gmu.bin
 vendor/firmware/gen71100_sqe.fw
 vendor/firmware/gmu_gen70900.bin
-
-# Graphics (Vulkan)
-vendor/lib64/hw/vulkan.adreno.so
-vendor/lib64/hw/vulkan.pastel.so
 
 # HDCP
 vendor/bin/hdcp1prov
