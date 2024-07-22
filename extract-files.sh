@@ -61,6 +61,9 @@ function blob_fixup() {
         system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml)
             sed -i '1,6d' "${2}"
             ;;
+        system_ext/lib64/libwfdnative.so)
+            ${PATCHELF} --remove-needed "android.hidl.base@1.0.so" "${2}"
+            ;;
         vendor/bin/init.qcom.usb.sh)
             sed -i 's/ro.product.marketname/ro.product.odm.marketname/g' "${2}"
             ;;
