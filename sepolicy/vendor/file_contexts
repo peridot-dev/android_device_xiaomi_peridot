@@ -39,6 +39,10 @@
 # CIT Sensors
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 
+# Charge
+/(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
+/data/vendor/charge_logger(/.*)? u:object_r:vendor_charge_log_file:s0
+
 # Diag
 /data/vendor/modem(/.*)? u:object_r:vendor_modem_data_file:s0
 
@@ -66,18 +70,15 @@
 /dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
 /dev/xiaomi-fp u:object_r:vendor_fingerprint_device:s0
 
+# GNSS
+/data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
+
 # IR
 /dev/ir_spi u:object_r:ir_spi_device:s0
 
-# Sensors
-/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                                                   u:object_r:hal_sensors_default_exec:s0
-
-# Touch
-/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hw\.touchfeature-service u:object_r:hal_touchfeature_xiaomi_default_exec:s0
-/dev/xiaomi-touch u:object_r:touchfeature_device:s0
-/(vendor|odm)/etc/init.panel_info.sh u:object_r:vendor_touch_init_shell_exec:s0
-/sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
-/sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
+# Mac Address
+/data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
+/vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
 
 # Mlipay
 /(odm|vendor/odm|system/vendor)/bin/mlipayd u:object_r:hal_mlipay_default_exec:s0
@@ -93,13 +94,12 @@
 /sys/devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 /sys/class/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 
-# Mac Address
-/data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
-/vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
+# Sensors
+/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                                                   u:object_r:hal_sensors_default_exec:s0
 
-# GNSS
-/data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
-
-# Charge
-/(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
-/data/vendor/charge_logger(/.*)? u:object_r:vendor_charge_log_file:s0
+# Touch
+/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hw\.touchfeature-service u:object_r:hal_touchfeature_xiaomi_default_exec:s0
+/dev/xiaomi-touch u:object_r:touchfeature_device:s0
+/(vendor|odm)/etc/init.panel_info.sh u:object_r:vendor_touch_init_shell_exec:s0
+/sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
+/sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
