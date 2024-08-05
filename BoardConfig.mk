@@ -168,6 +168,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
 
+# Power
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/props/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/props/vendor.prop
