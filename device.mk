@@ -196,6 +196,10 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
