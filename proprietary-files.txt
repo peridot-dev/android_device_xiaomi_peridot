@@ -70,7 +70,7 @@ odm/etc/audio/sku_cliffs/mixer_paths_cliffs_mtp.xml
 odm/etc/audio/sku_cliffs/mixer_paths_overlay_dynamic.xml
 odm/etc/audio/sku_cliffs/mixer_paths_overlay_static.xml
 odm/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp.xml
-odm/etc/audio_policy_engine_configuration_mi.xml
+odm/etc/audio_policy_engine_configuration_mi.xml:odm/etc/audio_policy_engine_configuration.xml
 odm/etc/audio_policy_engine_default_stream_volumes.xml
 odm/etc/audio_policy_engine_product_strategies.xml
 odm/etc/audio_policy_engine_stream_volumes.xml
