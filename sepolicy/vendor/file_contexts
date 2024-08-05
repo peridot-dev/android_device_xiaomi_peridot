@@ -54,6 +54,7 @@
 
 # Dolby
 /vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service u:object_r:mediacodec_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service       u:object_r:hal_dms_default_exec:s0
 
 # Fastcharge
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.xiaomi   u:object_r:hal_lineage_fastcharge_default_exec:s0
