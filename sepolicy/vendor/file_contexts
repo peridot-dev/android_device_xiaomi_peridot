@@ -69,6 +69,7 @@
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
 /dev/xiaomi-fp u:object_r:vendor_fingerprint_device:s0
+/dev/miev u:object_r:vendor_miev_device:s0
 
 # GNSS
 /data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
