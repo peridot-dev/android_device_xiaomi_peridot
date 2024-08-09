@@ -10,6 +10,10 @@
     <!-- Bottom margin size when fingerprint in display is active -->
     <dimen name="keyguard_indication_margin_bottom">6dp</dimen>
 
+     <!-- Preferred refresh rate at keyguard, if supported by the display. Overrides
+          keyguardMaxRefreshRate. -->
+     <integer name="config_keyguardRefreshRate">60</integer>
+
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">1210px</dimen>
 </resources>
