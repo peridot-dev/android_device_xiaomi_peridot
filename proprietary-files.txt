@@ -1385,7 +1385,7 @@ vendor/bin/vendor.qti.diag.sh
 vendor/etc/init/vendor.qti.diag_userdebug.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiagjni.so
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display
 odm/lib64/libclient2slpi.notifier.so
