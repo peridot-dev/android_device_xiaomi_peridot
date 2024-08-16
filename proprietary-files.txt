@@ -2034,40 +2034,6 @@ vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 vendor/lib64/vendor.qti.qspmhal-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
-# QVR
-vendor/bin/hw/qvrservice
-vendor/bin/qvrdatalogger
-vendor/bin/qvrservicetest
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua.txt
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua_6dof_config.xml
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua_qvr_3dof_tracker_config.txt
-vendor/etc/qvr/cfg/557/0/65536/mtplanai.txt
-vendor/etc/qvr/cfg/557/0/65536/mtplanai_6dof_config.xml
-vendor/etc/qvr/cfg/557/0/65536/mtplanai_qvr_3dof_tracker_config.txt
-vendor/etc/qvr/qvr_hid_device_list.txt
-vendor/etc/qvr/qvr_usb_device_list.txt
-vendor/etc/qvr/qvrservice_config.txt
-vendor/etc/seccomp_policy/qvr@2.0.policy
-vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
-vendor/lib64/libDspIOProxy_stub.so
-vendor/lib64/libMapService.so
-vendor/lib64/libQEGA.qti.so
-vendor/lib64/libScenescape.so
-vendor/lib64/libStereoRectifyWrapper.so
-vendor/lib64/libeye_tracking_dsp_sample_stub.so
-vendor/lib64/libhalide_hexagon_host.so
-vendor/lib64/libpolygon.so
-vendor/lib64/libqvr_cam_cdsp_driver_stub.so
-vendor/lib64/libqvr_cdsp_driver_stub.so
-vendor/lib64/libqvr_eyetracking_plugin.so
-vendor/lib64/libqvrcamera_client.qti.so
-vendor/lib64/libqvrcameraplayback.so
-vendor/lib64/libqvrservice.so
-vendor/lib64/libqvrservice_client.qti.so
-vendor/lib64/libtracker_6dof_impl.so
-vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
-vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
-
 # RIL
 odm/etc/MESubway_prebuilt.db
 odm/etc/me_config.xml
