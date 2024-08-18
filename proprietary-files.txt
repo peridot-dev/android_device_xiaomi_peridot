@@ -1746,9 +1746,6 @@ vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
 
-# IR
-odm/lib64/hw/consumerir.qcom.so
-
 # Kernel
 vendor/bin/init.qti.write.sh
 vendor/bin/system_dlkm_modprobe.sh
