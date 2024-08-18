@@ -9,7 +9,7 @@ type vendor_fingerprint_device, dev_type;
 type vendor_miev_device, dev_type;
 
 # IR
-type ir_spi_device, dev_type;
+type lirc_device, dev_type;
 
 # Touch
 type touchfeature_device, dev_type;
