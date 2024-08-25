@@ -30,6 +30,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.imsrtpservice@3.1',
         'vendor.qti.ImsRtpService-V1-ndk',
         'vendor.qti.diaghal@1.0',
+        'vendor.qti.hardware.wifidisplaysession@1.0',
     ): lib_fixup_vendor_suffix,
 }
 
