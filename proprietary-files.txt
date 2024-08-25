@@ -99,7 +99,7 @@ odm/firmware/aw882xx_acf.bin
 odm/firmware/fs19xx.fsm
 
 # Audio graph manager
--vendor/lib64/libagm.so
+vendor/lib64/libagm.so
 vendor/lib64/libagmmixer.so
 vendor/lib64/libmisight.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
@@ -138,7 +138,7 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
 vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
+vendor/lib64/libar-pal.so
 vendor/lib64/libarmemlog.so
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
