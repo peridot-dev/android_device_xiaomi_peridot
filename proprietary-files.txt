@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from peridot V816.0.5.0.UNPMIXM - miui_PERIDOTGlobal_OS1.0.5.0.UNPMIXM
+# All unpinned blobs below are extracted from peridot V816.0.7.0.UNPMIXM - miui_PERIDOTGlobal_OS1.0.7.0.UNPMIXM
 
 # ACDB
 odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb:odm/etc/acdbdata/cliffs_mtp/Fluence_acdb_cal.acdb
