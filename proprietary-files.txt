@@ -2151,6 +2151,7 @@ vendor/bin/ims-dataservice-daemon
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
 vendor/bin/ks
+vendor/bin/mbnota
 vendor/bin/nicmd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
@@ -2170,6 +2171,7 @@ vendor/etc/init/dataqti.rc
 vendor/etc/init/ims-dataservice-daemon.rc
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
+vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/nicmd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrilNrd.rc
@@ -2177,6 +2179,7 @@ vendor/etc/init/qwesd.rc
 vendor/etc/init/shsusrd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/tlpd.rc
+vendor/etc/init/vendor.mbnota.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
@@ -2868,15 +2871,11 @@ odm/firmware/haptic_rtp_lighthouse.bin
 odm/firmware/haptic_rtp_osc_24K_5s.bin
 odm/firmware/haptic_rtp_silk.bin
 
-# WiFi
-vendor/bin/cnss-daemon
-vendor/bin/cnss_diag
-vendor/bin/mbnota
-vendor/etc/init/init.vendor.wlan.rc
-vendor/etc/init/libxiaomi_qcril.rc
-vendor/etc/init/vendor.mbnota.rc
-vendor/lib64/libcert_parse.wpa_s.so
-vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
+# WiFi - from Update to LA.VENDOR.14.3.0.r1-11400-lanai.0
+vendor/bin/cnss-daemon|7ddfccc31cc09c188b63f4d7dafbdf695d25c2ad
+vendor/bin/cnss_diag|8bc2816b414da0532ac41726a660484cf96f237a
+vendor/etc/init/init.vendor.wlan.rc|a4d45be8c1e12d4690adbb9a79e882b2f094b2da
+vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so|f9422d43603f22c7837ad9154e83643633981025
 
 # WiFi Display
 system/framework/WfdCommon.jar
