@@ -103,7 +103,7 @@ BOARD_BOOTCONFIG := \
     androidboot.hypervisor.protected_vm.supported=false
 
 # Kernel (prebuilt)
-PREBUILT_PATH := device/xiaomi/peridot-prebuilt
+PREBUILT_PATH := device/xiaomi/peridot-kernel
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
 BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
