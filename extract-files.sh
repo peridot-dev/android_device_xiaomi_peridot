@@ -98,6 +98,10 @@ function blob_fixup() {
             rm -rf "${tmp_dir}"
             split --bytes=20M -d "${2}" "${2}".part
             ;;
+        vendor/lib64/libqcodec2_core.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
+            ;;
         vendor/lib64/vendor.libdpmframework.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
