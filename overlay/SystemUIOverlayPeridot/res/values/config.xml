@@ -12,7 +12,7 @@
 
      <!-- Preferred refresh rate at keyguard, if supported by the display. Overrides
           keyguardMaxRefreshRate. -->
-     <integer name="config_keyguardRefreshRate">60</integer>
+     <integer name="config_keyguardRefreshRate">120</integer>
 
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">1210px</dimen>
