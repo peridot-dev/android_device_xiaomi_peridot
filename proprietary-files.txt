@@ -1028,6 +1028,7 @@ vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqshcamera.so
+vendor/lib64/librendercore.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libshadowhook.so
 vendor/lib64/libsnpe_config.so
