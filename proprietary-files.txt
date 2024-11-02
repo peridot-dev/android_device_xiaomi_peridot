@@ -1966,6 +1966,10 @@ vendor/lib64/libprotobuf-cpp-lite-21.7.so
 -system_ext/app/QesdkSysService/QesdkSysService.apk
 system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml
 system_ext/lib64/libqesdk_ndk_platform.qti.so
+system_ext/lib64/vendor.qti.qesdhal@1.0.so
+system_ext/lib64/vendor.qti.qesdhal@1.1.so
+system_ext/lib64/vendor.qti.qesdhal@1.2.so
+system_ext/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
 vendor/bin/qesdk-manager
 vendor/bin/qesdk-secmanager
 vendor/etc/init/qesdk-manager.rc
