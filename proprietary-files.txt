@@ -648,6 +648,7 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.swjpegencode.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.tsskinbeautifier.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.watermark.so
 odm/lib64/libAncHumanVideoBokehV4.so
+odm/lib64/libMiStereoFactoryCalibAnalyzeBin_qual.so
 odm/lib64/libTrueSight.so
 odm/lib64/libanc_edof_checker.so
 odm/lib64/libanc_single_bokeh.so
@@ -669,6 +670,7 @@ odm/lib64/libarcsoft_turbo_sr_detection.so
 odm/lib64/libcamera_scene.so
 odm/lib64/libellv.so
 odm/lib64/liblocalFlickerDet.so
+odm/lib64/libmiStereoCalibLib_qual.so
 odm/lib64/libmiai_deblur.so
 odm/lib64/libmiaio_aio_seg.so
 odm/lib64/libmialgo_aio_seg.so
