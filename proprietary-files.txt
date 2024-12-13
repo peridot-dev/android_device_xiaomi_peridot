@@ -2626,17 +2626,6 @@ vendor/lib64/libsi.so
 vendor/lib64/libtaautoload.so
 vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
 
-# USB
-vendor/bin/hw/android.hardware.usb-service.qti
-vendor/bin/hw/android.hardware.usb.gadget-service.qti
-vendor/bin/init.qcom.usb.sh
-vendor/etc/init/android.hardware.usb-service.qti.rc
-vendor/etc/init/android.hardware.usb.gadget-service.qti.rc
-vendor/etc/init/hw/init.qcom.usb.rc
-vendor/etc/usb_compositions.conf
-vendor/etc/vintf/manifest/android.hardware.usb-service.qti.xml
-vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.qti.xml
-
 # VPP
 vendor/bin/hw/qconfigservice
 vendor/bin/qconfigfunctest
