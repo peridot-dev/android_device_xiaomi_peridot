@@ -283,6 +283,9 @@ PRODUCT_PACKAGES += \
     WifiOverlayPeridotPOCO \
     WifiOverlayPeridotRedmi
 
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
