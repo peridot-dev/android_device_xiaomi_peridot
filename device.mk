@@ -297,6 +297,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.sharedsecret-V1-ndk.vendor \
     android.system.keystore2-V1-ndk.vendor \
     lib_android_keymaster_keymint_utils.vendor \
+    libcppbor_external.vendor \
     libgatekeeper.vendor \
     libsoft_attestation_cert.vendor \
     libkeymaster_messages.vendor \
