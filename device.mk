@@ -438,9 +438,5 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
-# WiFi Display
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 # Vendor
 $(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
