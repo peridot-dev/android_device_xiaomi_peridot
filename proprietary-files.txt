@@ -2898,7 +2898,7 @@ vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 
 # WiFi Display
-system/framework/WfdCommon.jar
+system/framework/WfdCommon.jar;BOOT_JAR
 system_ext/bin/wfdservice64
 system_ext/etc/init/wfdservice.rc
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
