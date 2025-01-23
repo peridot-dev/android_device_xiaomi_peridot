@@ -390,6 +390,8 @@ on boot
     chmod 0660 /sys/class/touch/touch_dev/gesture_double_tap_enabled
     chown system system /sys/class/touch/touch_dev/gesture_double_tap_state
     chmod 0664 /sys/class/touch/touch_dev/gesture_double_tap_state
+    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
+    chmod 0660 /sys/devices/virtual/touch/touch_dev/bump_sample_rate
 
 on init && property:ro.boot.mode=charger
     wait_for_prop vendor.all.modules.ready 1
