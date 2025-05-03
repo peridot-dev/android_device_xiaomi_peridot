@@ -18,9 +18,14 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/xiaomi/peridot',
     'hardware/qcom-caf/sm8650',
     'hardware/qcom-caf/wlan',
     'hardware/xiaomi',
+    'hardware/qcom-caf/common/libqti-perfd-client',
+    'hardware/lineage/interfaces/power-libperfmgr',
+    'hardware/google/interfaces',
+    'hardware/google/pixel',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',

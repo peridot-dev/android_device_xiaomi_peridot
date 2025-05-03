@@ -432,6 +432,9 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc

@@ -5,7 +5,11 @@
 
 soong_namespace {
     imports: [
-        "hardware/xiaomi"
+        "hardware/xiaomi",
+        "hardware/lineage/interfaces/power-libperfmgr",
+        "hardware/qcom-caf/common/libqti-perfd-client",
+        "hardware/google/interfaces",
+        "hardware/google/pixel",
     ],
 }
 
