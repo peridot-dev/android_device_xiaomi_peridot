@@ -8,8 +8,5 @@ type vendor_displayfeature_device, dev_type;
 type vendor_fingerprint_device, dev_type;
 type vendor_miev_device, dev_type;
 
-# IR
-type lirc_device, dev_type;
-
 # Touch
 type touchfeature_device, dev_type;
