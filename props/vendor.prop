@@ -195,6 +195,7 @@ ro.vendor.radio.build_profile=miui
 ro.vendor.radio.build_region=global
 
 # Sensors
+ro.vendor.sensors.xiaomi.double_tap=true
 ro.vendor.sensors.xiaomi.single_tap=true
 
 # SKU
