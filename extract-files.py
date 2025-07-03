@@ -247,9 +247,19 @@ blob_fixups: blob_fixups_user_type = {
             'libcppbor_external.so',
             'libcppbor_peridot.so'
     ),
+    (
+        'vendor/bin/qcc-vendor',
+        'vendor/bin/qms',
+        'vendor/bin/xtra-daemon',
+        'vendor/lib64/libcne.so',
+        'vendor/lib64/libqcc_sdk.so',
+        'vendor/lib64/libqms_client.so',
+    ): blob_fixup()
+        .add_needed('libbinder_shim.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
+        .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
 
