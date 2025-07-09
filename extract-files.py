@@ -72,15 +72,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so')
         .remove_needed('android.hidl.base@1.0.so'),
-    'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .replace_needed(
-            'android.hardware.common-V2-ndk_platform.so',
-            'android.hardware.common-V2-ndk.so'
-        )
-        .replace_needed(
-            'android.media.audio.common.types-V2-cpp.so',
-            'android.media.audio.common.types-V4-cpp.so'
-        ),
     (
         'odm/etc/camera/enhance_motiontuning.xml',
         'odm/etc/camera/motiontuning.xml',
