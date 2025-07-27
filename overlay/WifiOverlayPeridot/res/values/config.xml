@@ -88,9 +88,6 @@
     <!-- Indicates that p2p MAC randomization is supported on this device -->
     <bool name="config_wifi_p2p_mac_randomization_supported" translatable="false">true</bool>
 
-    <!-- Indicates that bridged AP mode is supported on this device -->
-    <bool name="config_wifiBridgedSoftApSupported" translatable="false">false</bool>
-
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,16777216,262144,524288,16777216</string>
