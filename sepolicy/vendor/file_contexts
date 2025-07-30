@@ -61,8 +61,8 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.xiaomi   u:object_r:hal_lineage_fastcharge_default_exec:s0
 
 # Fingerprint
-/(vendor|system/vendor|odm)/bin/hw/mfp-daemon u:object_r:vendor_mfp-daemon_exec:s0
-/data/vendor/misc/mi_fp(/.*)? u:object_r:vendor_mfp-daemon_data_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+/data/vendor/misc/mi_fp(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /sys/devices/virtual/touch/tp_dev/fod_status u:object_r:sysfs_tp_fodstatus:s0
 /sys/devices/virtual/touch/touch_dev/fod_press_status u:object_r:sysfs_tp_fodstatus:s0
 /data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0

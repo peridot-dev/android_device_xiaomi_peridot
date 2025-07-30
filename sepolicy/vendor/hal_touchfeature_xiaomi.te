@@ -19,7 +19,6 @@ allow hal_touchfeature_xiaomi_default vendor_hal_perf_hwservice:hwservice_manage
 allow hal_touchfeature_xiaomi_default hal_touchfeature_xiaomi_service:service_manager find;
 allow hal_touchfeature_xiaomi_default vendor_hal_perf2_service:service_manager find;
 allow hal_touchfeature_xiaomi_default vendor_hal_perf_default:binder call;
-allow hal_touchfeature_xiaomi_default vendor_mfp-daemon:binder transfer;
 allow hal_touchfeature_xiaomi touchfeature_device:chr_file rw_file_perms;
 allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_server:binder { call transfer };
 allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_server:fd *;
