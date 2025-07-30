@@ -35,15 +35,8 @@ vendor.wv.oemcrypto.debug.enable_prov40=true
 ro.vendor.qti.va_odm.support=1
 
 # Fingerprint
-persist.vendor.sys.fp.expolevel=0x88
-persist.vendor.sys.fp.fod.location.X_Y=505,2333
-persist.vendor.sys.fp.fod.size.width_height=210,210
-ro.hardware.fp.fod.location=low
-ro.hardware.fp.fod.lowlight.brightness.threshold=411
-ro.hardware.fp.fod.lowlight.lux.threshold=3
-ro.hardware.fp.fod.touch.ctl.version=2.0
-ro.hardware.fp.fod=true
-ro.hardware.fp.mievent=true
+persist.vendor.fingerprint.type=udfps
+persist.vendor.fingerprint.sensor_location=610|2437|105
 
 # Graphics
 debug.sf.set_idle_timer_ms=1100
