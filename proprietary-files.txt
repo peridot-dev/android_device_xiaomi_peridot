@@ -2151,6 +2151,7 @@ vendor/bin/ims-dataservice-daemon
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
 vendor/bin/ks
+vendor/bin/mbnota
 vendor/bin/nicmd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
@@ -2170,6 +2171,7 @@ vendor/etc/init/dataqti.rc
 vendor/etc/init/ims-dataservice-daemon.rc
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
+vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/nicmd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrilNrd.rc
@@ -2177,6 +2179,7 @@ vendor/etc/init/qwesd.rc
 vendor/etc/init/shsusrd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/tlpd.rc
+vendor/etc/init/vendor.mbnota.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
@@ -2862,10 +2865,7 @@ odm/firmware/haptic_rtp_silk.bin
 
 # WiFi
 vendor/bin/cnss-daemon
-vendor/bin/mbnota
 vendor/etc/init/init.vendor.wlan.rc
-vendor/etc/init/libxiaomi_qcril.rc
-vendor/etc/init/vendor.mbnota.rc
 vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 
