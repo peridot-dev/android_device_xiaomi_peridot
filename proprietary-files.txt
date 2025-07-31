@@ -1409,7 +1409,6 @@ vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
 vendor/etc/init/vendor.qti.hardware.display.demura-service.rc
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.display.demura-service.xml
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/hw/gralloc.default.so
