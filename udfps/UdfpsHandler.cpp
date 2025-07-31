@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "UdfpsHandler.garnet"
+#define LOG_TAG "UdfpsHandler.peridot"
 
 #include <aidl/android/hardware/biometrics/fingerprint/BnFingerprint.h>
 #include <android-base/logging.h>
@@ -76,7 +76,7 @@ struct disp_base displayBasePrimary = {
 
 }  // anonymous namespace
 
-class XiaomiGarnetUdfpsHandler : public UdfpsHandler {
+class XiaomiPeridotUdfpsHandler : public UdfpsHandler {
   public:
     void init(fingerprint_device_t* device) {
         mDevice = device;
@@ -190,7 +190,7 @@ class XiaomiGarnetUdfpsHandler : public UdfpsHandler {
 };
 
 static UdfpsHandler* create() {
-    return new XiaomiGarnetUdfpsHandler();
+    return new XiaomiPeridotUdfpsHandler();
 }
 
 static void destroy(UdfpsHandler* handler) {
