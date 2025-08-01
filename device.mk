@@ -164,8 +164,8 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh
 
 # Dolby
-PRODUCT_PACKAGES += \
-    XiaomiDolby
+#PRODUCT_PACKAGES += \
+#    XiaomiDolby
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -183,8 +183,8 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Fastcharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.xiaomi
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.fastcharge@1.0-service.xiaomi
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -461,8 +461,8 @@ PRODUCT_PACKAGES += \
     librmnetctl
 
 PRODUCT_PACKAGES += \
-    rfs_msm_mpss_readonly_mbnconfig_symlink \
-    rfs_msm_mpss_readonly_modem_firmware_symlink
+    rfs_msm_mpss_readonly_mbnconfig_symlink
+    #rfs_msm_mpss_readonly_modem_firmware_symlink
 
 # RenderScript
 PRODUCT_PACKAGES += \
