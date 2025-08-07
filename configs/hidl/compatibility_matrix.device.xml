@@ -1,4 +1,60 @@
 <compatibility-matrix version="7.0" type="framework">
+   <hal format="aidl" optional="true">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <version>4</version>
+        <interface>
+            <name>IFingerprint</name>
+            <instance>default</instance>
+        </interface>
+   </hal>
+   <hal format="aidl" optional="true">
+        <name>android.hardware.bluetooth.audio</name>
+        <version>4</version>
+        <interface>
+            <name>IBluetoothAudioProviderFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+         <name>android.hardware.health</name>
+         <version>3</version>
+         <interface>
+             <name>IHealth</name>
+             <instance>default</instance>
+         </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.power</name>
+        <version>5</version>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+         <name>android.hardware.wifi</name>
+        <version>2</version>
+         <interface>
+             <name>IWifi</name>
+             <instance>default</instance>
+         </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+         <name>android.hardware.wifi.hostapd</name>
+         <version>2</version>
+         <interface>
+             <name>IHostapd</name>
+             <instance>default</instance>
+         </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi.supplicant</name>
+        <version>3</version>
+         <interface>
+             <name>ISupplicant</name>
+             <instance>default</instance>
+         </interface>
+    </hal>
     <hal format="aidl" optional="true">
         <name>com.fingerprints.extension3</name>
         <interface>
@@ -7,6 +63,13 @@
         </interface>
         <interface>
             <name>IFingerprintSensorTest</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>com.fingerprints.fpc.extension</name>
+        <interface>
+            <name>IFpcExtension</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -87,6 +150,13 @@
         <name>vendor.xiaomi.hw.touchfeature</name>
         <interface>
             <name>ITouchFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.xiaomi.sensor.camera</name>
+        <interface>
+            <name>IMiCam</name>
             <instance>default</instance>
         </interface>
     </hal>
