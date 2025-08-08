@@ -42,3 +42,10 @@ mkdir {
     dir: "modem_firmware",
     vendor: true,
 }
+
+cc_library_shared {
+    name: "libcodec2_hidl_shim",
+    srcs: ["shim/libcodec2_hidl_shim.cpp"],
+    shared_libs: ["libui","libutils"],
+    vendor: true,
+}
