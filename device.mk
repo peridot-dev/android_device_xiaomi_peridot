@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libcamera_metadata.vendor \
     libexif.vendor \
+    libprocessgroup_shim \
     libutilscallstack.vendor \
     libyuv.vendor
 

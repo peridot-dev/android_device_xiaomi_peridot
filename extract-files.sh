@@ -102,6 +102,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
             ;;
+        vendor/lib64/libcameraopt.so | odm/lib64/hw/camera.qcom.so | odm/lib64/hw/com.qti.chi.override.so | odm/lib64/hw/camera.xiaomi.so | odm/lib64/libcamxcommonutils.so | odm/lib64/libchifeature2.so | odm/lib64/libmialgoengine.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
+            ;;
         vendor/lib64/vendor.libdpmframework.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
