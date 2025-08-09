@@ -67,6 +67,7 @@ PRODUCT_PACKAGES += \
     libaudiochargerlistener \
     libbatterylistener \
     libfmpal \
+    libhapticgenerator \
     libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
@@ -151,8 +152,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.display.config@1.11.vendor \
     vendor.qti.hardware.display.allocator@4.0.vendor \
-    vendor.qti.hardware.display.composer-service.rc \
-    vendor.qti.hardware.display.composer-service.xml \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
     vendor.qti.hardware.display.config-V5-ndk.vendor \
     vendor.qti.hardware.display.config-V7-ndk.vendor \
@@ -199,7 +198,12 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator-V1-ndk.vendor \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service.rc \
+    vendor.qti.hardware.display.composer-service.xml \
+    vendor.qti.hardware.display.demura-service
+
+PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V4-ndk.vendor \
     android.hardware.graphics.composer3-V2-ndk.vendor \
     android.hardware.graphics.composer@2.1.vendor \
@@ -324,24 +328,13 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.2.vendor \
-    libOmxCore \
-    libavservices_minijail \
-    libavservices_minijail_vendor \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_hidl@1.1.vendor \
-    libcodec2_hidl@1.2.vendor \
     libcodec2_hidl_shim \
-    libcodec2_soft_common.vendor \
-    libcodec2_shim \
-    libcodec2_vndk.vendor \
-    libmm-omxcore
-
-PRODUCT_PACKAGES += \
-    android.hardware.media.bufferpool2-V1-ndk.vendor
+    libcodec2_shim
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_cliffs_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_cliffs_v0.xml \
+
+TARGET_SUPPORTS_OMX_SERVICE := false
 
 # Memtrack
 PRODUCT_PACKAGES += \
