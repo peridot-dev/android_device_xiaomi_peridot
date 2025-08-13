@@ -136,10 +136,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fastcharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.xiaomi
-
 # Fingerprint
 $(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,USE_NEW_IMPL,true)
 PRODUCT_PACKAGES += \
@@ -228,6 +224,9 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/qcom-battery/fastcharge_enable)
+$(call soong_config_set,lineage_health,fast_charge_value_none,0)
+$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,1)
 
 # Media
 PRODUCT_COPY_FILES += \
