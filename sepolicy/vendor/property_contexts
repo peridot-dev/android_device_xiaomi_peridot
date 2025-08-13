@@ -131,9 +131,6 @@ vendor.mi.filter.lut.enable u:object_r:vendor_displayfeature_prop:s0
 vendor.mi_sf. u:object_r:vendor_displayfeature_prop:s0
 vendor.video.mode.status u:object_r:vendor_displayfeature_prop:s0
 
-# Fastcharge
-persist.vendor.sec.fastchg_enabled  u:object_r:vendor_fastcharge_prop:s0
-
 # Fingerprint
 persist.vendor.fingerprint. u:object_r:vendor_fp_prop:s0
 persist.vendor.fpc. u:object_r:vendor_fp_prop:s0
