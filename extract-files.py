@@ -61,6 +61,14 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_line_if_missing('gettid: 1'),
     (
+        'vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp',
+        'vendor/lib64/libjc_keymint_nxp.so'
+    ): blob_fixup()
+        .replace_needed(
+            'android.hardware.security.keymint-V3-ndk.so',
+            'android.hardware.security.keymint-V4-ndk.so'
+    ),
+    (
         'vendor/lib64/hw/com.qti.chi.override.so',
         'vendor/lib64/hw/camera.xiaomi.so',
         'vendor/lib64/hw/camera.qcom.so',
