@@ -629,10 +629,10 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.capdepth.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.depurple.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.filter.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.frontbokeh.so
-odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so
+odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so;DISABLE_CHECKELF
 odm/lib64/camera/plugins/com.xiaomi.plugin.gainmapPostProc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.hdr.so
-odm/lib64/camera/plugins/com.xiaomi.plugin.jpegrAggr.so
+odm/lib64/camera/plugins/com.xiaomi.plugin.jpegrAggr.so;DISABLE_CHECKELF
 odm/lib64/camera/plugins/com.xiaomi.plugin.ldc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.mawaiie.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.memcpy.so
@@ -692,7 +692,7 @@ odm/lib64/libremosaiclib.so
 odm/lib64/librfs_warp.so
 odm/lib64/librmsclib1.so
 odm/lib64/libwa_widelens_undistort.so
-odm/lib64/libwrapper_dlengine.so
+odm/lib64/libwrapper_dlengine.so;DISABLE_CHECKELF
 odm/lib64/libxmi_hdr_checker.so
 odm/lib64/libxmi_slow_motion_mein.so
 vendor/bin/hw/vendor.qti.camera.provider-service_64
@@ -998,7 +998,7 @@ vendor/lib64/libmialgo_globalsaliency.so
 vendor/lib64/libmialgo_video_colourkeeping.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmialgoenginecustom.so
-vendor/lib64/libmibokeh_845_video.so
+vendor/lib64/libmibokeh_845_video.so;DISABLE_CHECKELF
 vendor/lib64/libmicamera_adapter.so
 vendor/lib64/libminikin.xiaomi.so
 vendor/lib64/libmis_platform.so
@@ -1030,7 +1030,7 @@ vendor/lib64/libqshcamera.so
 vendor/lib64/librendercore.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libshadowhook.so
-vendor/lib64/libsnpe_config.so
+vendor/lib64/libsnpe_config.so;DISABLE_CHECKELF
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
