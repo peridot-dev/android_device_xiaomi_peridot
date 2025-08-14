@@ -929,8 +929,8 @@ vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSNPESample.so
-vendor/lib64/libSnpeDspV66Stub.so
-vendor/lib64/libSnpeHta.so
+vendor/lib64/libSnpeDspV66Stub.so;FIX_SONAME
+vendor/lib64/libSnpeHta.so;FIX_SONAME
 vendor/lib64/libSnpeHtpPrepare.so
 vendor/lib64/libSnpeHtpV68Stub.so
 vendor/lib64/libSnpeHtpV69Stub.so
@@ -942,8 +942,8 @@ vendor/lib64/libaidenoiserv2.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libc++_shared.so
-vendor/lib64/libcalculator.so
-vendor/lib64/libcalculator_htp.so
+vendor/lib64/libcalculator.so;FIX_SONAME
+vendor/lib64/libcalculator_htp.so;FIX_SONAME
 vendor/lib64/libcameraopt.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamlog.so
