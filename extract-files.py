@@ -26,6 +26,9 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
+        'vendor.qti.imsrtpservice@3.0',
+        'vendor.qti.imsrtpservice@3.1',
+        'vendor.qti.ImsRtpService-V1-ndk',
     ): lib_fixup_vendor_suffix,
 }
 
