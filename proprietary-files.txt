@@ -1697,7 +1697,7 @@ vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libwifiobserver.so
 vendor/lib64/libxtadapter.so
-vendor/lib64/sqlite3.so
+vendor/lib64/sqlite3.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.gnss-V5-ndk.so
 vendor/lib64/vendor.qti.gnss-service.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
