@@ -2,6 +2,7 @@
 
 # ACDB
 odm/etc/acdbdata/Fluence/Fluence_acdb_cal.acdb
+odm/etc/acdbdata/Fluence/foursemi/Fluence_acdb_cal_fs.acdb
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd
@@ -66,6 +67,10 @@ vendor/etc/init/hw/init.mi_ambient.rc
 
 # Audio configs
 odm/etc/audio/sku_cliffs/adsp_sleep_monitor.conf
+odm/etc/audio/sku_cliffs/foursemi/mixer_paths_cliffs_mtp.xml
+odm/etc/audio/sku_cliffs/foursemi/mixer_paths_overlay_dynamic.xml
+odm/etc/audio/sku_cliffs/foursemi/mixer_paths_overlay_static.xml
+odm/etc/audio/sku_cliffs/foursemi/resourcemanager_cliffs_mtp.xml
 odm/etc/audio/sku_cliffs/mixer_paths_cliffs_mtp.xml
 odm/etc/audio/sku_cliffs/mixer_paths_overlay_dynamic.xml
 odm/etc/audio/sku_cliffs/mixer_paths_overlay_static.xml
@@ -91,6 +96,7 @@ vendor/etc/usecaseKvManager.xml
 
 # Audio firmware
 odm/firmware/aw882xx_acf.bin
+odm/firmware/fs19xx.fsm
 
 # Audio graph manager
 -vendor/lib64/libagm.so
@@ -116,6 +122,7 @@ odm/etc/init/init.cirrus.rc
 odm/lib64/libaudioroute_ext.so
 odm/lib64/libawcal.so
 odm/lib64/libcrussp.so
+odm/lib64/libfsalgocal.so
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
