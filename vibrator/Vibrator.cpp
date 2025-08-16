@@ -38,13 +38,13 @@ struct HapticConfig {
 
 std::map<Effect, HapticConfig> effectConfig = {
     //   Effect              activate_mode, effect_id, index, duration(ms)
-    {Effect::TICK,          {0,             2,         0,      30}},
-    {Effect::TEXTURE_TICK,  {0,             2,         0,      30}},
-    {Effect::CLICK,         {0,             0,         0,      50}},
-    {Effect::HEAVY_CLICK,   {0,             5,         0,      70}},
-    {Effect::DOUBLE_CLICK,  {0,             1,         0,      50}},
-    {Effect::THUD,          {0,             3,         0,      70}},
-    {Effect::POP,           {0,             4,         0,      30}}
+    {Effect::TICK,          {0,             2,         3,      45}},
+    {Effect::TEXTURE_TICK,  {0,             2,         3,      45}},
+    {Effect::CLICK,         {0,             0,         1,      45}},
+    {Effect::HEAVY_CLICK,   {0,             5,         6,      45}},
+    {Effect::DOUBLE_CLICK,  {0,             1,         2,      45}},
+    {Effect::THUD,          {0,             3,         4,      45}},
+    {Effect::POP,           {0,             4,         5,      45}}
 };
 
 template <typename T>
