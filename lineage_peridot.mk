@@ -24,8 +24,8 @@ PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="peridot_global-user 14 UKQ1.240116.001 V816.0.5.0.UNPMIXM release-keys" \
-    BuildFingerprint=POCO/peridot_global/peridot:14/UKQ1.240116.001/V816.0.5.0.UNPMIXM:user/release-keys \
+    BuildDesc="peridot_global-user 14 UKQ1.240116.001 V816.0.12.0.UNPMIXM release-keys" \
+    BuildFingerprint=POCO/peridot_global/peridot:14/UKQ1.240116.001/V816.0.12.0.UNPMIXM:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
