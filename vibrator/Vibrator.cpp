@@ -7,7 +7,6 @@
 #include "vibrator-impl/Vibrator.h"
 
 #include <android-base/logging.h>
-#include <android-base/properties.h>
 #include <thread>
 #include <map>
 #include <fstream>
@@ -22,29 +21,36 @@ std::map<int, std::string> haptic_nodes = {
     {1, "/sys/bus/i2c/drivers/awinic_haptic/2-005a/"},
 };
 
-static std::string HAPTIC_NODE;
-static std::string HAPTIC_PROP_PREFIX = "vendor.vibrator.hal.";
-static std::string HAPTIC_PROP_DURATION = "duration.";
-static std::string HAPTIC_PROP_EFFECT_ID = "effect_id.";
-static std::string HAPTIC_PROP_INDEX = "index.";
-static std::string HAPTIC_PROP_MODE="mode.";
-
 // Common haptic nodes
+static std::string HAPTIC_NODE;
 static std::string ACTIVATE_NODE = "activate";
 static std::string ACTIVATE_MODE_NODE = "activate_mode";
 static std::string EFFECT_ID_NODE = "effect_id";
 static std::string INDEX_NODE = "index";
 static std::string DURATION_NODE = "duration";
 
+struct HapticConfig {
+    int mode;
+    int effect_id;
+    int index;
+    int duration;
+};
+
+std::map<Effect, HapticConfig> effectConfig = {
+    //   Effect              activate_mode, effect_id, index, duration(ms)
+    {Effect::TICK,          {0,             2,         0,      30}},
+    {Effect::TEXTURE_TICK,  {0,             2,         0,      30}},
+    {Effect::CLICK,         {0,             0,         0,      50}},
+    {Effect::HEAVY_CLICK,   {0,             5,         0,      70}},
+    {Effect::DOUBLE_CLICK,  {0,             1,         0,      50}},
+    {Effect::THUD,          {0,             3,         0,      70}},
+    {Effect::POP,           {0,             4,         0,      30}}
+};
+
 template <typename T>
 static void write_haptic_node(const std::string& path, const T& value) {
     std::ofstream file(path);
     file << value;
-}
-
-template <typename T>
-static inline int getProperty(std::string key, const T def) {
-    return ::android::base::GetIntProperty(HAPTIC_PROP_PREFIX + key, def);
 }
 
 template <typename T>
@@ -112,74 +118,31 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
 
     LOG(INFO) << "Vibrator perform";
 
-    switch (effect) {
-        case Effect::TICK:
-            LOG(INFO) << "Vibrator effect set to TICK";
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "tick", 0);
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "tick", 2);
-            index = getProperty(HAPTIC_PROP_INDEX + "tick", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "tick", 30);
-            break;
-        case Effect::TEXTURE_TICK:
-            LOG(INFO) << "Vibrator effect set to TEXTURE_TICK";
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "texure_tick", 0);
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "texture_tick", 2);
-            index = getProperty(HAPTIC_PROP_INDEX + "texure_tick", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "texture_tick", 30);
-            break;
-        case Effect::CLICK:
-            LOG(INFO) << "Vibrator effect set to CLICK";
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "click", 0);
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "click", 0);
-            index = getProperty(HAPTIC_PROP_INDEX + "click", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "click", 50);
-            break;
-        case Effect::HEAVY_CLICK:
-            LOG(INFO) << "Vibrator effect set to HEAVY_CLICK";
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "heavy_click", 0);
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "heavy_click", 5);
-            index = getProperty(HAPTIC_PROP_INDEX + "heavy_click", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "heavy_click", 70);
-            break;
-        case Effect::DOUBLE_CLICK:
-            LOG(INFO) << "Vibrator effect set to DOUBLE_CLICK";
-            /* double click isn't mapped as an effect_id in most awinic drivers, so
-             * run the effect twice to get the effect.
-             */
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "double_click", 0);
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "double_click", 1);
-            index = getProperty(HAPTIC_PROP_INDEX + "double_click", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "double_click", 50);
-            write_haptic_node(HAPTIC_NODE + ACTIVATE_MODE_NODE, activate_mode);
-            write_haptic_node(HAPTIC_NODE + EFFECT_ID_NODE, effect_id);
-            write_haptic_node(HAPTIC_NODE + INDEX_NODE, index);
-            on(timeMs, nullptr);
-            usleep(timeMs * 1000);
-            /* set values again, as Vibrator::on() may trigger Vibrator::off() after playing the first
-             * set of haptics, leading to reset of index, effect_id and activate_mode.
-             */
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "double_click", 0);
-            // change to tick for better differentiated haptic
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "tick", 2);
-            index = getProperty(HAPTIC_PROP_INDEX + "double_click", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "double_click", 50);
-            break;
-        case Effect::THUD:
-            LOG(INFO) << "Vibrator effect set to THUD";
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "thud", 0);
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "thud", 3);
-            index = getProperty(HAPTIC_PROP_INDEX + "thud", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "thud", 70);
-            break;
-        case Effect::POP:
-            LOG(INFO) << "Vibrator effect set to POP";
-            activate_mode = getProperty(HAPTIC_PROP_MODE + "pop", 0);
-            effect_id = getProperty(HAPTIC_PROP_EFFECT_ID + "pop", 4);
-            index = getProperty(HAPTIC_PROP_INDEX + "pop", NULL);
-            timeMs = getProperty(HAPTIC_PROP_DURATION + "pop", 30);
-            break;
-        default:
-            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    auto it = effectConfig.find(effect);
+    if (it == effectConfig.end()) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
+    const HapticConfig& config = it->second;
+    activate_mode = config.mode;
+    effect_id = config.effect_id;
+    index = config.index;
+    timeMs = config.duration;
+
+    if (effect == Effect::DOUBLE_CLICK) {
+        // double click isn't mapped as an effect_id in most awinic drivers, so
+        // run the effect twice to get the effect.
+        write_haptic_node(HAPTIC_NODE + ACTIVATE_MODE_NODE, activate_mode);
+        write_haptic_node(HAPTIC_NODE + EFFECT_ID_NODE, effect_id);
+        write_haptic_node(HAPTIC_NODE + INDEX_NODE, index);
+        on(timeMs, nullptr);
+        usleep(timeMs * 1000);
+        // set values again, as Vibrator::on() may trigger Vibrator::off() after playing the first
+        // set of haptics, leading to reset of index, effect_id and activate_mode.
+        activate_mode = effectConfig.at(Effect::TICK).mode;  // change to tick for better differentiated haptic
+        effect_id = effectConfig.at(Effect::TICK).effect_id;
+        index = config.index;
+        timeMs = config.duration;
     }
 
     /* Setup mode */
