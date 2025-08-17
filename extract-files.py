@@ -100,6 +100,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.security.keymint-V3-ndk.so',
             'android.hardware.security.keymint-V4-ndk.so'
+        )
+        .replace_needed(
+            'libcppbor_external.so',
+            'libcppbor_peridot.so'
     ),
     (
         'vendor/lib64/hw/camera.qcom.so',
