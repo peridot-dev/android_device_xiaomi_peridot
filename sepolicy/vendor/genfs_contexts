@@ -2,6 +2,13 @@
 genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/typec/port0/data_role u:object_r:vendor_sysfs_battery_supply:s0
 
+# Haptics
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/activate                   u:object_r:sysfs_haptics:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/activate_mode              u:object_r:sysfs_haptics:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/duration                   u:object_r:sysfs_haptics:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/index                      u:object_r:sysfs_haptics:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/effect_id                  u:object_r:sysfs_haptics:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/soc/soc:xiaomi_fingerprint/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/wakeup u:object_r:sysfs_wakeup:s0

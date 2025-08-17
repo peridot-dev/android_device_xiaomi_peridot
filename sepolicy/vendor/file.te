@@ -5,6 +5,7 @@ type sysfs_tp_virtual_prox, fs_type, sysfs_type;
 type sys_thermal_wifi_limit, fs_type, sysfs_type;
 type sys_thermal_flash_state, fs_type, sysfs_type;
 type sys_thermal_torch_real_level, fs_type, sysfs_type;
+type sysfs_haptics, fs_type, sysfs_type;
 type camera_persist_file, file_type, vendor_persist_type;
 type vendor_mac_vendor_data_file, data_file_type, file_type, mlstrustedobject;
 type audio_socket, file_type;
