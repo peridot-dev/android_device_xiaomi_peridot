@@ -1773,6 +1773,7 @@ vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service.strongbox-nxp.rc
 vendor/etc/init/android.hardware.weaver-service.nxp.rc
 vendor/etc/permissions/android.hardware.hardware_keystore.jc-strongbox-keymint3-nxp.xml
+vendor/etc/permissions/android.hardware.hardware_keystore.xml:vendor/etc/permissions/android.hardware.hardware_keystore.km300.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint3-service.strongbox-nxp.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret3-service.strongbox-nxp.xml
