@@ -384,6 +384,8 @@ on boot
     # Xiaomi touch
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
+    chown system system /sys/class/touch/touch_dev/gesture_single_tap_enabled
+    chmod 0660 /sys/class/touch/touch_dev/gesture_single_tap_enabled
 
 on init && property:ro.boot.mode=charger
     wait_for_prop vendor.all.modules.ready 1

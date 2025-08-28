@@ -194,6 +194,9 @@ ro.com.android.dataroaming=true
 ro.vendor.radio.build_profile=miui
 ro.vendor.radio.build_region=global
 
+# Sensors
+ro.vendor.sensors.xiaomi.single_tap=true
+
 # SKU
 ro.boot.product.vendor.sku=cliffs
 
