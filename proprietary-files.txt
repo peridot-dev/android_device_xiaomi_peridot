@@ -2487,7 +2487,6 @@ vendor/etc/sensors/config/qsh_camera_imx688_4.json
 vendor/etc/sensors/config/qsh_camera_imx688_4_sm8635.json
 vendor/etc/sensors/config/qsh_camera_imx688_6.json
 vendor/etc/sensors/config/qsh_camera_imx688_6_actuator.json
-vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
 vendor/lib64/libsensor_calibration.so
