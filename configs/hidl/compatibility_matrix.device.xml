@@ -59,13 +59,6 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hw.touchfeature</name>
-        <interface>
-            <name>ITouchFeature</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.xiaomi.sensor.citsensorservice</name>
         <interface>
             <name>ICitSensorService</name>
