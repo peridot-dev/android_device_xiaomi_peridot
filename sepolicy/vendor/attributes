@@ -29,8 +29,3 @@ attribute hal_dms_server;
 attribute hal_mlipay;
 attribute hal_mlipay_client;
 attribute hal_mlipay_server;
-
-# Touchfeature
-attribute hal_touchfeature_xiaomi;
-attribute hal_touchfeature_xiaomi_client;
-attribute hal_touchfeature_xiaomi_server;

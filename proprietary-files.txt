@@ -2471,7 +2471,6 @@ odm/etc/sensors/config/sns_tilt.json
 odm/etc/sensors/config/sns_tilt_sw_disabled.json
 odm/etc/sensors/config/sns_tilt_sw_enabled.json
 odm/etc/sensors/config/sns_tilt_to_wake.json
-odm/lib64/sensors.touch.detect.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
@@ -2581,14 +2580,6 @@ vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
-
-# Touchfeature
-odm/bin/hw/vendor.xiaomi.hw.touchfeature-service
-odm/etc/init.panel_info.sh
-odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc
-odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature-service.xml
-vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so
-vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk_platform.so
 
 # Touchscreen
 odm/firmware/Conf_MultipleTest_TianMa.ini
