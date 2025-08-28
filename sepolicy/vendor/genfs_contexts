@@ -14,6 +14,10 @@ genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/index                      u:object_r:sysfs_haptics:s0
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/effect_id                  u:object_r:sysfs_haptics:s0
 
+# Sensors
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_enabled u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_state u:object_r:vendor_sysfs_sensors:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/soc/soc:xiaomi_fingerprint/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/wakeup u:object_r:sysfs_wakeup:s0
