@@ -67,10 +67,6 @@ vendor.display.support_video_mode_30hz_aod=1
 ro.odm.build.media_performance_class=0
 ro.vendor.media_performance_class=0
 
-# NFC
-nfc.fw.is_downloading=false
-ro.vendor.nfc.debounce_field_on=1
-
 # Radio
 ro.telephony.default_network=33,33
 
