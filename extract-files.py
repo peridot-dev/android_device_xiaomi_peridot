@@ -93,8 +93,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/seccomp_policy/wfdhdcphalservice.policy'
     ): blob_fixup()
         .add_line_if_missing('gettid: 1'),
-    ('vendor/bin/pnscr'): blob_fixup()
-        .add_needed('libbase_shim.so'),
     (
         'vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp',
         'vendor/lib64/libjc_keymint_nxp.so'
