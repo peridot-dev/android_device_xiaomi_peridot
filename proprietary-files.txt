@@ -1204,10 +1204,7 @@ odm/lib64/camera/com.qti.tuned.peridot_ofilm_ov20b40_front.bin
 
 # Charger
 vendor/bin/batterysecret
-vendor/bin/charge_logger
-vendor/etc/charger_diag.cfg
 vendor/etc/init/hw/init.batterysecret.rc
-vendor/etc/init/init.charge_logger.rc
 
 # Computer vision
 vendor/etc/eva/facedetection/bias.dat
