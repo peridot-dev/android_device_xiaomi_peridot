@@ -39,10 +39,6 @@
 # CIT Sensors
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 
-# Charge
-/(vendor|system/vendor)/bin/charge_logger u:object_r:charge_logger_exec:s0
-/data/vendor/charge_logger(/.*)? u:object_r:vendor_charge_log_file:s0
-
 # Diag
 /data/vendor/modem(/.*)? u:object_r:vendor_modem_data_file:s0
 
