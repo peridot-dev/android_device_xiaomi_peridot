@@ -78,7 +78,6 @@
 /(odm|vendor/odm|system/vendor)/bin/mlipayd u:object_r:hal_mlipay_default_exec:s0
 
 # MiThermal
-/(vendor|system/vendor)/bin/mi_ambient u:object_r:mi_ambient_exec:s0
 /sys/class/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0
 /sys/devices/virtual/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0
 /sys/class/thermal/thermal_message/torch_real_level u:object_r:sys_thermal_torch_real_level:s0
