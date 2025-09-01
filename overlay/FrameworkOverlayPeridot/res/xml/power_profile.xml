@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2024 The LineageOS Project
-     SPDX-License-Identifier: Apache-2.0
--->
 <device name="Android">
     <item name="screen.on.display0">103.42</item>
     <item name="screen.full.display0">356.11</item>
@@ -11,11 +7,7 @@
     <item name="wifi.on">0.22</item>
     <item name="wifi.active">473.65</item>
     <item name="wifi.scan">26.21</item>
-
-            <!-- Apps which primarily work with audio or music, such as music players. -->
     <item name="audio">29.83</item>
-
-            <!-- Apps which primarily work with video or movies, such as streaming video apps. -->
     <item name="video">45.08</item>
     <item name="camera.flashlight">153.5</item>
     <item name="camera.avg">568.24</item>
@@ -26,9 +18,6 @@
         <value>0.72</value>
         <value>0.72</value>
     </array>
-
-  <!-- Additional power consumption by CPU excluding cluster and core when
-       running -->
     <array name="cpu.active">
         <value>11.99</value>
     </array>
@@ -37,9 +26,6 @@
         <value>4</value>
         <value>1</value>
     </array>
-
-    <!-- Different CPU speeds as reported in
-         /sys/devices/system/cpu/cpu0/cpufreq/stats/scaling_available_frequencies -->
     <array name="cpu.core_speeds.cluster0">
         <value>364800</value>
         <value>441600</value>
@@ -57,9 +43,6 @@
         <value>1900800</value>
         <value>2016000</value>
     </array>
-
-    <!-- Additional power used by a CPU from cluster 0 when running at different
-         speeds. Currently this measurement also includes cluster cost. -->
     <array name="cpu.core_power.cluster0">
         <value>80.49</value>
         <value>93.64</value>
@@ -77,9 +60,6 @@
         <value>136.13</value>
         <value>143.42</value>
     </array>
-
-    <!-- Different CPU speeds as reported in
-         /sys/devices/system/cpu/cpu4/cpufreq/stats/scaling_available_frequencies -->
     <array name="cpu.core_speeds.cluster1">
         <value>480000</value>
         <value>633600</value>
@@ -102,9 +82,6 @@
         <value>2707200</value>
         <value>2803200</value>
     </array>
-
-    <!-- Additional power used by a CPU from cluster 1 when running at different
-         speeds. Currently this measurement also includes cluster cost. -->
     <array name="cpu.core_power.cluster1">
         <value>112.04</value>
         <value>129.14</value>
@@ -167,10 +144,6 @@
         <value>1022.27</value>
         <value>1167.02</value>
     </array>
-
-  <!-- Current when CPU is idle -->
     <item name="cpu.idle">5.53</item>
-
-  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
     <item name="battery.capacity">5000</item>
 </device>
