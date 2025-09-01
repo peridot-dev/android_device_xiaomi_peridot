@@ -47,9 +47,6 @@
     <!-- Boolean indicating performing a partial initial scan is enabled -->
     <bool name="config_wifiEnablePartialInitialScan" translatable="false">true</bool>
 
-    <!-- Boolean indicating that enable roaming between linked networks -->
-    <bool name="config_wifiEnableLinkedNetworkRoaming" translatable="false">false</bool>
-
     <!-- Boolean indicating that only configurations that have the same pre-shared key will be linked -->
     <bool name="config_wifi_only_link_same_credential_configurations" translatable="false">false</bool>
 
@@ -121,18 +118,6 @@
     <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
     <integer name="config_wifiDelayDisconnectOnImsLostMs" translatable="false">1000</integer>
 
-    <!-- Enable Make-Before-Break Wifi network switching.
-         Note: this is conditional on the device supporting dual concurrent STAs. -->
-    <bool name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled" translatable="false">false</bool>
-
-    <!-- Enable concurrent peer to peer + internet connectivity
-         Note: this is conditional on the device supporting dual concurrent STAs. -->
-    <bool name="config_wifiMultiStaLocalOnlyConcurrencyEnabled" translatable="false">false</bool>
-
-    <!-- Enable concurrent restricted connectivity + internet connectivity
-         Note: this is conditional on the device supporting dual concurrent STAs. -->
-    <bool name="config_wifiMultiStaRestrictedConcurrencyEnabled" translatable="false">false</bool>
-
     <!-- Enable concurrent internet connectivity + internet connectivity
          Note: this is conditional on the device supporting dual concurrent STAs. -->
     <bool name="config_wifiMultiStaMultiInternetConcurrencyEnabled" translatable="false">true</bool>
@@ -177,10 +162,6 @@
          aka Enhanced Open for Soft-AP -->
     <bool name="config_wifiSoftapOweSupported" translatable="false">true</bool>
 
-    <!-- Whether to show a confirmation dialog to the user if a third party app targeting below SDK
-         level Q tries to enable Wi-Fi -->
-    <bool name="config_showConfirmationDialogForThirdPartyAppsEnablingWifi" translatable="false">false</bool>
-
     <!-- Indicates whether or not the Soft AP needs to be restarted when country code changed -->
     <bool name="config_wifiForcedSoftApRestartWhenCountryCodeChanged" translatable="false">false</bool>
 
@@ -191,7 +172,4 @@
 
     <!-- Indicates whether the network-centric QoS policy feature is enabled. -->
     <bool name="config_wifiNetworkCentricQosPolicyFeatureEnabled" translatable="false">true</bool>
-
-    <!-- Indicates whether the application-centric QoS policy feature is enabled. -->
-    <bool name="config_wifiApplicationCentricQosPolicyFeatureEnabled" translatable="false">true</bool>
 </resources>
