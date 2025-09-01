@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "LineageSDKOverlayPeridot",
-    vendor: true,
+    product_specific: true,
 }
