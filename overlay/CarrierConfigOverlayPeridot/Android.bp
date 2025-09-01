@@ -5,6 +5,6 @@
 
 runtime_resource_overlay {
     name: "CarrierConfigOverlayPeridot",
-    vendor: true,
+    product_specific: true,
     aaptflags: ["--keep-raw-values"],
 }
