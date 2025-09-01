@@ -128,6 +128,8 @@ vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
+vendor/etc/models/vui/sm8_gr1UsPdk6XsMfcn220819Enpu4FloateAIv34.uim
+vendor/etc/models/vui/sm8_gr3UsMFCN230612eAIv34ENPUv4Float.uim
 vendor/lib64/hw/audio.primary.pineapple.so;DISABLE_CHECKELF
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/libVoiceSdk.so
@@ -166,6 +168,9 @@ vendor/lib64/libresampler.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libswspatializer_ext.so
 vendor/lib64/libtensorflowlite_c.so
+vendor/lib64/libvui_dmgr.so
+vendor/lib64/libvui_dmgr_client.so
+vendor/lib64/libvui_intf.so;DISABLE_CHECKELF
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
@@ -2028,32 +2033,6 @@ vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsubsystem_control.so
-
-# QSAP
-vendor/bin/qsap_dcfd
-vendor/bin/qsap_location
-vendor/bin/qsap_qapeservice
-vendor/bin/qsap_sensors
-vendor/bin/qsap_voiceui
-vendor/etc/init/dcfd.rc
-vendor/etc/init/vendor.qsap.location.rc
-vendor/etc/init/vendor.qsap.qapeservice.rc
-vendor/etc/init/vendor.qsap.sensors.rc
-vendor/etc/models/vui/sm8_gr1UsPdk6XsMfcn220819Enpu4FloateAIv34.uim
-vendor/etc/models/vui/sm8_gr3UsMFCN230612eAIv34ENPUv4Float.uim
-vendor/etc/seccomp_policy/qsap_dcfd.policy
-vendor/etc/seccomp_policy/qsap_qapeservice.policy
-vendor/etc/seccomp_policy/qsap_sensors.policy
-vendor/etc/seccomp_policy/qsap_voiceui.policy
-vendor/lib64/libDcfHalFramework.so
-vendor/lib64/libDcfHalLogger.so
-vendor/lib64/libDcfHalQtiMutex.so
-vendor/lib64/libSensorsInterface.so
-vendor/lib64/libqape_oem_ext.so
-vendor/lib64/libqsh_ble_pb.so
-vendor/lib64/libvui_dmgr.so
-vendor/lib64/libvui_dmgr_client.so
-vendor/lib64/libvui_intf.so;DISABLE_CHECKELF
 
 # QSPM
 vendor/bin/vendor.qti.qspmhal-service
