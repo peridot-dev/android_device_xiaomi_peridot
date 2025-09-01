@@ -60,11 +60,6 @@ vendor/lib/rfsa/adsp/nearby.so
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Ambient
-vendor/bin/mi_ambient
-vendor/etc/ambient_para.conf
-vendor/etc/init/hw/init.mi_ambient.rc
-
 # Audio configs
 odm/etc/audio/sku_cliffs/adsp_sleep_monitor.conf
 odm/etc/audio/sku_cliffs/foursemi/mixer_paths_cliffs_mtp.xml
