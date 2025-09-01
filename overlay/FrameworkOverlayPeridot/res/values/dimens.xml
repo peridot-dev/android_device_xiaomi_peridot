@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2024 The LineageOS Project
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -25,14 +25,14 @@
     <dimen name="rounded_corner_radius_bottom">108.0px</dimen>
 
     <!-- Default paddings for content around the corners. -->
-    <dimen name="rounded_corner_content_padding">50px</dimen>
+    <dimen name="rounded_corner_content_padding">50.0px</dimen>
 
-    <!-- Height of a small notification in the status bar -->
+    <!-- 20 * 2 (margins) + 24 * 2 (2 lines) = 88 (notification) -->
     <dimen name="notification_min_height">106.0dip</dimen>
 
     <!-- System-provided radius for the background view of app widgets. The resolved value of this resource may change at runtime. -->
     <dimen name="system_app_widget_background_radius">16.72998dip</dimen>
 
-    <!-- System-provided radius for inner views on app widgets. The resolved value of this resource may change at runtime. -->
+    <!-- System-provided radius for inner views on app widgets that are positioned 8dp within the widget background view. The resolved value of this resource may change at runtime. -->
     <dimen name="system_app_widget_inner_radius">8.72998dip</dimen>
 </resources>
