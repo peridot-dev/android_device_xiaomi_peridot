@@ -7,3 +7,18 @@ runtime_resource_overlay {
     name: "WifiOverlayPeridot",
     vendor: true,
 }
+
+runtime_resource_overlay {
+    name: "WifiOverlayPeridotPOCO",
+    manifest: "AndroidManifest-POCO.xml",
+    resource_dirs: ["res-POCO"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiOverlayPeridotRedmi",
+    manifest: "AndroidManifest-Redmi.xml",
+    resource_dirs: ["res-Redmi"],
+    vendor: true,
+}
+
