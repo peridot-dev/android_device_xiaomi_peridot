@@ -1696,8 +1696,6 @@ vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libmapdata_api.so
-vendor/lib64/libqcc_file_agent.so
-vendor/lib64/libqcc_sdk.so
 vendor/lib64/libqsh.so
 vendor/lib64/libslimclient.so
 vendor/lib64/libsynergy_loc_api.so
@@ -1707,9 +1705,6 @@ vendor/lib64/libxtadapter.so
 vendor/lib64/sqlite3.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.gnss-V5-ndk.so
 vendor/lib64/vendor.qti.gnss-service.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper-service-qti
@@ -1968,6 +1963,18 @@ vendor/lib64/vendor.qti.hardware.alarm-V1-ndk.so
 # Protobuff
 vendor/lib64/libprotobuf-cpp-full-21.7.so
 vendor/lib64/libprotobuf-cpp-lite-21.7.so
+
+# QCC
+vendor/bin/qcc-vendor
+vendor/etc/init/init.qccvendor.rc
+vendor/etc/vintf/manifest/vendor.qti.qccvndhal_aidl-service.xml
+vendor/lib64/libqcc_file_agent.so
+vendor/lib64/libqcc_sdk.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
+vendor/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
+vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 
 # QESDK
 system_ext/app/QesdkSysService/QesdkSysService.apk
