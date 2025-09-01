@@ -98,4 +98,9 @@
         <transport>hwbinder</transport>
         <fqname>@1.1::IImsFactory/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <version>1</version>
+        <fqname>IMiFxTunnel/default</fqname>
+    </hal>
 </manifest>
