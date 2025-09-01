@@ -833,9 +833,6 @@
     <!-- Whether this device is supporting the software microphone toggle -->
     <bool name="config_supportsMicToggle">true</bool>
 
-    <!-- Whether this device is supporting the camera toggle -->
-    <bool name="config_supportsCamToggle">false</bool>
-
     <!-- A string config in svg path format for the main display shape.
          (@see https://www.w3.org/TR/SVG/paths.html#PathData).
 
