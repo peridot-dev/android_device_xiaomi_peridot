@@ -2581,7 +2581,9 @@ vendor/lib64/libtime_genoff.so
 
 # Touchscreen
 odm/firmware/Conf_MultipleTest_TianMa.ini
+odm/firmware/Conf_MultipleTest_TianMa2.ini
 odm/firmware/focaltech_ts_fw_TianMa.bin
+odm/firmware/focaltech_ts_fw_TianMa2.bin
 odm/firmware/goodix_cfg_group_peridot_csot.bin
 odm/firmware/goodix_cfg_group_peridot_csot_second.bin
 odm/firmware/goodix_firmware_peridot_csot.bin
