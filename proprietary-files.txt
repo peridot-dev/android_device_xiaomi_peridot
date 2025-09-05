@@ -1791,7 +1791,10 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
+vendor/lib64/libAlacSwDec.so
+vendor/lib64/libApeSwDec.so
 vendor/lib64/libEvrcSwCodec.so
+vendor/lib64/libFlacSwDec.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_ddpdec.so
@@ -1801,6 +1804,7 @@ vendor/lib64/libdolbyclstc.so
 vendor/lib64/libdolbydecoderprocessor.so
 vendor/lib64/libdolbyeglcore.so
 vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libdsd2pcm.so
 vendor/lib64/libmilut.so
 vendor/lib64/libmisr.so
 vendor/lib64/libqc2audio_base.so
@@ -1877,12 +1881,6 @@ odm/lib64/libQnnJsonProfilingReader.so
 odm/lib64/libQnnModelDlc.so
 odm/lib64/libQnnSaver.so
 odm/lib64/libQnnSystem.so
-
-# OMX
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libFlacSwDec.so
-vendor/lib64/libdsd2pcm.so
 
 # Perf
 odm/etc/thermalbreakboostconfig.xml
