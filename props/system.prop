@@ -1,2 +1,7 @@
 # QTI
 ro.vendor.qti.va_aosp.support=1
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+ro.media.xml_variant.profiles=_cliffs_v0
