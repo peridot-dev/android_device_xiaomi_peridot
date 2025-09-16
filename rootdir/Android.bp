@@ -77,6 +77,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.peridot.rc",
+    src: "etc/init.peridot.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.qcom.factory.rc",
     src: "etc/init.qcom.factory.rc",
     sub_dir: "init/hw",
