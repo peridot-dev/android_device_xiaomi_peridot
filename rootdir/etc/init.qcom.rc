@@ -27,7 +27,7 @@
 # Changes from Qualcomm Innovation Center are provided under the following
 # license:
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022, 2024 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -72,18 +72,17 @@ on early-init
   # create symlink for vendor mount points
     symlink /vendor/firmware_mnt /firmware
     symlink /vendor/bt_firmware /bt_firmware
-# MIUI DEL: Audio_XiaoAi
-    # symlink /vendor/dsp /dsp
-# END Audio_XiaoAi
+    symlink /vendor/dsp /dsp
 
   # Change ownership of sysfs power control node
-    chown system graphics /sys/class/drm/card0/device/power/control
+    chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/power/control
+    chown system graphics /sys/devices/platform/soc/a800000.qcom,mdss_mdp/power/control
+    chmod 664 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/power/control
+    chmod 664 /sys/devices/platform/soc/a800000.qcom,mdss_mdp/power/control
 
-    #Disable UFS clock scaling
+    #Disable UFS LPM to save boot time
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
-    #Disable UFS auto_hibern8
     write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 0
-    #Disable UFS clock gating
     write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 0
 
     chown root system /dev/kmsg
@@ -112,9 +111,6 @@ on early-boot
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
-    setprop vendor.display.mixer_resolution ${persist.sys.miui_resolution}
-    mkdir /data/vendor/modem 0777 root root
-    mkdir /data/vendor/modem/diag_logs 0777 root root
 
     chown system system /mnt/vendor/persist/data/pfm/licenses
     chmod 0775 /mnt/vendor/persist/data/pfm/licenses
@@ -180,8 +176,6 @@ on boot
 
     setprop wifi.interface wlan0
 
-    setprop persist.bluetooth.a2dp_offload.disabled false
-
     setprop ro.telephony.call_ring.multiple false
 
     #Remove SUID bit for iproute2 ip tool
@@ -246,17 +240,6 @@ on boot
     chown system system /sys/class/sensors/apds9930-proximity/enable
     chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
-    # MIUI ADD: Power_LogEnhance
-    # Allow access to power_debug
-    chown system system /sys/class/power_debug/debug_suspend
-    # END Power_LogEnhance
-
-     # MIUI ADD: Performance_LogEnhance
-    chmod 0666 /dev/mi_exception_log
-    chown system system /proc/mi_log/binder_delay
-    chown system system /proc/mi_log/delay
-    # END Performance_LogEnhance
-
     # Create directory used for display
     # for backward compatibility
     mkdir /persist/display 0770 system graphics
@@ -265,6 +248,8 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /mnt/vendor/persist/hexlp 0770 media media
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
@@ -298,17 +283,8 @@ on post-fs-data
     mkdir /data/vendor/qtee 0770 system system
 
     #Create folder of camera
-    mkdir /data/vendor/camera 0777 camera camera
-    mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
-    mkdir /data/vendor/camera/aftersalelog 0777 cameraserver audio
+    mkdir /data/vendor/camera 0770 camera camera
 
-    # MIUI ADD: Camera_CameraSkyNet
-    chmod 0666 /dev/camlog
-    #END Camera_CameraSkyNet
-
-    # MIUI ADD: Camera_Sched
-    chmod 0666 /dev/mi_cam_sched
-    # END Camera_Sched
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -340,9 +316,6 @@ on post-fs-data
     mkdir /data/vendor/audio_dsp 0770 media media
     mkdir /data/vendor/audio/audio_collector 0770 audio audio
 
-    # Create directory used by video subsystem
-    mkdir /data/vendor/video 0777 audio audio
-
     # Create directory for audio delta files
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
@@ -350,12 +323,6 @@ on post-fs-data
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
     rm /data/vendor/radio/shmbus
-
-    #lwota
-    mkdir /data/vendor/radio/apkmbnconfig 0777 radio radio
-    mkdir /data/vendor/radio/sha256 0777 radio radio
-    mkdir /data/vendor/radio/efs 0777 radio radio
-    #lwota
 
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
@@ -459,11 +426,11 @@ on post-fs-data
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /data/vendor/hexlp 0770 media media
+
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
-
-    # Create the directory used by qrtr-lookup
-    mkdir /data/vendor/qrtr 0775 system system
 
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
@@ -484,7 +451,11 @@ service qcomsysd /system/vendor/bin/qcom-system-daemon
     group root diag oem_2901
     disabled
 
-on property:persist.vendor.qcomsysd.enabled=1
+# Not launch qcomsysd process in USER BUILD
+on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=userdebug
+    enable qcomsysd
+
+on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=eng
     enable qcomsysd
 
 on property:persist.vendor.qcomsysd.enabled=0
@@ -494,11 +465,10 @@ service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
     disabled
 
-service vendor.ss_ramdump /vendor/bin/subsystem_ramdump 3
+service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
     class main
     user system
-    group system root media_rw everybody
-    capabilities NET_ADMIN
+    group system
     ioprio rt 4
     disabled
 
@@ -547,11 +517,9 @@ on property:persist.vendor.sys.rawdump_copy=0
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    #Enable UFS clock scaling back
+    #Enable UFS LPM back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
-    #Enable UFS auto_hibern8 back
     write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
-    #Enable UFS clock gating back
     write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
     #Reset read ahead for dm-0 and dm-1 to 512kb
     write /sys/block/dm-0/queue/read_ahead_kb 512
@@ -563,8 +531,6 @@ on property:sys.boot_completed=1
     setprop lmkd.reinit 1
     chown media audio /sys/kernel/aud_dev/state
     write /sys/devices/virtual/cvp/cvp/boot 1
-    write /dev/kmsg "start qrtr-lookup after Boot completed "
-    start qrtr-lookup
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -583,6 +549,11 @@ on property:vendor.media.target.version=*
 on property:vendor.media.target_variant=*
     setprop ro.media.xml_variant.codecs ${vendor.media.target_variant}
     setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
+
+service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
+    class core
+    user root
+    oneshot
 
 service qcom-c_main-sh /vendor/bin/init.class_main.sh
     class main
@@ -710,7 +681,7 @@ service wifi_ftmd /system/vendor/bin/wifi_ftmd
 on property:vendor.wifi.ftmd.load=true
     insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
 
-service cnss-daemon /system/vendor/bin/cnss-daemon -n -l --max_file_count 3 --max_file_size 20
+service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
@@ -719,9 +690,6 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l --max_file_count 3 --ma
 on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
     stop cnss-daemon
-
-on property:persist.sys.miui_resolution=*
-    setprop vendor.display.mixer_resolution ${persist.sys.miui_resolution}
 
 service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
     class late_start
@@ -744,11 +712,6 @@ service mlid /vendor/bin/mlid
     user gps
     group gps
     socket mlid stream 0666 gps gps
-
-service loc_launcher /system/vendor/bin/loc_launcher
-    class late_start
-    user gps
-    group gps
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
@@ -774,6 +737,18 @@ service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
     disabled
     oneshot
     seclabel u:r:qti-testscripts:s0
+
+service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
+    class late_start
+    group wifi inet
+    disabled
+    oneshot
+
+service wifi-crda /vendor/bin/init.crda.sh
+   class late_start
+   user root
+   disabled
+   oneshot
 
 on property:sys.boot_completed=1
     start qcom-post-boot
@@ -831,36 +806,17 @@ service vendor.ssr_diag /system/vendor/bin/ssr_diag
     group system
     disabled
 
-service diag_mdlog_start /vendor/bin/diag_mdlog -q 0x2006 -j 1 -u -c -i -n 50
+service diag_mdlog_start /system/vendor/bin/diag_mdlog
     class late_start
     user shell
-    group system oem_2902 oem_2905 sdcard_rw sdcard_r media_rw
+    group system oem_2901 sdcard_rw sdcard_r media_rw
     disabled
     oneshot
-
-service vendor.diag.tcpdump /vendor/bin/tcpdump -i any -C 500 -W 3 -nnXSs 0 -w /data/vendor/modem/diag_logs/tcpdump.pcap -Z system
-    class main
-    user root
-    group root wifi
-    disabled
-    oneshot
-
-on property:persist.logd.diag.tcpdump=true
-    start vendor.diag.tcpdump
-
-on property:persist.logd.diag.tcpdump=false
-    stop vendor.diag.tcpdump
-
-on boot && property:persist.logd.diag.bootup=* && property:persist.logd.diag.networklog=*
-    start vendor.diag.tcpdump
-
-on boot && property:persist.logd.diag.bootup=* && property:persist.logd.diag.mobilelog=*
-    start logcatlog
 
 service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
     class late_start
     user shell
-    group system oem_2902 oem_2905 sdcard_rw sdcard_r media_rw
+    group system oem_2901 sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
@@ -923,6 +879,10 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     group nfc
 
 on charger
+    #Enable UFS LPM back
+    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
 
@@ -983,31 +943,3 @@ on property:vendor.opengles.version=*
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
-
-on property:sys.boot_completed=1 && property:ro.product.debugfs_restrictions.enabled=true && \
-    property:persist.dbg.keep_debugfs_mounted="" && property:ro.debuggable=1
-    setprop persist.dbg.keep_debugfs_mounted 1
-
-on late-init && property:ro.build.type=user && property:ro.debuggable=1
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
-
-on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.debuggable=1
-    chmod 0666 /sys/class/thermal/thermal_zone75/temp
-    chmod 0666 /sys/class/thermal/thermal_zone74/temp
-    chmod 0666 /sys/class/thermal/thermal_zone73/temp
-    chmod 0666 /sys/class/thermal/thermal_zone72/temp
-    chmod 0666 /sys/class/thermal/thermal_zone71/temp
-    chmod 0666 /sys/class/thermal/thermal_zone70/temp
-    chmod 0666 /sys/class/thermal/thermal_zone69/temp
-    chmod 0666 /sys/class/thermal/thermal_zone68/temp
-    chmod 0666 /sys/class/thermal/thermal_zone67/temp
-    chmod 0666 /sys/class/thermal/thermal_zone66/temp
-    chmod 0666 /sys/class/thermal/thermal_zone65/temp
-
-service qrtr-lookup /vendor/bin/qrtr-lookup
-    class core
-    user system
-    group system
-    disabled
-    oneshot
