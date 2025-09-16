@@ -5,6 +5,42 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kernel.post_boot-cliffs_2_2_1.sh",
+    src: "bin/init.kernel.post_boot-cliffs_2_2_1.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-cliffs_2_3_0.sh",
+    src: "bin/init.kernel.post_boot-cliffs_2_3_0.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-cliffs_3_3_1.sh",
+    src: "bin/init.kernel.post_boot-cliffs_3_3_1.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-cliffs_default_3_4_1.sh",
+    src: "bin/init.kernel.post_boot-cliffs_default_3_4_1.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-cliffs.sh",
+    src: "bin/init.kernel.post_boot-cliffs.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-memory.sh",
+    src: "bin/init.kernel.post_boot-memory.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.kernel.post_boot.sh",
     src: "bin/init.kernel.post_boot.sh",
     vendor: true,
