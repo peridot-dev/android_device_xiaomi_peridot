@@ -60,15 +60,13 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.xiaomi   u:object_r:hal_lineage_fastcharge_default_exec:s0
 
 # Fingerprint
-/sys/devices/virtual/touch/tp_dev/fod_status u:object_r:sysfs_tp_fodstatus:s0
-/sys/devices/virtual/touch/touch_dev/fod_press_status u:object_r:sysfs_tp_fodstatus:s0
-/data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/fpdump(/.*)? u:object_r:vendor_fingerprint_data_file_fpdump:s0
-/data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
 /dev/xiaomi-fp u:object_r:vendor_fingerprint_device:s0
-/dev/miev u:object_r:vendor_miev_device:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+/data/vendor/fpc(/.*)? u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/fpdump(/.*)? u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
+/mnt/vendor/persist/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 
 # GNSS
 /data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
