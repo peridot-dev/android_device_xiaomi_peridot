@@ -9,6 +9,7 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -32,6 +33,16 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'libagmclient',
+        'libagmmixer',
+        'libar-acdb',
+        'libar-gsl',
+        'libats',
+        'liblx-osal',
+        'libpalclient',
+        'vendor.qti.hardware.AGMIPC@1.0-impl',
+    ): lib_fixup_remove,
     (
         'sqlite3',
         'vendor.qti.imsrtpservice@3.0',
