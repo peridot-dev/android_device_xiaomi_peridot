@@ -2442,7 +2442,6 @@ vendor/lib64/libGPQeSE.so
 vendor/lib64/vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk_platform.so
 
 # Sensors
-odm/bin/test-nusensors
 odm/etc/sensors/config/ak7323.json
 odm/etc/sensors/config/chre_dynamic_sensors.json
 odm/etc/sensors/config/gt9786.json
