@@ -28,6 +28,9 @@ namespace_imports = [
     'vendor/qcom/opensource/display',
 ]
 
+def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'odm' else None
+
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
@@ -45,6 +48,9 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_remove,
     (
         'sqlite3',
+        'libqshcamera',
+    ): lib_fixup_odm_suffix,
+    (
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.qccsyshal@1.0',
         'vendor.qti.hardware.qccsyshal@1.1',
@@ -78,58 +84,16 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .regex_replace('xml=version', 'xml version'),
     (
-        'odm/lib64/libTrueSight.so',
-        'odm/lib64/libAncHumanVideoBokehV4.so',
-        'odm/lib64/libwa_widelens_undistort.so',
-        'vendor/lib64/libMiVideoFilter.so',
-        'vendor/lib64/libmorpho_ubwc.so'
-    ): blob_fixup()
-        .clear_symbol_version('AHardwareBuffer_allocate')
-        .clear_symbol_version('AHardwareBuffer_describe')
-        .clear_symbol_version('AHardwareBuffer_lock')
-        .clear_symbol_version('AHardwareBuffer_lockPlanes')
-        .clear_symbol_version('AHardwareBuffer_release')
-        .clear_symbol_version('AHardwareBuffer_unlock'),
-    'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
-        .add_line_if_missing('setsockopt: 1'),
-    (
-        'vendor/etc/seccomp_policy/atfwd@2.0.policy',
-        'vendor/etc/seccomp_policy/wfdhdcphalservice.policy'
-    ): blob_fixup()
-        .add_line_if_missing('gettid: 1'),
-    (
-        'vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp',
-        'vendor/lib64/libjc_keymint_nxp.so'
-    ): blob_fixup()
-        .replace_needed(
-            'android.hardware.security.keymint-V3-ndk.so',
-            'android.hardware.security.keymint-V4-ndk.so'
-        )
-        .replace_needed(
-            'libcppbor_external.so',
-            'libcppbor_peridot.so'
-    ),
-    (
-        'vendor/lib64/hw/camera.qcom.so',
-        'vendor/lib64/hw/camera.xiaomi.so',
-        'vendor/lib64/hw/com.qti.chi.override.so',
-        'vendor/lib64/libchifeature2.so',
+        'odm/lib64/hw/camera.qcom.so',
+        'odm/lib64/hw/camera.xiaomi.so',
+        'odm/lib64/hw/com.qti.chi.override.so',
+        'odm/lib64/libchifeature2.so',
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so')
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
             'android.hardware.graphics.allocator-V2-ndk.so'
     ),
-    (
-        'vendor/lib64/libcameraopt.so',
-        'vendor/lib64/libcamxcommonutils.so',
-        'vendor/lib64/libmialgoengine.so'
-    ): blob_fixup()
-        .add_needed('libprocessgroup_shim.so'),
-    'vendor/lib64/libqcodec2_core.so': blob_fixup()
-        .add_needed('libcodec2_shim.so'),
-    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
-        .add_needed('libhidlbase_shim.so'),
     (
         'odm/lib64/camera/com.qti.actuator.peridot_aac_imx882_gt9764ber_wide_i_actuator.so',
         'odm/lib64/camera/com.qti.actuator.peridot_ofilm_imx882_aw86016csr_wide_ii_actuator.so',
@@ -146,106 +110,143 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/camera/com.qti.sensor.peridot_ofilm_ov20b40_front.so',
         'odm/lib64/camera/components/com.jigan.node.videobokeh.so',
         'odm/lib64/camera/components/com.mi.node.aiasd.so',
+        'odm/lib64/camera/components/com.mi.node.dlengine.so',
+        'odm/lib64/camera/components/com.mi.node.mawsaliency.so',
         'odm/lib64/camera/components/com.mi.node.skinbeautifier.so',
+        'odm/lib64/camera/components/com.mi.node.videobokeh.so',
+        'odm/lib64/camera/components/com.mi.node.videofilter.so',
         'odm/lib64/camera/components/com.mi.node.videonight.so',
+        'odm/lib64/camera/components/com.qti.hwcfg.bps.so',
+        'odm/lib64/camera/components/com.qti.hwcfg.ife.so',
+        'odm/lib64/camera/components/com.qti.hwcfg.ipe.so',
+        'odm/lib64/camera/components/com.qti.node.aon.so',
+        'odm/lib64/camera/components/com.qti.node.depth.so',
+        'odm/lib64/camera/components/com.qti.node.depthprovider.so',
+        'odm/lib64/camera/components/com.qti.node.dewarp.so',
+        'odm/lib64/camera/components/com.qti.node.eisv2.so',
+        'odm/lib64/camera/components/com.qti.node.eisv3.so',
+        'odm/lib64/camera/components/com.qti.node.evadepth.so',
+        'odm/lib64/camera/components/com.qti.node.gme.so',
+        'odm/lib64/camera/components/com.qti.node.gyrornn.so',
+        'odm/lib64/camera/components/com.qti.node.hdr10pgen.so',
+        'odm/lib64/camera/components/com.qti.node.hdr10phist.so',
+        'odm/lib64/camera/components/com.qti.node.itofpreprocess.so',
+        'odm/lib64/camera/components/com.qti.node.ml.so',
+        'odm/lib64/camera/components/com.qti.node.mlinference.so',
+        'odm/lib64/camera/components/com.qti.node.pixelstats.so',
+        'odm/lib64/camera/components/com.qti.node.seg.so',
+        'odm/lib64/camera/components/com.qti.node.swec.so',
+        'odm/lib64/camera/components/com.qti.node.swregistration.so',
+        'odm/lib64/camera/components/com.qti.stats.cnndriver.so',
+        'odm/lib64/camera/components/libcamxevainterface.so',
+        'odm/lib64/camera/components/libdepthmapwrapper_itof.so',
+        'odm/lib64/camera/components/libdepthmapwrapper_secure.so',
         'odm/lib64/camera/libchxlogicalcameratable.so',
-        'vendor/lib64/camera/components/com.mi.node.dlengine.so',
-        'vendor/lib64/camera/components/com.mi.node.mawsaliency.so',
-        'vendor/lib64/camera/components/com.mi.node.videobokeh.so',
-        'vendor/lib64/camera/components/com.mi.node.videofilter.so',
-        'vendor/lib64/camera/components/com.qti.hwcfg.bps.so',
-        'vendor/lib64/camera/components/com.qti.hwcfg.ife.so',
-        'vendor/lib64/camera/components/com.qti.hwcfg.ipe.so',
-        'vendor/lib64/camera/components/com.qti.node.aon.so',
-        'vendor/lib64/camera/components/com.qti.node.depth.so',
-        'vendor/lib64/camera/components/com.qti.node.depthprovider.so',
-        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
-        'vendor/lib64/camera/components/com.qti.node.eisv2.so',
-        'vendor/lib64/camera/components/com.qti.node.eisv3.so',
-        'vendor/lib64/camera/components/com.qti.node.evadepth.so',
-        'vendor/lib64/camera/components/com.qti.node.gme.so',
-        'vendor/lib64/camera/components/com.qti.node.gyrornn.so',
-        'vendor/lib64/camera/components/com.qti.node.hdr10pgen.so',
-        'vendor/lib64/camera/components/com.qti.node.hdr10phist.so',
-        'vendor/lib64/camera/components/com.qti.node.itofpreprocess.so',
-        'vendor/lib64/camera/components/com.qti.node.ml.so',
-        'vendor/lib64/camera/components/com.qti.node.mlinference.so',
-        'vendor/lib64/camera/components/com.qti.node.pixelstats.so',
-        'vendor/lib64/camera/components/com.qti.node.seg.so',
-        'vendor/lib64/camera/components/com.qti.node.swec.so',
-        'vendor/lib64/camera/components/com.qti.node.swregistration.so',
-        'vendor/lib64/camera/components/com.qti.stats.cnndriver.so',
-        'vendor/lib64/camera/components/libcamxevainterface.so',
-        'vendor/lib64/camera/components/libdepthmapwrapper_itof.so',
-        'vendor/lib64/camera/components/libdepthmapwrapper_secure.so',
-        'vendor/lib64/com.qti.camx.chiiqutils.so',
-        'vendor/lib64/com.qti.chiusecaseselector.so',
-        'vendor/lib64/com.qti.feature2.afbrckt.so',
-        'vendor/lib64/com.qti.feature2.anchorsync.so',
-        'vendor/lib64/com.qti.feature2.demux.so',
-        'vendor/lib64/com.qti.feature2.derivedoffline.so',
-        'vendor/lib64/com.qti.feature2.fusion.so',
-        'vendor/lib64/com.qti.feature2.generic.so',
-        'vendor/lib64/com.qti.feature2.gs.sm8650.so',
-        'vendor/lib64/com.qti.feature2.hdr.so',
-        'vendor/lib64/com.qti.feature2.mcreprocrt.so',
-        'vendor/lib64/com.qti.feature2.memcpy.so',
-        'vendor/lib64/com.qti.feature2.metadataserializer.so',
-        'vendor/lib64/com.qti.feature2.mfsr.so',
-        'vendor/lib64/com.qti.feature2.ml.so',
-        'vendor/lib64/com.qti.feature2.mux.so',
-        'vendor/lib64/com.qti.feature2.offlinestatsregeneration.so',
-        'vendor/lib64/com.qti.feature2.qcfa.so',
-        'vendor/lib64/com.qti.feature2.rawhdr.so',
-        'vendor/lib64/com.qti.feature2.realtimeserializer.so',
-        'vendor/lib64/com.qti.feature2.rt.so',
-        'vendor/lib64/com.qti.feature2.rtmcx.so',
-        'vendor/lib64/com.qti.feature2.serializer.so',
-        'vendor/lib64/com.qti.feature2.statsregeneration.so',
-        'vendor/lib64/com.qti.feature2.stub.so',
-        'vendor/lib64/com.qti.feature2.swmf.so',
-        'vendor/lib64/com.qti.qseeutils.so',
-        'vendor/lib64/com.qualcomm.mcx.distortionmapper.so',
-        'vendor/lib64/com.qualcomm.mcx.linearmapper.so',
-        'vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so',
-        'vendor/lib64/com.qualcomm.mcx.policy.mfl.so',
-        'vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so',
-        'vendor/lib64/com.xiaomi.camx.hook.so',
-        'vendor/lib64/com.xiaomi.chi.hook.so',
-        'vendor/lib64/hw/camera.qcom.sm8650.so',
-        'vendor/lib64/hw/com.qti.chi.offline.so',
-        'vendor/lib64/libcamerapostproc.so',
-        'vendor/lib64/libcamxhwnodecontext.so',
-        'vendor/lib64/libcamxifestriping.so',
-        'vendor/lib64/libcamximageformatutils.so',
-        'vendor/lib64/libcamxncsdatafactory.so',
-        'vendor/lib64/libcom.xiaomi.mawutilsold.so',
-        'vendor/lib64/libcommonchiutils.so',
-        'vendor/lib64/libfastmessage.so',
-        'vendor/lib64/libhme.so',
-        'vendor/lib64/libipebpsstriping.so',
-        'vendor/lib64/libipebpsstriping170.so',
-        'vendor/lib64/libipebpsstriping480.so',
-        'vendor/lib64/libisphwsetting.so',
-        'vendor/lib64/libjpege.so',
-        'vendor/lib64/libmctfengine_stub.so',
-        'vendor/lib64/libmfec.so',
-        'vendor/lib64/libmmcamera_bestats.so',
-        'vendor/lib64/libmmcamera_cac.so',
-        'vendor/lib64/libmmcamera_lscv35.so',
-        'vendor/lib64/libmmcamera_pdpc.so',
-        'vendor/lib64/libofflinefeatureintf.so',
-        'vendor/lib64/libopestriping.so',
-        'vendor/lib64/libtfestriping.so',
-        'vendor/lib64/libubifocus.so',
-        'vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so',
-        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
-        'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so',
+        'odm/lib64/com.qti.camx.chiiqutils.so',
+        'odm/lib64/com.qti.chiusecaseselector.so',
+        'odm/lib64/com.qti.feature2.afbrckt.so',
+        'odm/lib64/com.qti.feature2.anchorsync.so',
+        'odm/lib64/com.qti.feature2.demux.so',
+        'odm/lib64/com.qti.feature2.derivedoffline.so',
+        'odm/lib64/com.qti.feature2.fusion.so',
+        'odm/lib64/com.qti.feature2.generic.so',
+        'odm/lib64/com.qti.feature2.gs.sm8650.so',
+        'odm/lib64/com.qti.feature2.hdr.so',
+        'odm/lib64/com.qti.feature2.mcreprocrt.so',
+        'odm/lib64/com.qti.feature2.memcpy.so',
+        'odm/lib64/com.qti.feature2.metadataserializer.so',
+        'odm/lib64/com.qti.feature2.mfsr.so',
+        'odm/lib64/com.qti.feature2.ml.so',
+        'odm/lib64/com.qti.feature2.mux.so',
+        'odm/lib64/com.qti.feature2.offlinestatsregeneration.so',
+        'odm/lib64/com.qti.feature2.qcfa.so',
+        'odm/lib64/com.qti.feature2.rawhdr.so',
+        'odm/lib64/com.qti.feature2.realtimeserializer.so',
+        'odm/lib64/com.qti.feature2.rt.so',
+        'odm/lib64/com.qti.feature2.rtmcx.so',
+        'odm/lib64/com.qti.feature2.serializer.so',
+        'odm/lib64/com.qti.feature2.statsregeneration.so',
+        'odm/lib64/com.qti.feature2.stub.so',
+        'odm/lib64/com.qti.feature2.swmf.so',
+        'odm/lib64/com.qti.qseeutils.so',
+        'odm/lib64/com.qualcomm.mcx.distortionmapper.so',
+        'odm/lib64/com.qualcomm.mcx.linearmapper.so',
+        'odm/lib64/com.qualcomm.mcx.nonlinearmapper.so',
+        'odm/lib64/com.qualcomm.mcx.policy.mfl.so',
+        'odm/lib64/com.qualcomm.qti.mcx.usecase.extension.so',
+        'odm/lib64/com.xiaomi.camx.hook.so',
+        'odm/lib64/com.xiaomi.chi.hook.so',
+        'odm/lib64/hw/camera.qcom.sm8650.so',
+        'odm/lib64/hw/com.qti.chi.offline.so',
+        'odm/lib64/libcamerapostproc.so',
+        'odm/lib64/libcamxhwnodecontext.so',
+        'odm/lib64/libcamxifestriping.so',
+        'odm/lib64/libcamximageformatutils.so',
+        'odm/lib64/libcamxncsdatafactory.so',
+        'odm/lib64/libcom.xiaomi.mawutilsold.so',
+        'odm/lib64/libcommonchiutils.so',
+        'odm/lib64/libfastmessage.so',
+        'odm/lib64/libhme.so',
+        'odm/lib64/libipebpsstriping.so',
+        'odm/lib64/libipebpsstriping170.so',
+        'odm/lib64/libipebpsstriping480.so',
+        'odm/lib64/libisphwsetting.so',
+        'odm/lib64/libjpege.so',
+        'odm/lib64/libmctfengine_stub.so',
+        'odm/lib64/libmfec.so',
+        'odm/lib64/libmmcamera_bestats.so',
+        'odm/lib64/libmmcamera_cac.so',
+        'odm/lib64/libmmcamera_lscv35.so',
+        'odm/lib64/libmmcamera_pdpc.so',
+        'odm/lib64/libofflinefeatureintf.so',
+        'odm/lib64/libopestriping.so',
+        'odm/lib64/libtfestriping.so',
+        'odm/lib64/libubifocus.so',
+        'odm/lib64/vendor.qti.hardware.camera.aon-service-impl.so',
+        'odm/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
+        'odm/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so',
     ): blob_fixup()
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
             'android.hardware.graphics.allocator-V2-ndk.so'
     ),
+    (
+        'odm/lib64/libcamxcommonutils.so',
+        'odm/lib64/libmialgoengine.so',
+        'vendor/lib64/libcameraopt.so',
+    ): blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
+    (
+        'odm/lib64/libAncHumanVideoBokehV4.so',
+        'odm/lib64/libTrueSight.so',
+        'odm/lib64/libMiVideoFilter.so',
+        'odm/lib64/libwa_widelens_undistort.so',
+        'odm/lib64/libmorpho_ubwc.so'
+    ): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
+        .add_line_if_missing('setsockopt: 1'),
+    (
+        'vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp',
+        'vendor/lib64/libjc_keymint_nxp.so'
+    ): blob_fixup()
+        .replace_needed(
+            'android.hardware.security.keymint-V3-ndk.so',
+            'android.hardware.security.keymint-V4-ndk.so'
+        )
+        .replace_needed(
+            'libcppbor_external.so',
+            'libcppbor_peridot.so'
+    ),
+    'vendor/lib64/libqcodec2_core.so': blob_fixup()
+        .add_needed('libcodec2_shim.so'),
+    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
+        .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

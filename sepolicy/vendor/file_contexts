@@ -9,28 +9,30 @@
 /(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
 
 # Camera
+/(odm|vendor)/bin/hw/vendor\.qti\.camera\.provider-service_64 u:object_r:hal_camera_default_exec:s0
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
 /persist/camera(/.*)? u:object_r:camera_persist_file:s0
 /odm/lib(64)?/libmialgo_utils\.so u:object_r:same_process_hal_file:s0
 /odm/lib(64)?/libmiocr\.so u:object_r:same_process_hal_file:s0
 /odm/lib(64)?/libxmi_slow_motion_mein\.so u:object_r:same_process_hal_file:s0
 /odm/lib(64)?/rfsa/adsp/libmialgo_bokeh_effect_cdsp_skel\.so u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libcamxexternalformatutils\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor.qti.qegahal-V1-ndk_platform\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/rfsa/adsp/libSnpeHtpV73Skel\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/rfsa/adsp/libSnpeHtpV75Skel\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/rfsa/adsp/libcalculator_skel\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/rfsa/adsp/libmialgo_basic_cdsp_skel\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgo_ai_vision\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libhta_hexagon_runtime_snpe\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libc\+\+_shared\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libcalculator\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libcalculator_htp\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libSNPE\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libSnpeHta\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libSnpeHtpPrepare\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libSnpeHtpV73Stub\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libSnpeHtpV75Stub\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libPlatformValidatorShared\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/rfsa/adsp/libSnpeHtpV73Skel\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/rfsa/adsp/libSnpeHtpV75Skel\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/rfsa/adsp/libcalculator_skel\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/rfsa/adsp/libmialgo_basic_cdsp_skel\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libmialgo_ai_vision\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libhta_hexagon_runtime_snpe\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libc\+\+_shared\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libcalculator\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libcalculator_htp\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libSNPE\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libSnpeHta\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libSnpeHtpPrepare\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libSnpeHtpV73Stub\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libSnpeHtpV75Stub\.so u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libPlatformValidatorShared\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libQEGA.qti\.so u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libanc_single_bokeh\.so u:object_r:same_process_hal_file:s0
 /(vendor|odm)/lib(64)?/libmiaio_head_seg\.so u:object_r:same_process_hal_file:s0
@@ -65,6 +67,7 @@
 /mnt/vendor/persist/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 
 # GNSS
+/(odm|vendor|vendor/odm|system/vendor/odm)/bin/hw/android\.hardware\.gnss.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
 /data/vendor/ins(/.*)? u:object_r:vendor_ins_vendor_data_file:s0
 
 # Keymint
