@@ -78,8 +78,6 @@ odm/etc/audio_policy_engine_stream_volumes.xml
 odm/etc/backend_conf.xml
 odm/etc/usecaseKvManager.xml
 vendor/etc/audio/sku_cliffs/audio_effects.conf
-vendor/etc/audio/sku_cliffs/mixer_paths_cliffs_mtp_wcd9395.xml
-vendor/etc/audio/sku_cliffs/resourcemanager_cliffs_mtp_wcd9395.xml
 vendor/etc/audio_diag.cfg
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/card-defs.xml
