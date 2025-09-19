@@ -124,9 +124,6 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh
 
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.composer-service.xml
-
 # Dolby
 PRODUCT_PACKAGES += \
     XiaomiDolby
