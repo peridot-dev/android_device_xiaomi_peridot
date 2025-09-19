@@ -1469,9 +1469,6 @@ odm/etc/display/qdcm_calib_data_xiaomi_42_0a_0c_video_mode_dsc_dsi_panel.json
 odm/etc/mdss_dsi_n16t_36_0f_0b_dsc_vid_mi.xml
 odm/etc/mdss_dsi_n16t_42_02_0a_dsc_vid_mi.xml
 odm/etc/mdss_dsi_n16t_42_0a_0c_dsc_vid_mi.xml
-vendor/etc/displayconfig/display_id_4630946416293825923.xml
-vendor/etc/displayconfig/display_id_4630946545580055171.xml
-vendor/etc/displayconfig/display_id_4630947082089526659.xml
 
 # Displayfeature
 odm/lib64/hw/displayfeature.default.so
