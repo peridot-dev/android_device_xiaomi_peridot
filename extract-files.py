@@ -232,7 +232,7 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed(
             'android.hardware.security.keymint-V3-ndk.so',
-            'android.hardware.security.keymint-V4-ndk.so'
+            'android.hardware.security.keymintperidot.so'
         )
         .replace_needed(
             'libcppbor_external.so',
