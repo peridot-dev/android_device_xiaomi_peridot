@@ -1,2 +1,5 @@
 # Parts
 user=system seinfo=platform isPrivApp=true name=com.xiaomi.settings domain=parts_app type=system_app_data_file levelFrom=all
+
+# QESDK_APP
+user=system seinfo=platform name=vendor.qti.qesdk.sysservice isPrivApp=true domain=vendor_qesdk_app type=system_app_data_file
