@@ -17,12 +17,8 @@ namespace android {
 namespace hardware {
 namespace vibrator {
 
-std::map<int, std::string> haptic_nodes = {
-    {1, "/sys/bus/i2c/drivers/awinic_haptic/2-005a/"},
-};
-
-// Common haptic nodes
-static std::string HAPTIC_NODE;
+// haptic nodes
+static std::string HAPTIC_NODE = "/sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.i2c/i2c-2/2-005a/";
 static std::string ACTIVATE_NODE = "activate";
 static std::string ACTIVATE_MODE_NODE = "activate_mode";
 static std::string EFFECT_ID_NODE = "effect_id";
@@ -105,16 +101,6 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
     uint32_t timeMs = 0;
     uint32_t activate_mode = 1;
     uint32_t effect_id = 0;
-    std::ofstream stream;
-
-    for (auto& i: haptic_nodes) {
-        std::string triggerNode = i.second + ACTIVATE_NODE;
-        if (!openNoCreate(triggerNode, &stream))
-            continue;
-        else
-            HAPTIC_NODE = i.second;
-            break;
-    }
 
     LOG(INFO) << "Vibrator perform";
 
