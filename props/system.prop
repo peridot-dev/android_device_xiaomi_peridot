@@ -1,3 +1,6 @@
+# Device
+ro.product.mod_device=peridot_global
+
 # QTI
 ro.vendor.qti.va_aosp.support=1
 
