@@ -1,0 +1,105 @@
+click
+[ 1290.186321] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1312.321707] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 0 state=1 activate_mode = 0 duration = 0
+[ 1312.323228] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1312.323687] [awinic_haptic]aw86927_haptic_stop enter
+[ 1312.324170] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1312.324174] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1312.324357] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1312.324681] [awinic_haptic]aw86927_haptic_set_wav_loop enter!
+[ 1312.325191] [awinic_haptic]aw86927_haptic_play_mode: enter ram mode
+[ 1312.325736] [awinic_haptic]aw86927_haptic_bst_mode_config enter!
+[ 1312.326019] [awinic_haptic]aw86927_haptic_bst_mode_config haptic bst mode = bst
+[ 1312.327217] [awinic_haptic]aw86927_haptic_effect_strength: aw86927->level =0x80
+[ 1312.330829] [awinic_haptic]The temperature:37267,return value:0
+[ 1312.369322] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 0 state=0 activate_mode = 0 duration = 0
+[ 1312.369670] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1312.371685] [awinic_haptic]aw86927_haptic_stop enter
+[ 1312.372312] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+
+
+double click
+[ 1338.670535] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 1 state=1 activate_mode = 0 duration = 0
+[ 1338.672135] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1338.672792] [awinic_haptic]aw86927_haptic_stop enter
+[ 1338.673499] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1338.673506] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1338.674004] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1338.674566] [awinic_haptic]aw86927_haptic_set_wav_loop enter!
+[ 1338.675753] [awinic_haptic]aw86927_haptic_play_mode: enter ram mode
+[ 1338.676367] [awinic_haptic]aw86927_haptic_bst_mode_config enter!
+[ 1338.676372] [awinic_haptic]aw86927_haptic_bst_mode_config haptic bst mode = bst
+[ 1338.677610] [awinic_haptic]aw86927_haptic_effect_strength: aw86927->level =0x80
+[ 1338.679193] [awinic_haptic]The temperature:37825,return value:0
+[ 1338.720849] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 1 state=0 activate_mode = 0 duration = 0
+[ 1338.721130] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1338.721915] [awinic_haptic]aw86927_haptic_stop enter
+
+tick
+[ 1371.162583] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 2 state=1 activate_mode = 0 duration = 0
+[ 1371.165345] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1371.165684] [awinic_haptic]aw86927_haptic_stop enter
+[ 1371.166092] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1371.166096] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1371.166256] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1371.166499] [awinic_haptic]aw86927_haptic_set_wav_loop enter!
+[ 1371.166930] [awinic_haptic]aw86927_haptic_play_mode: enter ram mode
+[ 1371.167344] [awinic_haptic]aw86927_haptic_bst_mode_config enter!
+[ 1371.167348] [awinic_haptic]aw86927_haptic_bst_mode_config haptic bst mode = bst
+[ 1371.168160] [awinic_haptic]aw86927_haptic_effect_strength: aw86927->level =0x80
+[ 1371.169481] [awinic_haptic]The temperature:37169,return value:0
+[ 1371.219412] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 2 state=0 activate_mode = 0 duration = 0
+[ 1371.223830] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1371.224255] [awinic_haptic]aw86927_haptic_stop enter
+[ 1371.224845] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1377.929052] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 2 state=1 activate_mode = 0 duration = 0
+[ 1377.930159] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1377.931189] [awinic_haptic]aw86927_haptic_stop enter
+
+thud
+[ 1539.551549] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 3 state=1 activate_mode = 0 duration = 0
+[ 1539.553223] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1539.553741] [awinic_haptic]aw86927_haptic_stop enter
+[ 1539.554477] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1539.554483] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1539.554674] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1539.554851] [awinic_haptic]aw86927_haptic_set_wav_loop enter!
+[ 1539.555371] [awinic_haptic]aw86927_haptic_play_mode: enter ram mode
+[ 1539.555865] [awinic_haptic]aw86927_haptic_bst_mode_config enter!
+[ 1539.555869] [awinic_haptic]aw86927_haptic_bst_mode_config haptic bst mode = bst
+[ 1539.558007] [awinic_haptic]aw86927_haptic_effect_strength: aw86927->level =0x80
+[ 1539.559349] [awinic_haptic]The temperature:36846,return value:0
+[ 1539.599726] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 3 state=0 activate_mode = 0 duration = 0
+[ 1539.600002] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1539.600461] [awinic_haptic]aw86927_haptic_stop enter
+[ 1539.601721] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+
+pop:
+[ 1631.284184] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 4 state=1 activate_mode = 0 duration = 0
+[ 1631.285403] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1631.286115] [awinic_haptic]aw86927_haptic_stop enter
+[ 1631.286649] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1631.286655] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1631.286848] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1631.287046] [awinic_haptic]aw86927_haptic_set_wav_loop enter!
+[ 1631.287559] [awinic_haptic]aw86927_haptic_play_mode: enter ram mode
+[ 1631.288063] [awinic_haptic]aw86927_haptic_bst_mode_config enter!
+[ 1631.288066] [awinic_haptic]aw86927_haptic_bst_mode_config haptic bst mode = bst
+[ 1631.289533] [awinic_haptic]aw86927_haptic_effect_strength: aw86927->level =0x80
+[ 1631.291284] [awinic_haptic]The temperature:36699,return value:0
+[ 1631.331622] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 4 state=0 activate_mode = 0 duration = 0
+[ 1631.331915] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1631.332628] [awinic_haptic]aw86927_haptic_stop enter
+
+heavy:
+[ 1899.035109] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 5 state=1 activate_mode = 0 duration = 0
+[ 1899.036617] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
+[ 1899.037205] [awinic_haptic]aw86927_haptic_stop enter
+[ 1899.037885] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+[ 1899.037890] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1899.038070] [awinic_haptic]aw86927_haptic_set_wav_seq enter!
+[ 1899.038302] [awinic_haptic]aw86927_haptic_set_wav_loop enter!
+[ 1899.039252] [awinic_haptic]aw86927_haptic_play_mode: enter ram mode
+[ 1899.039700] [awinic_haptic]aw86927_haptic_bst_mode_config enter!
+[ 1899.039705] [awinic_haptic]aw86927_haptic_bst_mode_config haptic bst mode = bst
+[ 1899.040709] [awinic_haptic]aw86927_haptic_effect_strength: aw86927->level =0x80
