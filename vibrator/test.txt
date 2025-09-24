@@ -17,6 +17,16 @@ click
 [ 1312.371685] [awinic_haptic]aw86927_haptic_stop enter
 [ 1312.372312] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
 
+09-24 20:46:17.944  1812  1812 D vendor.hardware.vibratorfeature: Vibrator perform effect 0
+09-24 20:46:17.945  1812  1812 D vendor.hardware.vibratorfeature: uses mCurrMagnitudeExt 1.500000
+09-24 20:46:17.945  1812  1812 D vendor.hardware.vibratorfeature: getAmplitudeFromEffectStrength 1.000000
+09-24 20:46:17.945  1812  1812 D vendor.hardware.vibratorfeature: return from driver is 5
+09-24 20:46:17.949  1812  1812 D vendor.hardware.vibratorfeature: playLengthMs is 45
+09-24 20:46:17.949  1812 19380 D vendor.hardware.vibratorfeature: Starting perform on another thread
+09-24 20:46:17.994  1812 19380 D vendor.hardware.vibratorfeature: Notifying perform complete
+09-24 20:46:17.995  2284  6998 D VibratorManagerService: Vibration 189 on vibrator 0 complete, notifying thread
+09-24 20:46:17.996  1812  1812 D vendor.hardware.vibratorfeature: QTI Vibrator off
+
 
 double click
 [ 1338.670535] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 1 state=1 activate_mode = 0 duration = 0
@@ -34,6 +44,16 @@ double click
 [ 1338.720849] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 1 state=0 activate_mode = 0 duration = 0
 [ 1338.721130] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
 [ 1338.721915] [awinic_haptic]aw86927_haptic_stop enter
+
+09-24 20:46:38.086  1812  1812 D vendor.hardware.vibratorfeature: Vibrator perform effect 1
+09-24 20:46:38.086  1812  1812 D vendor.hardware.vibratorfeature: uses mCurrMagnitudeExt 1.500000
+09-24 20:46:38.086  1812  1812 D vendor.hardware.vibratorfeature: getAmplitudeFromEffectStrength 1.000000
+09-24 20:46:38.086  1812  1812 D vendor.hardware.vibratorfeature: return from driver is 5
+09-24 20:46:38.086  1812  1812 D vendor.hardware.vibratorfeature: playLengthMs is 45
+09-24 20:46:38.087  1812 19415 D vendor.hardware.vibratorfeature: Starting perform on another thread
+09-24 20:46:38.132  1812 19415 D vendor.hardware.vibratorfeature: Notifying perform complete
+09-24 20:46:38.132  2284  2389 D VibratorManagerService: Vibration 190 on vibrator 0 complete, notifying thread
+09-24 20:46:38.133  1812  1812 D vendor.hardware.vibratorfeature: QTI Vibrator off
 
 tick
 [ 1371.162583] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 2 state=1 activate_mode = 0 duration = 0
@@ -55,6 +75,15 @@ tick
 [ 1377.929052] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 2 state=1 activate_mode = 0 duration = 0
 [ 1377.930159] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
 [ 1377.931189] [awinic_haptic]aw86927_haptic_stop enter
+09-24 20:46:54.258  1812  1812 D vendor.hardware.vibratorfeature: Vibrator perform effect 2
+09-24 20:46:54.258  1812  1812 D vendor.hardware.vibratorfeature: uses mCurrMagnitudeExt 1.500000
+09-24 20:46:54.258  1812  1812 D vendor.hardware.vibratorfeature: getAmplitudeFromEffectStrength 1.000000
+09-24 20:46:54.259  1812  1812 D vendor.hardware.vibratorfeature: return from driver is 5
+09-24 20:46:54.259  1812  1812 D vendor.hardware.vibratorfeature: playLengthMs is 45
+09-24 20:46:54.259  1812 19450 D vendor.hardware.vibratorfeature: Starting perform on another thread
+09-24 20:46:54.304  1812 19450 D vendor.hardware.vibratorfeature: Notifying perform complete
+09-24 20:46:54.305  2284  6915 D VibratorManagerService: Vibration 191 on vibrator 0 complete, notifying thread
+09-24 20:46:54.307  1812  1812 D vendor.hardware.vibratorfeature: QTI Vibrator off
 
 thud
 [ 1539.551549] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 3 state=1 activate_mode = 0 duration = 0
@@ -73,6 +102,15 @@ thud
 [ 1539.600002] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
 [ 1539.600461] [awinic_haptic]aw86927_haptic_stop enter
 [ 1539.601721] [awinic_haptic]aw86927_haptic_wait_enter_standby: entered standby!
+09-24 20:47:08.318  1812  1812 D vendor.hardware.vibratorfeature: Vibrator perform effect 3
+09-24 20:47:08.318  1812  1812 D vendor.hardware.vibratorfeature: uses mCurrMagnitudeExt 1.500000
+09-24 20:47:08.318  1812  1812 D vendor.hardware.vibratorfeature: getAmplitudeFromEffectStrength 1.000000
+09-24 20:47:08.318  1812  1812 D vendor.hardware.vibratorfeature: return from driver is 5
+09-24 20:47:08.318  1812  1812 D vendor.hardware.vibratorfeature: playLengthMs is 45
+09-24 20:47:08.319  1812 19467 D vendor.hardware.vibratorfeature: Starting perform on another thread
+09-24 20:47:08.364  1812 19467 D vendor.hardware.vibratorfeature: Notifying perform complete
+09-24 20:47:08.368  2284  3985 D VibratorManagerService: Vibration 192 on vibrator 0 complete, notifying thread
+09-24 20:47:08.372  1812  1812 D vendor.hardware.vibratorfeature: QTI Vibrator off
 
 pop:
 [ 1631.284184] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 4 state=1 activate_mode = 0 duration = 0
@@ -90,6 +128,15 @@ pop:
 [ 1631.331622] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 4 state=0 activate_mode = 0 duration = 0
 [ 1631.331915] [awinic_haptic]aw86927_haptic_upload_lra write f0_calib_data to trim_lra = 0x02
 [ 1631.332628] [awinic_haptic]aw86927_haptic_stop enter
+09-24 20:47:23.764  1812  1812 D vendor.hardware.vibratorfeature: Vibrator perform effect 4
+09-24 20:47:23.764  1812  1812 D vendor.hardware.vibratorfeature: uses mCurrMagnitudeExt 1.500000
+09-24 20:47:23.764  1812  1812 D vendor.hardware.vibratorfeature: getAmplitudeFromEffectStrength 1.000000
+09-24 20:47:23.764  1812  1812 D vendor.hardware.vibratorfeature: return from driver is 5
+09-24 20:47:23.764  1812  1812 D vendor.hardware.vibratorfeature: playLengthMs is 45
+09-24 20:47:23.764  1812 19493 D vendor.hardware.vibratorfeature: Starting perform on another thread
+09-24 20:47:23.810  1812 19493 D vendor.hardware.vibratorfeature: Notifying perform complete
+09-24 20:47:23.811  2284  3985 D VibratorManagerService: Vibration 193 on vibrator 0 complete, notifying thread
+09-24 20:47:23.812  1812  1812 D vendor.hardware.vibratorfeature: QTI Vibrator off
 
 heavy:
 [ 1899.035109] [awinic_haptic]aw86927_vibrator_work_routine: effect_id = 5 state=1 activate_mode = 0 duration = 0
@@ -103,3 +150,12 @@ heavy:
 [ 1899.039700] [awinic_haptic]aw86927_haptic_bst_mode_config enter!
 [ 1899.039705] [awinic_haptic]aw86927_haptic_bst_mode_config haptic bst mode = bst
 [ 1899.040709] [awinic_haptic]aw86927_haptic_effect_strength: aw86927->level =0x80
+09-24 20:47:38.575  1812  1812 D vendor.hardware.vibratorfeature: Vibrator perform effect 5
+09-24 20:47:38.576  1812  1812 D vendor.hardware.vibratorfeature: uses mCurrMagnitudeExt 1.500000
+09-24 20:47:38.576  1812  1812 D vendor.hardware.vibratorfeature: getAmplitudeFromEffectStrength 1.000000
+09-24 20:47:38.578  1812  1812 D vendor.hardware.vibratorfeature: return from driver is 5
+09-24 20:47:38.578  1812  1812 D vendor.hardware.vibratorfeature: playLengthMs is 45
+09-24 20:47:38.578  1812 19542 D vendor.hardware.vibratorfeature: Starting perform on another thread
+09-24 20:47:38.624  1812 19542 D vendor.hardware.vibratorfeature: Notifying perform complete
+09-24 20:47:38.625  2284  5535 D VibratorManagerService: Vibration 194 on vibrator 0 complete, notifying thread
+09-24 20:47:38.628  1812  1812 D vendor.hardware.vibratorfeature: QTI Vibrator off
