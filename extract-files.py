@@ -246,8 +246,17 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.security.keymintperidot.so'
         )
         .replace_needed(
+            'lib_android_keymaster_keymint_utils.so',
+            'lib_android_keymaster_keymint_stock.so'
+        )
+        .replace_needed(
             'libcppbor_external.so',
             'libcppbor_peridot.so'
+    ),
+    'vendor/lib64/hw/libqtigatekeeper.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.gatekeeper-V1-ndk.so',
+            'android.hardware.gatekeeperperidot.so'
     ),
     (
         'vendor/bin/qcc-vendor',
