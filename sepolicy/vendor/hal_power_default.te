@@ -1,0 +1,35 @@
+allow hal_power_default {
+  vendor_sysfs_devfreq
+  vendor_sysfs_msm_subsys
+}:dir search;
+
+allow hal_power_default {
+  input_device
+  vendor_latency_device
+}:chr_file rw_file_perms;
+
+allow hal_power_default {
+  cgroup
+  proc
+  sysfs_devices_system_cpu
+  vendor_sysfs_graphics
+  vendor_sysfs_devfreq
+  vendor_sysfs_kgsl
+  vendor_sysfs_scsi_host
+}:{
+  file
+  lnk_file
+} rw_file_perms;
+
+allow hal_power_default {
+  cgroup
+  input_device
+  vendor_sysfs_devfreq
+}:dir r_dir_perms;
+
+
+# Rule for hal_power_default to access graphics composer process
+unix_socket_connect(hal_power_default, vendor_pps, hal_graphics_composer_default);
+
+# To get/set powerhal state propert
+set_prop(hal_power_default, vendor_power_prop)

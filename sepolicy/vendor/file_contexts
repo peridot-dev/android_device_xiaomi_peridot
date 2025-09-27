@@ -87,6 +87,9 @@
 /sys/devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 /sys/class/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 
+# Power
+/vendor/bin/hw/android\.hardware\.power-service\.lineage-libperfmgr  u:object_r:hal_power_default_exec:s0
+
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                                                   u:object_r:hal_sensors_default_exec:s0
 

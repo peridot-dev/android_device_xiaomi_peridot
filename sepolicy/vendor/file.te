@@ -10,3 +10,6 @@ type audio_socket, file_type;
 type thermal_data_file, data_file_type, file_type;
 type vendor_modem_data_file, data_file_type, file_type;
 type vendor_ins_vendor_data_file, data_file_type, file_type;
+
+# Power
+type vendor_sysfs_msm_subsys, fs_type, sysfs_type;
