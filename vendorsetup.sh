@@ -33,23 +33,23 @@ git clone -b lineage-23.0 --depth 1 https://github.com/powerhouse1997/proprietar
 
 # Kernel sources
 info "Cloning Kernel sources"
-git clone -b Rd --depth 1 https://github.com/powerhouse1997/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635 || fatal "Kernel source clone failed!"
+git clone -b lineage-23.0 --depth 1 https://github.com/powerhouse1997/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635 || fatal "Kernel source clone failed!"
 
 warn "Cleaning kernel modules directory (if exists)"
 rm -rf kernel/xiaomi/sm8635-modules
 info "Cloning kernel modules"
-git clone -b Rd https://github.com/powerhouse1997/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules || fatal "Kernel modules clone failed!"
+git clone -b lineage-23.0 https://github.com/powerhouse1997/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules || fatal "Kernel modules clone failed!"
 
 warn "Cleaning kernel devicetrees directory (if exists)"
 rm -rf kernel/xiaomi/sm8635-devicetrees
 info "Cloning kernel devicetrees"
-git clone -b Rd https://github.com/powerhouse1997/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees || fatal "Kernel devicetrees clone failed!"
+git clone -b lineage-23.0 https://github.com/powerhouse1997/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees || fatal "Kernel devicetrees clone failed!"
 
 # Hardware xiaomi
 info "Cloning hardware xiaomi test branch"
 warn "Cleaning hardware/xiaomi directory (if exists)"
 rm -rf hardware/xiaomi
-git clone -b test https://github.com/powerhouse1997/android_hardware_xiaomi.git hardware/xiaomi || fatal "Hardware xiaomi clone failed!"
+git clone -b lineage-23.0 https://github.com/powerhouse1997/android_hardware_xiaomi.git hardware/xiaomi || fatal "Hardware xiaomi clone failed!"
 
 # Dolby
 info "Cloning XiaomiDolby"
