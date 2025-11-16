@@ -55,6 +55,13 @@ git clone -b lineage-23.0 https://github.com/powerhouse1997/android_hardware_xia
 info "Cloning XiaomiDolby"
 git clone -b lineage-23.0 https://github.com/powerhouse1997/android_packages_apps_XiaomiDolby.git packages/apps/XiaomiDolby || fatal "XiaomiDolby clone failed!"
 
+# cloning lineage interface
+rm -rf hardware/bliss/interface
+git clone -b lineage-23.0 https://github.com/LineageOS/android_hardware_lineage_interfaces.git hardware/lineage/interfaces
+
+# cloning lineage sepolicy
+git clone -b lineage-23.0 https://github.com/LineageOS/android_device_lineage_sepolicy.git device/lineage/sepolicy
+
 success "All resources cloned successfully!"
 
 return 0
