@@ -318,6 +318,10 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
 
+
+# Camera Extension
+system_ext/framework/camerax-vendor-extensions.jar
+
 # Camera
 odm/bin/hw/vendor.qti.camera.provider-service_64
 odm/etc/camera/GpuKernelRepo.pb

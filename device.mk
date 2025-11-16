@@ -134,6 +134,11 @@ $(foreach display_id, 4630947195234848131 4630947033261136259 463094654558005517
         $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_$(display_id).xml \
     ))
 
+# CameraExtensions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/camerax-vendor-extensions.xml
+
+
 # Dolby
 PRODUCT_PACKAGES += \
     XiaomiDolby
@@ -479,3 +484,6 @@ PRODUCT_COPY_FILES += \
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
+
+# Sign-Build
+$(call inherit-product, vendor/evolution-priv/keys/keys.mk)

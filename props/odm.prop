@@ -25,8 +25,8 @@ vendor.audio.rt.mode=19
 vendor.audio.ultrasound.stoplatency=60
 vendor.audio.ultrasound.usync=100
 
-# Camera
-ro.camerax.extensions.enabled=false
+# CameraX
+ro.camerax.extensions.enabled=true
 
 # DRM
 vendor.wv.oemcrypto.debug.enable_prov40=true
