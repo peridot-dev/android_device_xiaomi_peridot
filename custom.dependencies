@@ -1,0 +1,24 @@
+[
+  {
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "lineage-23.2"
+  },
+  {
+    "repository": "PixelOS-Devices/android_kernel_xiaomi_sm8635",
+    "target_path": "kernel/xiaomi/sm8635"
+  },
+  {
+    "repository": "PixelOS-Devices/android_kernel_xiaomi_sm8635-devicetrees",
+    "target_path": "kernel/xiaomi/sm8635-devicetrees"
+  },
+  {
+    "repository": "PixelOS-Devices/android_kernel_xiaomi_sm8635-modules",
+    "target_path": "kernel/xiaomi/sm8635-modules"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "NoPrincessHere/proprietary_vendor_xiaomi_peridot",
+    "target_path": "vendor/xiaomi/peridot"
+  }
+]
