@@ -141,10 +141,6 @@ $(foreach display_id, 4630947195234848131 4630947033261136259 463094654558005517
         $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_$(display_id).xml \
     ))
 
-# Dolby
-PRODUCT_PACKAGES += \
-    XiaomiDolby
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

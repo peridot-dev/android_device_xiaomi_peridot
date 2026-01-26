@@ -12,7 +12,6 @@ persist.vendor.audio.misound.disable=true
 persist.vendor.audio.misoundasc=true
 ro.audio.flinger_standbytime_ms=2000
 ro.audio.monitorRotation=true
-ro.audio.spatializer_enabled=true
 ro.vendor.audio.btsamplerate.adaptive=true
 ro.vendor.audio.dualadc.support=true
 ro.vendor.audio.gain.support=true
