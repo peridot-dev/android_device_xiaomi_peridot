@@ -224,6 +224,9 @@ on property:sys.boot_completed=1
     wait /sys/class/thermal/thermal_message/boot_complete
     write /sys/class/thermal/thermal_message/boot_complete 2
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 service qrtr-lookup /vendor/bin/qrtr-lookup
     class core
     user system
