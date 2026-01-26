@@ -10,3 +10,4 @@ type audio_socket, file_type;
 type thermal_data_file, data_file_type, file_type;
 type vendor_modem_data_file, data_file_type, file_type;
 type vendor_ins_vendor_data_file, data_file_type, file_type;
+type proc_walt, fs_type, proc_type;
