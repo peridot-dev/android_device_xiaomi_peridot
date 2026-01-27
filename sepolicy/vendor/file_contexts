@@ -8,6 +8,10 @@
 # Battery
 /(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
 
+# Block
+/dev/block/platform/soc/1d84000.ufshc/by-name/countrycode_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/modemfirmware_[ab]    u:object_r:vendor_modem_block_device:s0
+
 # Camera
 /(odm|vendor)/bin/hw/vendor\.qti\.camera\.provider-service_64 u:object_r:hal_camera_default_exec:s0
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
