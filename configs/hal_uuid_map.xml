@@ -55,14 +55,4 @@
         </uids>
         <uuid>636F6D2E6E78702E7365637572697479</uuid>
     </uuid_ref_do>
-
-    <!-- STM KEYMINT (UID = 2913) and WEAVER (UID = 1087) mapping -->
-    <!-- with UUID = 534552454144595f48414c5f55554944-->
-    <uuid_ref_do>
-        <uids>
-            <uid>1087</uid>
-            <uid>2913</uid>
-        </uids>
-        <uuid>534552454144595f48414c5f55554944</uuid>
-    </uuid_ref_do>
 </ref_do>
