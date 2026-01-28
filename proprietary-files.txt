@@ -1730,7 +1730,6 @@ vendor/etc/init/hw/init.qti.kernel.rc
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/bin/hw/android.hardware.security.keymint-service.strongbox-nxp
 vendor/bin/hw/android.hardware.weaver-service.nxp-qti
-vendor/etc/hal_uuid_map_peridot.xml
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service.strongbox-nxp.rc
 vendor/etc/init/android.hardware.weaver-service.nxp.rc:vendor/etc/init/android.hardware.weaver-service.nxp-qti.rc
