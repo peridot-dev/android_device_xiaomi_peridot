@@ -2249,6 +2249,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=_vendor
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.qti
 vendor/etc/init/android.hardware.secure_element-service.qti.rc
+vendor/etc/permissions/com.android.se.xml
 vendor/etc/vintf/manifest/android.hardware.secure_element.xml
 vendor/etc/vintf/manifest/secure_element-service.xml
 vendor/lib64/hw/libEseUtils.so
