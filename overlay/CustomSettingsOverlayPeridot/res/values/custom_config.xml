@@ -6,4 +6,7 @@
 <resources>
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count">true</bool>
+
+    <!-- Uses the legacy UDFPS enrollment UI with side text instead of a footer button. -->
+    <bool name="config_useLegacyUdfpsUi">true</bool>
 </resources>
