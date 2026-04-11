@@ -323,6 +323,9 @@ void SensorsSubHal::postEvents(const std::vector<Event>& events, ScopedWakelock 
         forwarded_events.emplace_back(e);
         if (static_cast<int32_t>(e.sensorType) == kTsl2522FbRawType) {
             const auto alias_handle = getAliasHandle(e.sensorHandle);
+            if (e.u.vec4.x == -1 && e.u.vec4.y == 0 && e.u.vec4.z == 0 && e.u.vec4.w == 0) {
+                continue;
+            }
             if (alias_handle != e.sensorHandle) {
                 auto event_copy = e;
                 event_copy.sensorHandle = alias_handle;
