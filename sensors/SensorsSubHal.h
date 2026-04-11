@@ -73,7 +73,8 @@ class SensorsSubHal : public ISensorsSubHal, public IHalProxyCallback {
 
     void displayMonitorThread();
 
-    std::atomic<bool> display_on_{false};
+    // Assume the display is on at boot until a power event proves otherwise.
+    std::atomic<bool> display_on_{true};
     std::atomic<bool> requested_enabled_{false};
     std::atomic<bool> sensor_currently_enabled_{false};
     std::atomic<bool> stop_disp_thread_{false};
