@@ -7,6 +7,8 @@
 
 #include <V2_1/SubHal.h>
 
+#include <thread>
+
 namespace android {
 namespace hardware {
 namespace sensors {
@@ -26,6 +28,7 @@ using ::android::hardware::sensors::V2_1::implementation::ISensorsSubHal;
 class SensorsSubHal : public ISensorsSubHal, public IHalProxyCallback {
   public:
     SensorsSubHal();
+    ~SensorsSubHal();
 
     // ISensors
     Return<Result> setOperationMode(OperationMode mode) override;
@@ -60,6 +63,23 @@ class SensorsSubHal : public ISensorsSubHal, public IHalProxyCallback {
     std::unique_ptr<void, std::function<void(void*)>> lib_handle_;
     V2_1::implementation::ISensorsSubHal* impl_;
     sp<IHalProxyCallback> hal_proxy_callback_;
+
+    std::unordered_map<int32_t, SensorType> handle_type_;
+    std::unordered_map<int32_t, int32_t> alias_handle_to_raw_handle_;
+    std::unordered_map<int32_t, int32_t> raw_handle_to_alias_handle_;
+
+    int32_t getRealHandle(int32_t sensor_handle) const;
+    int32_t getAliasHandle(int32_t raw_sensor_handle) const;
+
+    void displayMonitorThread();
+
+    std::atomic<bool> display_on_{false};
+    std::atomic<bool> requested_enabled_{false};
+    std::atomic<bool> sensor_currently_enabled_{false};
+    std::atomic<bool> stop_disp_thread_{false};
+    int32_t gated_raw_handle_{-1};
+    std::thread disp_thread_;
+    std::mutex display_mutex_;
 };
 
 }  // namespace qsh_wrapper

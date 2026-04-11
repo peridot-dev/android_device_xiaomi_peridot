@@ -20,6 +20,8 @@ cc_library_shared {
     ],
     header_libs: [
         "android.hardware.sensors@2.X-multihal.header",
+        "libhardware_headers",
+        "generated_kernel_headers",
     ],
     cflags: [
         "-DLOG_TAG=\"sensors.qsh_wrapper\"",
