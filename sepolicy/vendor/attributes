@@ -15,11 +15,6 @@ attribute hal_aidlbgservice;
 attribute hal_aidlbgservice_client;
 attribute hal_aidlbgservice_server;
 
-# Displatfeature
-attribute vendor_hal_displayfeature_xiaomi;
-attribute vendor_hal_displayfeature_xiaomi_client;
-attribute vendor_hal_displayfeature_xiaomi_server;
-
 # Mlipay
 attribute hal_mlipay;
 attribute hal_mlipay_client;

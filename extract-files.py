@@ -69,11 +69,8 @@ blob_fixups: blob_fixups_user_type = {
             'libprotobuf-cpp-full-21.7.so'
     ),
     (
-        'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl',
         'odm/lib64/camera/plugins/com.xiaomi.plugin.anchor.so',
         'odm/lib64/com.qti.feature2.anchorsync.so',
-        'odm/lib64/hw/displayfeature.default.so',
-        'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
         'vendor/lib64/libaudiocloudctrl.so',
         'vendor/lib64/libdpps.so',
         'vendor/lib64/liblearningmodule.so',
@@ -274,8 +271,6 @@ blob_fixups: blob_fixups_user_type = {
             'libaudioroute.so',
             'libaudioroute-v34.so'
     ),
-    'vendor/etc/clstc_config_library.xml': blob_fixup()
-        .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
     'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
         .add_line_if_missing('setsockopt: 1'),
     'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()

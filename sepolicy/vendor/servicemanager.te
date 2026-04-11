@@ -1,2 +1,1 @@
 allow servicemanager bluetooth:binder transfer;
-allow servicemanager vendor_hal_citsensorservice_xiaomi_server:binder transfer;

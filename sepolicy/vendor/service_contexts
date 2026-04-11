@@ -1,14 +1,7 @@
-# CIT
-vendor.xiaomi.sensor.citsensorservice.ICitSensorService/default   u:object_r:vendor_hal_citsensorservice_xiaomi_service:s0
-
 # Camera
 vendor.xiaomi.hardware.quickcamera.IQuickCameraService/default u:object_r:hal_quickcamera_service:s0
 vendor.xiaomi.hardware.aidlbgservice.IBGService/default           u:object_r:hal_aidlbgservice_service:s0
 vendor.xiaomi.hardware.aon.IAlwaysOn/miaonservicehal           u:object_r:hal_camera_aon_service:s0
-
-# Display
-vendor.xiaomi.hardware.displayfeature_aidl.IDisplayFeature/default       u:object_r:vendor_hal_displayfeature_xiaomi_service:s0
-vendor.xiaomi.hardware.display.mihwcextension.IMiHwcExtension/default      u:object_r:vendor_hal_hwcextension_xiaomi_service:s0
 
 # Fingerprint
 vendor.xiaomi.hardware.fx.tunnel.IMiFxTunnel/default                    u:object_r:vendor_hal_fingerprint_service_xiaomi:s0

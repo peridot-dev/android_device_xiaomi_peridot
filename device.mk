@@ -126,15 +126,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.demura-service
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.composer3-V1-ndk.vendor \
-    vendor.qti.hardware.display.config-V11-ndk.vendor
 
 PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh
+
+PRODUCT_COPY_FILES += \
+    hardware/qcom-caf/sm8650/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml \
+    hardware/qcom-caf/sm8650/display/config/clstc_config_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/clstc_config_library.xml
 
 $(foreach display_id, 4630947195234848131 4630947033261136259 4630946545580055171, \
     $(eval PRODUCT_COPY_FILES += \
