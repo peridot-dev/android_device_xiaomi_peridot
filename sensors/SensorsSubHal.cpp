@@ -41,6 +41,7 @@ bool IsRawAmbientLightSensor(const android::hardware::sensors::V2_1::SensorInfo&
 }
 
 static constexpr char kDispFeatureDevice[] = "/dev/mi_display/disp_feature";
+static constexpr int64_t kMinLightSamplingPeriodNs = 2'000'000'000; // 2 seconds
 
 bool IsDefaultLightSensor(const android::hardware::sensors::V2_1::SensorInfo& sensor) {
     return sensor.type == SensorType::LIGHT && !IsRawAmbientLightSensor(sensor);
@@ -148,6 +149,9 @@ Return<Result> SensorsSubHal::activate(int32_t sensor_handle, bool enabled) {
 Return<Result> SensorsSubHal::batch(int32_t sensor_handle, int64_t sampling_period_ns,
                                     int64_t max_report_latency_ns) {
     const auto real_handle = getRealHandle(sensor_handle);
+    if (real_handle != sensor_handle && sampling_period_ns < kMinLightSamplingPeriodNs) {
+        sampling_period_ns = kMinLightSamplingPeriodNs;
+    }
     return impl_->batch(real_handle, sampling_period_ns, max_report_latency_ns);
 }
 
