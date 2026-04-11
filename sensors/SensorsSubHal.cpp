@@ -132,17 +132,24 @@ Return<Result> SensorsSubHal::activate(int32_t sensor_handle, bool enabled) {
 
         if (enabled && display_on_.load()) {
             sensor_currently_enabled_.store(true);
+            LOG(INFO) << "activate(" << sensor_handle << ") -> real handle " << real_handle
+                      << " enabled=" << enabled << " (display on)";
             return impl_->activate(real_handle, enabled);
         }
 
         if (!enabled && sensor_currently_enabled_.load()) {
             sensor_currently_enabled_.store(false);
+            LOG(INFO) << "activate(" << sensor_handle << ") -> real handle " << real_handle
+                      << " disabled because display state changed";
             return impl_->activate(real_handle, false);
         }
 
+        LOG(INFO) << "activate(" << sensor_handle << ") deferred because display is off";
         return Result::OK;
     }
 
+    LOG(INFO) << "activate(" << sensor_handle << ") -> real handle " << real_handle
+              << " enabled=" << enabled;
     return impl_->activate(real_handle, enabled);
 }
 
@@ -150,13 +157,18 @@ Return<Result> SensorsSubHal::batch(int32_t sensor_handle, int64_t sampling_peri
                                     int64_t max_report_latency_ns) {
     const auto real_handle = getRealHandle(sensor_handle);
     if (real_handle != sensor_handle && sampling_period_ns < kMinLightSamplingPeriodNs) {
+        LOG(INFO) << "forcing alias light batch period to minimum " << kMinLightSamplingPeriodNs
+                  << " ns for sensor_handle=" << sensor_handle;
         sampling_period_ns = kMinLightSamplingPeriodNs;
     }
+    LOG(INFO) << "batch(" << sensor_handle << ") -> real handle " << real_handle
+              << " period=" << sampling_period_ns << " max_latency=" << max_report_latency_ns;
     return impl_->batch(real_handle, sampling_period_ns, max_report_latency_ns);
 }
 
 Return<Result> SensorsSubHal::flush(int32_t sensor_handle) {
     const auto real_handle = getRealHandle(sensor_handle);
+    LOG(INFO) << "flush(" << sensor_handle << ") -> real handle " << real_handle;
     return impl_->flush(real_handle);
 }
 
@@ -173,6 +185,8 @@ Return<void> SensorsSubHal::configDirectReport(int32_t sensor_handle, int32_t ch
                                                RateLevel rate,
                                                ISensors::configDirectReport_cb _hidl_cb) {
     const auto real_handle = getRealHandle(sensor_handle);
+    LOG(INFO) << "configDirectReport(" << sensor_handle << ") -> real handle " << real_handle
+              << " channel=" << channel_handle << " rate=" << static_cast<int32_t>(rate);
     return impl_->configDirectReport(real_handle, channel_handle, rate, _hidl_cb);
 }
 
@@ -197,6 +211,8 @@ Return<void> SensorsSubHal::getSensorsList_2_1(ISensors::getSensorsList_2_1_cb _
                 if (!IsDefaultLightSensor(sensor)) {
                     filtered.emplace_back(sensor);
                 } else {
+                    LOG(INFO) << "Dropping default light sensor " << sensor.sensorHandle
+                              << " from sensor list";
                 }
             }
 
@@ -215,6 +231,8 @@ Return<void> SensorsSubHal::getSensorsList_2_1(ISensors::getSensorsList_2_1_cb _
 
             auto aliased_sensors = hidl_vec<SensorInfo>(filtered.size());
             std::copy(filtered.begin(), filtered.end(), aliased_sensors.begin());
+            LOG(INFO) << "Aliasing raw ambient light sensor " << raw_sensor.sensorHandle
+                      << " to alias handle " << alias_handle << " (sensor id 5 externally)";
             _hidl_cb(aliased_sensors);
         } else {
             _hidl_cb(sensors);
@@ -228,6 +246,8 @@ Return<Result> SensorsSubHal::injectSensorData_2_1(const Event& event) {
         auto event_copy = event;
         event_copy.sensorHandle = real_handle;
         event_copy.sensorType = handle_type_[event.sensorHandle];
+        LOG(INFO) << "injectSensorData_2_1 alias " << event.sensorHandle << " -> raw "
+                  << real_handle << " type=" << static_cast<int32_t>(event_copy.sensorType);
         return impl_->injectSensorData_2_1(event_copy);
     }
     return impl_->injectSensorData_2_1(event);
@@ -254,6 +274,7 @@ void SensorsSubHal::displayMonitorThread() {
             .events = POLLIN,
     };
 
+    LOG(INFO) << "displayMonitorThread started, watching " << kDispFeatureDevice;
     while (!stop_disp_thread_.load()) {
         int rc = poll(&dispEventPoll, 1, -1);
         if (rc < 0) {
@@ -276,6 +297,7 @@ void SensorsSubHal::displayMonitorThread() {
         }
 
         const bool on = response->data[0] == MI_DISP_POWER_ON;
+        LOG(INFO) << "displayMonitorThread event: power=" << response->data[0] << " on=" << on;
         const bool previous = display_on_.exchange(on);
         if (on == previous) {
             continue;
@@ -283,9 +305,11 @@ void SensorsSubHal::displayMonitorThread() {
 
         std::lock_guard<std::mutex> lock(display_mutex_);
         if (on && requested_enabled_.load() && gated_raw_handle_ != -1) {
+            LOG(INFO) << "Display ON: enabling raw light sensor handle " << gated_raw_handle_;
             impl_->activate(gated_raw_handle_, true);
             sensor_currently_enabled_.store(true);
         } else if (!on && sensor_currently_enabled_.load() && gated_raw_handle_ != -1) {
+            LOG(INFO) << "Display OFF: disabling raw light sensor handle " << gated_raw_handle_;
             impl_->activate(gated_raw_handle_, false);
             sensor_currently_enabled_.store(false);
         }
@@ -327,14 +351,24 @@ void SensorsSubHal::postEvents(const std::vector<Event>& events, ScopedWakelock 
         forwarded_events.emplace_back(e);
         if (static_cast<int32_t>(e.sensorType) == kTsl2522FbRawType) {
             const auto alias_handle = getAliasHandle(e.sensorHandle);
+            LOG(INFO) << "Raw light event: raw handle=" << e.sensorHandle
+                      << " type=" << static_cast<int32_t>(e.sensorType) << " vec4=(" << e.u.vec4.x
+                      << "," << e.u.vec4.y << "," << e.u.vec4.z << "," << e.u.vec4.w << ")";
+
             if (e.u.vec4.x == -1 && e.u.vec4.y == 0 && e.u.vec4.z == 0 && e.u.vec4.w == 0) {
+                LOG(INFO) << "Skipping invalid raw light event: raw handle=" << e.sensorHandle;
                 continue;
             }
+
             if (alias_handle != e.sensorHandle) {
                 auto event_copy = e;
                 event_copy.sensorHandle = alias_handle;
                 event_copy.sensorType = SensorType::LIGHT;
                 event_copy.u.scalar = e.u.vec4.y;
+                LOG(INFO) << "Forwarding aliased light event: alias handle="
+                          << event_copy.sensorHandle
+                          << " type=" << static_cast<int32_t>(event_copy.sensorType)
+                          << " scalar=" << event_copy.u.scalar;
                 forwarded_events.emplace_back(std::move(event_copy));
             }
         }
